@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Kandel Biahal</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0d1117;
+      color: #ffffff;
+    }
+
+    /* Navigation Bar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #161b22;
+      border-bottom: 1px solid #30363d;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #58a6ff;
+      text-decoration: none;
+    }
+
+    .nav-links a {
+      color: #c9d1d9;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      color: #58a6ff;
+    }
+
+    /* Projects Page Container */
+    .projects-container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .page-title {
+      font-size: 2.5rem;
+      color: #58a6ff;
+      margin-bottom: 10px;
+    }
+
+    .page-description {
+      color: #8b949e;
+      margin-bottom: 40px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .project-card {
+      background-color: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: #58a6ff;
+    }
+
+    .project-title {
+      margin-top: 0;
+      color: #f0f6fc;
+    }
+
+    .project-description {
+      color: #8b949e;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .project-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .project-tags span {
+      background-color: #21262d;
+      color: #58a6ff;
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 15px;
+      border: 1px solid #30363d;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      font-size: 0.85rem;
+      color: #ffffff;
+      background-color: #238636;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      border: 1px solid #30363d;
+      color: #c9d1d9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">Biahal Kandel</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html" style="color: #58a6ff;">Projects</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="projects-container">
+    <h1 class="page-title">My Projects</h1>
+    <p class="page-description">Here are some of the personal and open-source projects I've built.</p>
+
+    <div class="projects-grid">
+      
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div>
+          <h3 class="project-title">Project Title 1</h3>
+          <p class="project-description">Detailed description about this project goes here. Explain what problem it solves and how you created it.</p>
+          <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JS</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a href="#" target="_blank" class="btn">Live Demo</a>
+          <a href="#" target="_blank" class="btn btn-outline">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div>
+          <h3 class="project-title">Project Title 2</h3>
+          <p class="project-description">Detailed description about your second project goes here.</p>
+          <div class="project-tags">
+            <span>React</span>
+            <span>Node.js</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a href="#" target="_blank" class="btn">Live Demo</a>
+          <a href="#" target="_blank" class="btn btn-outline">GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+  </html>
+  
