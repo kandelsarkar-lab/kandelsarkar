@@ -971,36 +971,133 @@
     <span>Experiments</span><span>Comedy</span><span>Food Vlogs</span><span>Challenges</span><span>Nepali Entertainment</span><span>Weekly Uploads</span>
   </div>
 </div>
-
-  <!-- Golden Navigation Link for Projects -->
-<a href="projects.html" class="gold-nav-item">PROJECTS</a>
+<!-- ================= CENTERED 3D GOLDEN PROJECT BUTTON ================= -->
+<div class="project-btn-wrapper">
+  <a href="projects.html" class="gold-project-btn" id="projectBtn">
+    <span class="btn-glow"></span>
+    <span class="btn-text">
+      <span class="btn-icon">🧪</span> EXPLORE PROJECTS <span class="btn-arrow">→</span>
+    </span>
+  </a>
+</div>
 
 <style>
-  .gold-nav-item {
-    font-size: 1.25rem; /* Larger font size */
-    font-weight: 800; /* Bold text */
-    letter-spacing: 1px;
-    color: #ffc107; /* Matching golden theme color */
+  /* Container to handle perfect centering */
+  .project-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+
+  /* Large Professional Button */
+  .gold-project-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 480px; /* Big prominence on desktop */
+    padding: 22px 40px; /* Generous padding */
+    font-size: 1.35rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #0b0d17; /* Dark text contrast */
+    background: linear-gradient(135deg, #ffe066 0%, #ffb700 50%, #ffa200 100%);
+    border: 2px solid #ffd700;
+    border-radius: 16px;
     text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 8px;
-    transition: all 0.2s ease-in-out;
-    display: inline-block;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(255, 183, 0, 0.35), 0 0 20px rgba(255, 215, 0, 0.2);
+    transition: transform 0.15s ease-out, box-shadow 0.25s ease-out, border-color 0.25s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
   }
 
-  /* Hover effect */
-  .gold-nav-item:hover {
-    color: #ffffff;
-    text-shadow: 0 0 10px rgba(255, 193, 7, 0.8);
-    transform: translateY(-2px);
+  /* Interactive Spotlight Glow */
+  .btn-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.7) 0%, transparent 60%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
   }
 
-  /* Click (Active) effect */
-  .gold-nav-item:active {
-    transform: scale(0.95); /* Shrinks slightly when clicked */
-    color: #e0a800;
+  /* Hover States */
+  .gold-project-btn:hover .btn-glow {
+    opacity: 1;
+  }
+
+  .gold-project-btn:hover {
+    box-shadow: 0 20px 45px rgba(255, 183, 0, 0.55), 0 0 30px rgba(255, 224, 102, 0.8);
+    border-color: #ffffff;
+  }
+
+  /* Button Content Formatting */
+  .btn-text {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    pointer-events: none;
+  }
+
+  .btn-arrow {
+    transition: transform 0.2s ease;
+  }
+
+  .gold-project-btn:hover .btn-arrow {
+    transform: translateX(6px);
+  }
+
+  /* Click Animation */
+  .gold-project-btn:active {
+    transform: scale(0.95) !important;
+  }
+
+  /* Responsive sizing for smaller mobile screens */
+  @media (max-width: 480px) {
+    .gold-project-btn {
+      font-size: 1.1rem;
+      padding: 18px 24px;
+    }
   }
 </style>
+
+<script>
+  const btn = document.getElementById('projectBtn');
+
+  if (btn) {
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left; 
+      const y = e.clientY - rect.top;
+
+      btn.style.setProperty('--mouse-x', `${x}px`);
+      btn.style.setProperty('--mouse-y', `${y}px`);
+
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = ((y - centerY) / centerY) * -14; 
+      const rotateY = ((x - centerX) / centerX) * 14;  
+
+      btn.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.03, 1.03, 1.03)`;
+    });
+
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+    });
+  }
+</script>
+<!-- ================= END BUTTON ================= -->
   
   
 <!-- ============ READOUT ============ -->
