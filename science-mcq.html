@@ -3,1758 +3,1788 @@
 
 <head>
 
-    <!-- =====================================================
-         BASIC SETTINGS
-    ====================================================== -->
+<meta charset="UTF-8">
 
-    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0">
+<meta name="description"
+      content="Class 10 Science MCQ Practice">
 
-    <meta
-        name="description"
-        content="Class 10 NEB Science MCQ Practice - Kandel Sarkar">
+<title>
+    Science MCQ Lab | Kandel Sarkar
+</title>
 
-    <meta
-        name="theme-color"
-        content="#07111f">
 
-    <title>
-        Science Lab | Class 10 MCQ Practice
-    </title>
+<style>
 
+/* =========================================================
+   GLOBAL
+========================================================= */
 
-    <!-- =====================================================
-         ALL CSS
-    ====================================================== -->
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    <style>
+:root{
 
-        /* =================================================
-           ROOT VARIABLES
-        ================================================== */
+    --background:#06111f;
 
-        :root {
+    --background2:#091b2d;
 
-            --bg-main: #06101d;
+    --card:rgba(13,35,55,.78);
 
-            --bg-secondary: #091827;
+    --card2:rgba(10,28,46,.92);
 
-            --card: rgba(12, 28, 45, 0.76);
+    --border:rgba(86,196,255,.18);
 
-            --card-solid: #0c1c2d;
+    --border-hover:rgba(86,220,255,.55);
 
-            --border: rgba(100, 190, 255, 0.16);
+    --cyan:#35d8ff;
 
-            --border-bright: rgba(91, 207, 255, 0.38);
+    --blue:#4d8dff;
 
-            --text: #edf8ff;
+    --green:#47e0a3;
 
-            --muted: #8da5b8;
+    --yellow:#ffd166;
 
-            --cyan: #35d6ff;
+    --red:#ff6879;
 
-            --blue: #438cff;
+    --white:#f2faff;
 
-            --green: #45e0a1;
+    --text:#d6e5ef;
 
-            --yellow: #ffd166;
+    --muted:#8199aa;
 
-            --red: #ff6b7a;
+    --shadow:
+        0 25px 80px rgba(0,0,0,.4);
 
-            --shadow:
-                0 25px 80px rgba(0, 0, 0, 0.38);
+    --mouse-x:50vw;
 
-            --mouse-x: 50vw;
+    --mouse-y:50vh;
+}
 
-            --mouse-y: 50vh;
 
-        }
+html{
+    scroll-behavior:smooth;
+}
 
 
-        /* =================================================
-           RESET
-        ================================================== */
+body{
 
-        * {
+    min-height:100vh;
 
-            margin: 0;
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
 
-            padding: 0;
+    color:var(--white);
 
-            box-sizing: border-box;
+    background:
 
-        }
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(44,198,255,.10),
+            transparent 28%
+        ),
 
+        radial-gradient(
+            circle at 90% 30%,
+            rgba(68,224,163,.07),
+            transparent 28%
+        ),
 
-        html {
+        linear-gradient(
+            135deg,
+            #030a13,
+            #061321,
+            #08182a
+        );
 
-            scroll-behavior: smooth;
+    overflow-x:hidden;
 
-        }
+    position:relative;
+}
 
 
-        body {
+/* =========================================================
+   MOUSE TRACKING LIGHT
+========================================================= */
 
-            min-height: 100vh;
+body::before{
 
-            font-family:
-                Inter,
-                ui-sans-serif,
-                system-ui,
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                sans-serif;
+    content:"";
 
-            color: var(--text);
+    position:fixed;
 
-            background:
+    width:650px;
 
-                radial-gradient(
-                    circle at 15% 15%,
-                    rgba(34, 173, 255, 0.12),
-                    transparent 30%
-                ),
+    height:650px;
 
-                radial-gradient(
-                    circle at 85% 30%,
-                    rgba(69, 224, 161, 0.07),
-                    transparent 28%
-                ),
+    left:var(--mouse-x);
 
-                linear-gradient(
-                    135deg,
-                    #040b14,
-                    #06111e 45%,
-                    #071525
-                );
+    top:var(--mouse-y);
 
-            overflow-x: hidden;
+    transform:
+        translate(-50%,-50%);
 
-            position: relative;
+    background:
+        radial-gradient(
+            circle,
+            rgba(53,216,255,.09),
+            transparent 68%
+        );
 
-        }
+    pointer-events:none;
 
+    z-index:-2;
 
-        /* =================================================
-           SCIENCE GRID
-        ================================================== */
+}
 
-        body::after {
 
-            content: "";
+/* =========================================================
+   SCIENCE GRID
+========================================================= */
 
-            position: fixed;
+body::after{
 
-            inset: 0;
+    content:"";
 
-            background-image:
+    position:fixed;
 
-                linear-gradient(
-                    rgba(70, 170, 220, 0.035) 1px,
-                    transparent 1px
-                ),
+    inset:0;
 
-                linear-gradient(
-                    90deg,
-                    rgba(70, 170, 220, 0.035) 1px,
-                    transparent 1px
-                );
+    background-image:
 
-            background-size: 45px 45px;
+        linear-gradient(
+            rgba(53,216,255,.035) 1px,
+            transparent 1px
+        ),
 
-            mask-image:
-                linear-gradient(
-                    to bottom,
-                    black,
-                    transparent 85%
-                );
+        linear-gradient(
+            90deg,
+            rgba(53,216,255,.035) 1px,
+            transparent 1px
+        );
 
-            pointer-events: none;
+    background-size:45px 45px;
 
-            z-index: -3;
+    pointer-events:none;
 
-        }
+    z-index:-3;
 
+}
 
-        /* =================================================
-           MOUSE LIGHT
-        ================================================== */
 
-        body::before {
+/* =========================================================
+   FLOATING PARTICLES
+========================================================= */
 
-            content: "";
+.particles{
 
-            position: fixed;
+    position:fixed;
 
-            width: 600px;
+    inset:0;
 
-            height: 600px;
+    overflow:hidden;
 
-            left: var(--mouse-x);
+    pointer-events:none;
 
-            top: var(--mouse-y);
+    z-index:-1;
+}
 
-            transform:
-                translate(-50%, -50%);
 
-            background:
+.particle{
 
-                radial-gradient(
-                    circle,
-                    rgba(45, 202, 255, 0.10),
-                    rgba(45, 202, 255, 0.035) 30%,
-                    transparent 70%
-                );
+    position:absolute;
 
-            pointer-events: none;
+    width:4px;
 
-            z-index: -1;
+    height:4px;
 
-            transition:
-                left 0.08s linear,
-                top 0.08s linear;
+    border-radius:50%;
 
-        }
+    background:var(--cyan);
 
+    box-shadow:
+        0 0 15px var(--cyan);
 
-        /* =================================================
-           FLOATING PARTICLES
-        ================================================== */
+    opacity:.25;
 
-        .particles {
+    animation:
+        floating 20s linear infinite;
+}
 
-            position: fixed;
 
-            inset: 0;
+.particle:nth-child(1){
+    left:5%;
+    animation-duration:18s;
+}
 
-            pointer-events: none;
+.particle:nth-child(2){
+    left:18%;
+    animation-duration:24s;
+}
 
-            z-index: -2;
+.particle:nth-child(3){
+    left:32%;
+    animation-duration:20s;
+}
 
-            overflow: hidden;
+.particle:nth-child(4){
+    left:48%;
+    animation-duration:26s;
+}
 
-        }
+.particle:nth-child(5){
+    left:63%;
+    animation-duration:22s;
+}
 
+.particle:nth-child(6){
+    left:77%;
+    animation-duration:19s;
+}
 
-        .particle {
+.particle:nth-child(7){
+    left:91%;
+    animation-duration:25s;
+}
 
-            position: absolute;
 
-            width: 4px;
+@keyframes floating{
 
-            height: 4px;
+    from{
+        transform:
+            translateY(110vh)
+            scale(.5);
+    }
 
-            border-radius: 50%;
+    to{
+        transform:
+            translateY(-20vh)
+            scale(1.3);
+    }
 
-            background: var(--cyan);
+}
 
-            opacity: 0.25;
 
-            box-shadow:
-                0 0 15px var(--cyan);
+/* =========================================================
+   NAVBAR
+========================================================= */
 
-            animation:
-                floatParticle
-                linear
-                infinite;
+.navbar{
 
-        }
+    position:sticky;
 
+    top:0;
 
-        .particle:nth-child(1) {
-            left: 8%;
-            animation-duration: 17s;
-            animation-delay: -5s;
-        }
+    z-index:100;
 
-        .particle:nth-child(2) {
-            left: 18%;
-            animation-duration: 22s;
-            animation-delay: -10s;
-        }
+    height:70px;
 
-        .particle:nth-child(3) {
-            left: 32%;
-            animation-duration: 19s;
-            animation-delay: -2s;
-        }
+    padding:
+        0 6%;
 
-        .particle:nth-child(4) {
-            left: 47%;
-            animation-duration: 25s;
-            animation-delay: -14s;
-        }
+    display:flex;
 
-        .particle:nth-child(5) {
-            left: 63%;
-            animation-duration: 20s;
-            animation-delay: -7s;
-        }
+    align-items:center;
 
-        .particle:nth-child(6) {
-            left: 78%;
-            animation-duration: 24s;
-            animation-delay: -12s;
-        }
+    justify-content:space-between;
 
-        .particle:nth-child(7) {
-            left: 91%;
-            animation-duration: 18s;
-            animation-delay: -4s;
-        }
+    background:
+        rgba(3,11,19,.72);
 
+    backdrop-filter:
+        blur(18px);
 
-        @keyframes floatParticle {
+    border-bottom:
+        1px solid
+        rgba(100,200,255,.10);
+}
 
-            0% {
 
-                transform:
-                    translateY(110vh)
-                    scale(0.5);
+.logo{
 
-            }
+    text-decoration:none;
 
-            100% {
+    color:white;
 
-                transform:
-                    translateY(-20vh)
-                    scale(1.4);
+    display:flex;
 
-            }
+    align-items:center;
 
-        }
+    gap:11px;
 
+    font-weight:800;
 
-        /* =================================================
-           NAVIGATION
-        ================================================== */
+    font-size:16px;
+}
 
-        .navbar {
 
-            position: sticky;
+.logo-icon{
 
-            top: 0;
+    width:38px;
 
-            z-index: 1000;
+    height:38px;
 
-            height: 72px;
+    display:grid;
 
-            padding:
-                0 6%;
+    place-items:center;
 
-            display: flex;
+    border-radius:12px;
 
-            align-items: center;
+    border:
+        1px solid
+        var(--border-hover);
 
-            justify-content: space-between;
+    background:
+        rgba(53,216,255,.08);
 
-            background:
-                rgba(4, 12, 21, 0.72);
+    box-shadow:
+        0 0 25px
+        rgba(53,216,255,.10);
+}
 
-            backdrop-filter:
-                blur(18px);
 
-            border-bottom:
-                1px solid
-                rgba(110, 200, 255, 0.10);
+.nav-links{
 
-        }
+    display:flex;
 
+    gap:25px;
+}
 
-        .brand {
 
-            display: flex;
+.nav-links a{
 
-            align-items: center;
+    text-decoration:none;
 
-            gap: 12px;
+    color:var(--muted);
 
-            color: white;
+    font-size:13px;
 
-            text-decoration: none;
+    transition:.25s;
+}
 
-            font-weight: 800;
 
-            font-size: 17px;
+.nav-links a:hover{
 
-        }
+    color:var(--cyan);
 
+}
 
-        .brand-icon {
 
-            width: 38px;
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
 
-            height: 38px;
+.container{
 
-            display: grid;
+    width:min(94%,1050px);
 
-            place-items: center;
+    margin:auto;
+}
 
-            border-radius: 12px;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(53,214,255,0.18),
-                    rgba(67,140,255,0.18)
-                );
+/* =========================================================
+   HERO
+========================================================= */
 
-            border:
-                1px solid
-                var(--border-bright);
+.hero{
 
-            box-shadow:
-                0 0 25px
-                rgba(53,214,255,0.12);
+    text-align:center;
 
-        }
+    padding:
+        65px 15px 40px;
+}
 
 
-        .nav-links {
+.badge{
 
-            display: flex;
+    display:inline-flex;
 
-            gap: 28px;
+    align-items:center;
 
-            align-items: center;
+    gap:8px;
 
-        }
+    padding:
+        8px 15px;
 
+    border-radius:100px;
 
-        .nav-links a {
+    border:
+        1px solid
+        rgba(53,216,255,.3);
 
-            color: var(--muted);
+    background:
+        rgba(53,216,255,.06);
 
-            text-decoration: none;
+    color:var(--cyan);
 
-            font-size: 13px;
+    font-size:11px;
 
-            transition: 0.25s ease;
+    font-weight:800;
 
-        }
+    letter-spacing:1.3px;
 
+    text-transform:uppercase;
 
-        .nav-links a:hover,
-        .nav-links a.active {
+    margin-bottom:20px;
+}
 
-            color: var(--cyan);
 
-        }
+.badge-dot{
 
+    width:7px;
 
-        /* =================================================
-           MAIN
-        ================================================== */
+    height:7px;
 
-        .container {
+    border-radius:50%;
 
-            width: min(92%, 980px);
+    background:var(--green);
 
-            margin: auto;
+    box-shadow:
+        0 0 12px var(--green);
+}
 
-            position: relative;
 
-        }
+.hero h1{
 
+    font-size:
+        clamp(42px,7vw,72px);
 
-        /* =================================================
-           HERO
-        ================================================== */
+    letter-spacing:-3px;
 
-        .hero {
+    line-height:1;
 
-            text-align: center;
+    margin-bottom:20px;
 
-            padding:
-                70px 20px 42px;
+    background:
+        linear-gradient(
+            110deg,
+            white,
+            #77e7ff,
+            #769eff
+        );
 
-        }
+    -webkit-background-clip:text;
 
+    background-clip:text;
 
-        .science-label {
+    color:transparent;
+}
 
-            display: inline-flex;
 
-            align-items: center;
+.hero p{
 
-            gap: 8px;
+    max-width:650px;
 
-            padding:
-                8px 14px;
+    margin:auto;
 
-            border:
-                1px solid
-                var(--border-bright);
+    color:var(--muted);
 
-            border-radius: 999px;
+    line-height:1.7;
 
-            background:
-                rgba(30, 130, 180, 0.08);
+    font-size:14px;
+}
 
-            color: var(--cyan);
 
-            font-size: 11px;
+/* =========================================================
+   MAIN PANEL
+========================================================= */
 
-            font-weight: 800;
+.panel{
 
-            letter-spacing: 1.4px;
+    position:relative;
 
-            text-transform: uppercase;
+    overflow:hidden;
 
-            margin-bottom: 20px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(13,37,57,.88),
+            rgba(7,20,34,.91)
+        );
 
-        }
+    border:
+        1px solid
+        var(--border);
 
+    border-radius:25px;
 
-        .pulse-dot {
+    padding:32px;
 
-            width: 7px;
+    box-shadow:var(--shadow);
 
-            height: 7px;
+    backdrop-filter:blur(20px);
 
-            border-radius: 50%;
+}
 
-            background: var(--green);
 
-            box-shadow:
-                0 0 12px
-                var(--green);
+.panel::before{
 
-        }
+    content:"";
 
+    position:absolute;
 
-        .hero h1 {
+    width:400px;
 
-            font-size:
-                clamp(40px, 7vw, 72px);
+    height:400px;
 
-            line-height: 1;
+    left:
+        var(--panel-x,50%);
 
-            letter-spacing: -3px;
+    top:
+        var(--panel-y,0%);
 
-            margin-bottom: 20px;
+    transform:
+        translate(-50%,-50%);
 
-            background:
+    background:
+        radial-gradient(
+            circle,
+            rgba(53,216,255,.07),
+            transparent 68%
+        );
 
-                linear-gradient(
-                    110deg,
-                    #ffffff 10%,
-                    #82e8ff 50%,
-                    #75a9ff 90%
-                );
+    pointer-events:none;
+}
 
-            -webkit-background-clip: text;
 
-            background-clip: text;
+/* =========================================================
+   PANEL HEADER
+========================================================= */
 
-            color: transparent;
+.panel-header{
 
-        }
+    position:relative;
 
+    margin-bottom:30px;
+}
 
-        .hero p {
 
-            max-width: 650px;
+.panel-header h2{
 
-            margin: auto;
+    font-size:25px;
 
-            color: var(--muted);
+    margin-bottom:7px;
+}
 
-            line-height: 1.75;
 
-            font-size: 15px;
+.panel-header p{
 
-        }
+    color:var(--muted);
 
+    font-size:13px;
 
-        /* =================================================
-           SCIENCE STATS
-        ================================================== */
+    line-height:1.6;
+}
 
-        .stats {
 
-            display: grid;
+/* =========================================================
+   LESSON GRID
+========================================================= */
 
-            grid-template-columns:
-                repeat(3, 1fr);
+.lesson-grid{
 
-            gap: 12px;
+    position:relative;
 
-            margin-bottom: 18px;
+    display:grid;
 
-        }
+    grid-template-columns:
+        repeat(2,1fr);
 
+    gap:12px;
+}
 
-        .stat {
 
-            padding: 15px;
+/* =========================================================
+   LESSON CARD
+========================================================= */
 
-            background:
-                rgba(10, 27, 43, 0.60);
+.lesson-card{
 
-            border:
-                1px solid
-                var(--border);
+    position:relative;
 
-            border-radius: 13px;
+    min-height:90px;
 
-            text-align: center;
+    padding:16px;
 
-        }
+    border:
+        1px solid
+        var(--border);
 
+    border-radius:15px;
 
-        .stat strong {
+    background:
+        rgba(6,22,37,.67);
 
-            display: block;
+    cursor:pointer;
 
-            color: var(--cyan);
+    transition:
 
-            font-size: 18px;
+        transform .22s ease,
 
-            margin-bottom: 4px;
+        border-color .22s ease,
 
-        }
+        background .22s ease,
 
+        box-shadow .22s ease;
+}
 
-        .stat span {
 
-            color: var(--muted);
+.lesson-card:hover{
 
-            font-size: 11px;
+    transform:
+        translateY(-3px);
 
-        }
+    border-color:
+        var(--border-hover);
 
+    background:
+        rgba(14,42,65,.82);
 
-        /* =================================================
-           QUIZ CARD
-        ================================================== */
+    box-shadow:
+        0 12px 35px
+        rgba(0,0,0,.2);
+}
 
-        .quiz-card {
 
-            position: relative;
+.lesson-card.selected{
 
-            overflow: hidden;
+    border-color:
+        var(--cyan);
 
-            padding: 34px;
+    background:
+        linear-gradient(
+            120deg,
+            rgba(30,116,157,.28),
+            rgba(48,78,150,.24)
+        );
 
-            border-radius: 24px;
+    box-shadow:
+        0 0 0 1px
+        rgba(53,216,255,.08),
+        0 15px 40px
+        rgba(0,0,0,.2);
+}
 
-            border:
-                1px solid
-                var(--border);
 
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(14, 34, 53, 0.88),
-                    rgba(7, 19, 32, 0.82)
-                );
+.lesson-number{
 
-            box-shadow:
-                var(--shadow);
+    color:var(--cyan);
 
-            backdrop-filter:
-                blur(20px);
+    font-size:10px;
 
-        }
+    font-weight:900;
 
+    letter-spacing:1.3px;
 
-        .quiz-card::before {
+    margin-bottom:7px;
+}
 
-            content: "";
 
-            position: absolute;
+.lesson-name{
 
-            width: 420px;
+    color:#dceaf2;
 
-            height: 420px;
+    font-size:14px;
 
-            left:
-                var(--card-x, 50%);
+    font-weight:700;
 
-            top:
-                var(--card-y, 50%);
+    line-height:1.4;
+}
 
-            transform:
-                translate(-50%, -50%);
 
-            background:
-                radial-gradient(
-                    circle,
-                    rgba(53,214,255,0.08),
-                    transparent 68%
-                );
+.lesson-meta{
 
-            pointer-events: none;
+    color:var(--muted);
 
-        }
+    font-size:10px;
 
+    margin-top:7px;
+}
 
-        /* =================================================
-           QUIZ HEADER
-        ================================================== */
 
-        .quiz-header {
+/* =========================================================
+   ALL CHAPTERS
+========================================================= */
 
-            position: relative;
+.all-chapters{
 
-            display: flex;
+    grid-column:
+        1 / -1;
 
-            justify-content:
-                space-between;
+    min-height:105px;
 
-            align-items: center;
+    display:flex;
 
-            gap: 15px;
+    align-items:center;
 
-            margin-bottom: 16px;
+    gap:17px;
 
-        }
+    padding:19px;
 
+    border:
+        1px solid
+        rgba(69,224,163,.25);
 
-        .question-count {
+    border-radius:16px;
 
-            color: #c8d9e5;
+    background:
+        linear-gradient(
+            100deg,
+            rgba(69,224,163,.07),
+            rgba(53,216,255,.05)
+        );
 
-            font-size: 13px;
+    cursor:pointer;
 
-            font-weight: 700;
+    transition:.25s;
+}
 
-        }
 
+.all-chapters:hover{
 
-        .score-preview {
+    border-color:
+        rgba(69,224,163,.55);
 
-            color: var(--muted);
+    transform:
+        translateY(-3px);
 
-            font-size: 12px;
+}
 
-        }
 
+.all-icon{
 
-        /* =================================================
-           PROGRESS
-        ================================================== */
+    width:52px;
 
-        .progress-track {
+    height:52px;
 
-            height: 7px;
+    flex-shrink:0;
 
-            width: 100%;
+    display:grid;
 
-            background:
-                rgba(255,255,255,0.06);
+    place-items:center;
 
-            border-radius: 20px;
+    border-radius:15px;
 
-            overflow: hidden;
+    background:
+        rgba(69,224,163,.10);
 
-            margin-bottom: 38px;
+    border:
+        1px solid
+        rgba(69,224,163,.25);
 
-        }
+    font-size:24px;
+}
 
 
-        .progress-fill {
+.all-chapters h3{
 
-            width: 0%;
+    font-size:16px;
 
-            height: 100%;
+    margin-bottom:4px;
+}
 
-            border-radius: inherit;
 
-            background:
+.all-chapters p{
 
-                linear-gradient(
-                    90deg,
-                    var(--cyan),
-                    var(--blue),
-                    var(--green)
-                );
+    color:var(--muted);
 
-            box-shadow:
-                0 0 18px
-                rgba(53,214,255,0.32);
+    font-size:12px;
 
-            transition:
-                width 0.45s ease;
+    line-height:1.5;
+}
 
-        }
 
+/* =========================================================
+   SELECTED LESSON
+========================================================= */
 
-        /* =================================================
-           QUESTION
-        ================================================== */
+.selection-info{
 
-        .question-label {
+    margin-top:28px;
 
-            color: var(--cyan);
+    padding:17px;
 
-            font-size: 11px;
+    border-radius:14px;
 
-            text-transform: uppercase;
+    border:
+        1px solid
+        rgba(53,216,255,.12);
 
-            letter-spacing: 1.6px;
+    background:
+        rgba(53,216,255,.035);
 
-            font-weight: 800;
+    display:flex;
 
-            margin-bottom: 12px;
+    align-items:center;
 
-        }
+    justify-content:space-between;
 
+    gap:15px;
+}
 
-        #question {
 
-            position: relative;
+.selection-label{
 
-            font-size:
-                clamp(21px, 3vw, 28px);
+    color:var(--muted);
 
-            line-height: 1.5;
+    font-size:11px;
 
-            font-weight: 650;
+    margin-bottom:5px;
+}
 
-            margin-bottom: 27px;
 
-        }
+.selection-value{
 
+    color:var(--cyan);
 
-        /* =================================================
-           OPTIONS
-        ================================================== */
+    font-weight:800;
 
-        .options {
+    font-size:14px;
+}
 
-            display: grid;
 
-            gap: 12px;
+/* =========================================================
+   QUESTION COUNT
+========================================================= */
 
-        }
+.question-settings{
 
+    margin-top:24px;
 
-        .option {
+    padding-top:25px;
 
-            position: relative;
+    border-top:
+        1px solid
+        rgba(110,190,230,.09);
+}
 
-            width: 100%;
 
-            min-height: 62px;
+.question-settings h3{
 
-            display: flex;
+    font-size:17px;
 
-            align-items: center;
+    margin-bottom:6px;
+}
 
-            gap: 14px;
 
-            padding:
-                14px 17px;
+.question-settings p{
 
-            border:
-                1px solid
-                rgba(115, 190, 230, 0.13);
+    color:var(--muted);
 
-            border-radius: 14px;
+    font-size:12px;
 
-            background:
-                rgba(8, 24, 39, 0.72);
+    margin-bottom:17px;
+}
 
-            color: #dbeaf4;
 
-            text-align: left;
+.number-buttons{
 
-            font-size: 14px;
+    display:flex;
 
-            line-height: 1.5;
+    flex-wrap:wrap;
 
-            cursor: pointer;
+    gap:9px;
+}
 
-            transition:
-                transform 0.2s ease,
-                border-color 0.2s ease,
-                background 0.2s ease,
-                box-shadow 0.2s ease;
 
-        }
+.number-btn{
 
+    min-width:65px;
 
-        .option:hover:not(.selected) {
+    height:42px;
 
-            transform:
-                translateX(5px);
+    border:
+        1px solid
+        var(--border);
 
-            border-color:
-                rgba(53,214,255,0.35);
+    border-radius:10px;
 
-            background:
-                rgba(16, 43, 66, 0.82);
+    background:
+        rgba(255,255,255,.025);
 
-            box-shadow:
-                0 8px 30px
-                rgba(0,0,0,0.16);
+    color:#bcd0dc;
 
-        }
+    font-weight:800;
 
+    cursor:pointer;
 
-        .option-letter {
+    transition:.2s;
+}
 
-            flex-shrink: 0;
 
-            width: 34px;
+.number-btn:hover{
 
-            height: 34px;
+    border-color:
+        var(--border-hover);
 
-            display: grid;
+    color:white;
+}
 
-            place-items: center;
 
-            border-radius: 10px;
+.number-btn.selected{
 
-            border:
-                1px solid
-                rgba(130,190,220,0.16);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(53,216,255,.20),
+            rgba(77,141,255,.18)
+        );
 
-            background:
-                rgba(255,255,255,0.035);
+    border-color:
+        var(--cyan);
 
-            color: #a8c5d7;
+    color:var(--cyan);
+}
 
-            font-size: 12px;
 
-            font-weight: 800;
+/* =========================================================
+   CUSTOM NUMBER
+========================================================= */
 
-        }
+.custom-count{
 
+    margin-top:15px;
 
-        .option.selected {
+    display:flex;
 
-            border-color:
-                rgba(53,214,255,0.62);
+    gap:10px;
+}
 
-            background:
-                linear-gradient(
-                    100deg,
-                    rgba(22,101,143,0.32),
-                    rgba(31,67,130,0.28)
-                );
 
-            box-shadow:
-                0 0 0 1px
-                rgba(53,214,255,0.06),
-                0 12px 35px
-                rgba(0,0,0,0.18);
+.custom-count input{
 
-        }
+    width:150px;
 
+    height:43px;
 
-        .option.selected .option-letter {
+    border:
+        1px solid
+        var(--border);
 
-            background:
-                rgba(53,214,255,0.15);
+    border-radius:10px;
 
-            border-color:
-                rgba(53,214,255,0.5);
+    background:
+        rgba(2,12,22,.65);
 
-            color: var(--cyan);
+    color:white;
 
-        }
+    padding:
+        0 13px;
 
+    outline:none;
 
-        /* =================================================
-           QUIZ FOOTER
-        ================================================== */
+    font-size:13px;
+}
 
-        .quiz-footer {
 
-            display: flex;
+.custom-count input:focus{
 
-            align-items: center;
+    border-color:
+        var(--cyan);
 
-            justify-content:
-                space-between;
+}
 
-            gap: 15px;
 
-            margin-top: 30px;
+/* =========================================================
+   START BUTTON
+========================================================= */
 
-            padding-top: 22px;
+.start-area{
 
-            border-top:
-                1px solid
-                rgba(120,180,220,0.08);
+    margin-top:28px;
 
-        }
+    display:flex;
 
+    justify-content:flex-end;
+}
 
-        .selection-status {
 
-            color: var(--muted);
+.start-btn{
 
-            font-size: 12px;
+    min-height:51px;
 
-        }
+    padding:
+        0 27px;
 
+    border:none;
 
-        .next-btn,
-        .submit-btn,
-        .restart-btn {
+    border-radius:12px;
 
-            border: none;
+    background:
+        linear-gradient(
+            135deg,
+            var(--cyan),
+            var(--blue)
+        );
 
-            min-height: 46px;
+    color:#03101a;
 
-            padding:
-                0 21px;
+    font-size:13px;
 
-            border-radius: 11px;
+    font-weight:900;
 
-            background:
+    cursor:pointer;
 
-                linear-gradient(
-                    135deg,
-                    #36d8ff,
-                    #438cff
-                );
+    box-shadow:
+        0 12px 35px
+        rgba(53,216,255,.16);
 
-            color: #03101b;
+    transition:.2s;
+}
 
-            font-weight: 800;
 
-            font-size: 13px;
+.start-btn:hover{
 
-            cursor: pointer;
+    transform:
+        translateY(-2px);
 
-            box-shadow:
-                0 10px 30px
-                rgba(53,214,255,0.15);
+    filter:
+        brightness(1.08);
+}
 
-            transition:
-                transform 0.2s ease,
-                filter 0.2s ease,
-                opacity 0.2s ease;
 
-        }
+.start-btn:disabled{
 
+    opacity:.35;
 
-        .next-btn:hover:not(:disabled),
-        .submit-btn:hover:not(:disabled),
-        .restart-btn:hover {
+    cursor:not-allowed;
 
-            transform:
-                translateY(-2px);
+    transform:none;
+}
 
-            filter:
-                brightness(1.08);
 
-        }
+/* =========================================================
+   QUIZ
+========================================================= */
 
+#quiz-section{
 
-        .next-btn:disabled {
+    margin-top:25px;
+}
 
-            opacity: 0.3;
 
-            cursor: not-allowed;
+.quiz-top{
 
-            box-shadow: none;
+    display:flex;
 
-        }
+    align-items:center;
 
+    justify-content:space-between;
 
-        /* =================================================
-           RESULT
-        ================================================== */
+    margin-bottom:15px;
+}
 
-        .result-card {
 
-            position: relative;
+.quiz-count{
 
-            overflow: hidden;
+    font-size:13px;
 
-            padding:
-                48px 30px;
+    font-weight:800;
+}
 
-            border-radius: 24px;
 
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(13, 37, 55, 0.94),
-                    rgba(7, 19, 32, 0.96)
-                );
+.quiz-answered{
 
-            border:
-                1px solid
-                var(--border-bright);
+    color:var(--muted);
 
-            box-shadow:
-                var(--shadow);
+    font-size:11px;
+}
 
-            text-align: center;
 
-        }
+.progress{
 
+    height:7px;
 
-        .result-orbit {
+    background:
+        rgba(255,255,255,.05);
 
-            width: 100px;
+    border-radius:20px;
 
-            height: 100px;
+    overflow:hidden;
 
-            margin:
-                0 auto 25px;
+    margin-bottom:35px;
+}
 
-            display: grid;
 
-            place-items: center;
+.progress-bar{
 
-            border-radius: 50%;
+    width:0%;
 
-            border:
-                1px solid
-                rgba(53,214,255,0.35);
+    height:100%;
 
-            background:
-                radial-gradient(
-                    circle,
-                    rgba(53,214,255,0.12),
-                    transparent 65%
-                );
+    background:
+        linear-gradient(
+            90deg,
+            var(--cyan),
+            var(--blue),
+            var(--green)
+        );
 
-            box-shadow:
-                0 0 50px
-                rgba(53,214,255,0.13);
+    transition:
+        width .4s ease;
+}
 
-            font-size: 42px;
 
-        }
+.question-tag{
 
+    color:var(--cyan);
 
-        .result-card h2 {
+    font-size:10px;
 
-            font-size:
-                clamp(28px, 5vw, 42px);
+    font-weight:900;
 
-            margin-bottom: 10px;
+    text-transform:uppercase;
 
-        }
+    letter-spacing:1.5px;
 
+    margin-bottom:10px;
+}
 
-        .result-subtitle {
 
-            color: var(--muted);
+#quiz-question{
 
-            font-size: 14px;
+    font-size:
+        clamp(20px,3vw,29px);
 
-            margin-bottom: 30px;
+    line-height:1.5;
 
-        }
+    margin-bottom:25px;
+}
 
 
-        .score-number {
+.options{
 
-            font-size:
-                clamp(50px, 9vw, 78px);
+    display:grid;
 
-            font-weight: 850;
+    gap:11px;
+}
 
-            line-height: 1;
 
-            background:
+.option{
 
-                linear-gradient(
-                    120deg,
-                    #ffffff,
-                    var(--cyan),
-                    #82a8ff
-                );
+    width:100%;
 
-            -webkit-background-clip: text;
+    min-height:62px;
 
-            background-clip: text;
+    display:flex;
 
-            color: transparent;
+    align-items:center;
 
-        }
+    gap:13px;
 
+    text-align:left;
 
-        .score-caption {
+    border:
+        1px solid
+        rgba(100,190,230,.13);
 
-            margin-top: 9px;
+    border-radius:14px;
 
-            color: var(--muted);
+    padding:
+        12px 15px;
 
-            font-size: 12px;
+    background:
+        rgba(5,20,34,.72);
 
-        }
+    color:#d9e8f1;
 
+    cursor:pointer;
 
-        .percentage {
+    transition:.2s;
+}
 
-            display: inline-flex;
 
-            margin:
-                22px 0;
+.option:hover{
 
-            padding:
-                9px 16px;
+    border-color:
+        rgba(53,216,255,.4);
 
-            border-radius: 999px;
+    transform:
+        translateX(4px);
+}
 
-            border:
-                1px solid
-                rgba(69,224,161,0.25);
 
-            background:
-                rgba(69,224,161,0.07);
+.option.selected{
 
-            color: var(--green);
+    border-color:
+        rgba(53,216,255,.65);
 
-            font-weight: 800;
+    background:
+        rgba(26,105,145,.25);
 
-            font-size: 14px;
+}
 
-        }
 
+.option-letter{
 
-        .result-message {
+    width:34px;
 
-            max-width: 650px;
+    height:34px;
 
-            margin:
-                0 auto 25px;
+    flex-shrink:0;
 
-            color: #b5c8d5;
+    display:grid;
 
-            font-size: 14px;
+    place-items:center;
 
-            line-height: 1.7;
+    border-radius:9px;
 
-        }
+    background:
+        rgba(255,255,255,.035);
 
+    border:
+        1px solid
+        rgba(120,190,220,.13);
 
-        /* =================================================
-           REVIEW
-        ================================================== */
+    color:#a9c2d0;
 
-        .review {
+    font-size:12px;
 
-            margin-top: 42px;
+    font-weight:900;
+}
 
-            padding-top: 30px;
 
-            border-top:
-                1px solid
-                rgba(120,180,220,0.10);
+.option.selected
+.option-letter{
 
-            text-align: left;
+    color:var(--cyan);
 
-        }
+    border-color:
+        rgba(53,216,255,.5);
 
+    background:
+        rgba(53,216,255,.10);
+}
 
-        .review-title {
 
-            margin-bottom: 20px;
+.quiz-footer{
 
-        }
+    margin-top:27px;
 
+    padding-top:21px;
 
-        .review-title h3 {
+    border-top:
+        1px solid
+        rgba(110,190,230,.08);
 
-            font-size: 23px;
+    display:flex;
 
-            margin-bottom: 7px;
+    justify-content:space-between;
 
-        }
+    align-items:center;
 
+    gap:15px;
+}
 
-        .review-title p {
 
-            color: var(--muted);
+.status{
 
-            font-size: 13px;
+    color:var(--muted);
 
-            line-height: 1.6;
+    font-size:11px;
 
-        }
+}
 
 
-        .review-item {
+.next-btn{
 
-            padding: 21px;
+    min-height:46px;
 
-            margin-bottom: 13px;
+    padding:
+        0 22px;
 
-            border:
-                1px solid
-                rgba(110,190,230,0.11);
+    border:none;
 
-            border-radius: 15px;
+    border-radius:11px;
 
-            background:
-                rgba(5,17,29,0.66);
+    background:
+        linear-gradient(
+            135deg,
+            var(--cyan),
+            var(--blue)
+        );
 
-        }
+    color:#03101a;
 
+    font-weight:900;
 
-        .review-item.correct {
+    cursor:pointer;
+}
 
-            border-left:
-                4px solid
-                var(--green);
 
-        }
+.next-btn:disabled{
 
+    opacity:.3;
 
-        .review-item.wrong {
+    cursor:not-allowed;
+}
 
-            border-left:
-                4px solid
-                var(--red);
 
-        }
+/* =========================================================
+   RESULT
+========================================================= */
 
+.result{
 
-        .review-number {
+    margin-top:25px;
 
-            color: var(--cyan);
+    padding:40px 25px;
 
-            font-size: 11px;
+    text-align:center;
 
-            font-weight: 800;
+    border-radius:24px;
 
-            letter-spacing: 1px;
+    border:
+        1px solid
+        rgba(53,216,255,.25);
 
-            text-transform: uppercase;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(13,39,58,.95),
+            rgba(5,18,31,.97)
+        );
 
-            margin-bottom: 9px;
+    box-shadow:var(--shadow);
+}
 
-        }
 
+.result-icon{
 
-        .review-question {
+    width:90px;
 
-            font-size: 15px;
+    height:90px;
 
-            font-weight: 700;
+    margin:
+        0 auto 20px;
 
-            line-height: 1.6;
+    display:grid;
 
-            margin-bottom: 14px;
+    place-items:center;
 
-        }
+    border-radius:50%;
 
+    border:
+        1px solid
+        rgba(53,216,255,.35);
 
-        .answer-line {
+    background:
+        rgba(53,216,255,.07);
 
-            padding:
-                10px 12px;
+    font-size:40px;
 
-            border-radius: 9px;
+    box-shadow:
+        0 0 45px
+        rgba(53,216,255,.12);
+}
 
-            margin-top: 7px;
 
-            font-size: 13px;
+.result h2{
 
-            line-height: 1.55;
+    font-size:32px;
 
-        }
+    margin-bottom:7px;
+}
 
 
-        .answer-line.student {
+.result-subtitle{
 
-            background:
-                rgba(255,255,255,0.035);
+    color:var(--muted);
 
-            color: #b7c5cf;
+    font-size:13px;
+}
 
-        }
 
+.score{
 
-        .answer-line.student.wrong {
+    font-size:
+        clamp(55px,9vw,80px);
 
-            border:
-                1px solid
-                rgba(255,107,122,0.18);
+    font-weight:900;
 
-            background:
-                rgba(255,107,122,0.055);
+    margin-top:25px;
 
-        }
+    background:
+        linear-gradient(
+            120deg,
+            white,
+            var(--cyan),
+            #789fff
+        );
 
+    -webkit-background-clip:text;
 
-        .answer-line.student.correct {
+    background-clip:text;
 
-            border:
-                1px solid
-                rgba(69,224,161,0.18);
+    color:transparent;
+}
 
-            background:
-                rgba(69,224,161,0.055);
 
-        }
+.score-percent{
 
+    display:inline-block;
 
-        .answer-line.correct-answer {
+    margin-top:10px;
 
-            border:
-                1px solid
-                rgba(69,224,161,0.18);
+    padding:
+        8px 16px;
 
-            background:
-                rgba(69,224,161,0.06);
+    border-radius:100px;
 
-            color:
-                #c5e7d7;
+    color:var(--green);
 
-        }
+    border:
+        1px solid
+        rgba(69,224,163,.25);
 
+    background:
+        rgba(69,224,163,.06);
 
-        .reason {
+    font-size:13px;
 
-            margin-top: 13px;
+    font-weight:800;
+}
 
-            padding:
-                14px;
 
-            border-radius: 10px;
+.result-message{
 
-            background:
-                rgba(53,214,255,0.045);
+    max-width:650px;
 
-            border:
-                1px solid
-                rgba(53,214,255,0.10);
+    margin:
+        20px auto;
 
-            color: #9fb7c7;
+    color:#a9bdca;
 
-            font-size: 13px;
+    line-height:1.7;
 
-            line-height: 1.7;
+    font-size:13px;
+}
 
-        }
 
+/* =========================================================
+   REVIEW
+========================================================= */
 
-        .reason strong {
+.review{
 
-            color: var(--cyan);
+    margin-top:35px;
 
-        }
+    padding-top:28px;
 
+    border-top:
+        1px solid
+        rgba(110,190,230,.09);
 
-        /* =================================================
-           RESULT BUTTONS
-        ================================================== */
+    text-align:left;
+}
 
-        .result-actions {
 
-            display: flex;
+.review h3{
 
-            justify-content: center;
+    font-size:22px;
 
-            gap: 10px;
+    margin-bottom:6px;
+}
 
-            flex-wrap: wrap;
 
-            margin-top: 27px;
+.review-intro{
 
-        }
+    color:var(--muted);
 
+    font-size:12px;
 
-        .secondary-btn {
+    margin-bottom:20px;
+}
 
-            min-height: 46px;
 
-            padding:
-                0 20px;
+.review-item{
 
-            border-radius: 11px;
+    margin-bottom:12px;
 
-            border:
-                1px solid
-                rgba(120,190,230,0.22);
+    padding:20px;
 
-            background:
-                rgba(255,255,255,0.035);
+    border-radius:15px;
 
-            color: white;
+    background:
+        rgba(3,15,26,.68);
 
-            text-decoration: none;
+    border:
+        1px solid
+        rgba(110,190,230,.11);
 
-            font-size: 13px;
+}
 
-            font-weight: 700;
 
-            display: inline-flex;
+.review-item.correct{
 
-            align-items: center;
+    border-left:
+        4px solid
+        var(--green);
+}
 
-            justify-content: center;
 
-            cursor: pointer;
+.review-item.wrong{
 
-        }
+    border-left:
+        4px solid
+        var(--red);
+}
 
 
-        /* =================================================
-           INFO SECTION
-        ================================================== */
+.review-number{
 
-        .info-section {
+    color:var(--cyan);
 
-            margin:
-                22px 0 65px;
+    font-size:10px;
 
-            padding:
-                25px;
+    font-weight:900;
 
-            border:
-                1px solid
-                var(--border);
+    letter-spacing:1px;
 
-            border-radius: 18px;
+    margin-bottom:9px;
+}
 
-            background:
-                rgba(8,24,39,0.56);
 
-        }
+.review-question{
 
+    font-size:15px;
 
-        .info-section h3 {
+    font-weight:750;
 
-            font-size: 18px;
+    line-height:1.6;
 
-            margin-bottom: 8px;
+    margin-bottom:13px;
+}
 
-        }
 
+.answer{
 
-        .info-section p {
+    padding:
+        10px 12px;
 
-            color: var(--muted);
+    border-radius:9px;
 
-            font-size: 13px;
+    font-size:12px;
 
-            line-height: 1.7;
+    line-height:1.5;
 
-        }
+    margin-top:6px;
+}
 
 
-        /* =================================================
-           HIDDEN
-        ================================================== */
+.student-answer{
 
-        .hidden {
+    background:
+        rgba(255,255,255,.035);
 
-            display: none !important;
+    color:#afc1cc;
+}
 
-        }
 
+.correct-answer{
 
-        /* =================================================
-           FOOTER
-        ================================================== */
+    background:
+        rgba(69,224,163,.055);
 
-        footer {
+    border:
+        1px solid
+        rgba(69,224,163,.16);
 
-            padding:
-                28px 20px;
+    color:#c3e8d6;
+}
 
-            text-align: center;
 
-            color: #637b8c;
+.reason{
 
-            border-top:
-                1px solid
-                rgba(100,180,220,0.07);
+    margin-top:12px;
 
-            font-size: 12px;
+    padding:14px;
 
-            line-height: 2;
+    border-radius:10px;
 
-        }
+    background:
+        rgba(53,216,255,.045);
 
+    border:
+        1px solid
+        rgba(53,216,255,.10);
 
-        /* =================================================
-           MOBILE
-        ================================================== */
+    color:#9db5c4;
 
-        @media (max-width: 650px) {
+    font-size:12px;
 
-            .navbar {
+    line-height:1.7;
+}
 
-                height: 64px;
 
-                padding:
-                    0 5%;
+.reason strong{
 
-            }
+    color:var(--cyan);
+}
 
 
-            .nav-links {
+/* =========================================================
+   RESULT BUTTON
+========================================================= */
 
-                gap: 13px;
+.restart-btn{
 
-            }
+    margin-top:15px;
 
+    min-height:46px;
 
-            .nav-links a {
+    padding:
+        0 22px;
 
-                font-size: 11px;
+    border:none;
 
-            }
+    border-radius:11px;
 
+    background:
+        linear-gradient(
+            135deg,
+            var(--cyan),
+            var(--blue)
+        );
 
-            .brand {
+    color:#03101a;
 
-                font-size: 14px;
+    font-weight:900;
 
-            }
+    cursor:pointer;
+}
 
 
-            .brand-icon {
+/* =========================================================
+   UTILITIES
+========================================================= */
 
-                width: 32px;
+.hidden{
 
-                height: 32px;
+    display:none !important;
+}
 
-            }
 
+footer{
 
-            .hero {
+    text-align:center;
 
-                padding:
-                    55px 10px 35px;
+    padding:
+        35px 20px;
 
-            }
+    color:#607888;
 
+    font-size:11px;
 
-            .hero h1 {
+    line-height:2;
+}
 
-                letter-spacing:
-                    -1.8px;
 
-            }
+/* =========================================================
+   MOBILE
+========================================================= */
 
+@media(max-width:700px){
 
-            .hero p {
+    .navbar{
 
-                font-size: 13px;
+        padding:
+            0 4%;
 
-            }
+    }
 
+    .nav-links{
 
-            .stats {
+        gap:12px;
 
-                gap: 7px;
+    }
 
-            }
+    .nav-links a{
 
+        font-size:10px;
 
-            .stat {
+    }
 
-                padding: 12px 7px;
+    .hero{
 
-            }
+        padding:
+            50px 8px 30px;
 
+    }
 
-            .stat strong {
+    .hero h1{
 
-                font-size: 16px;
+        letter-spacing:-1.5px;
 
-            }
+    }
 
+    .panel{
 
-            .stat span {
+        padding:20px;
 
-                font-size: 9px;
+        border-radius:19px;
 
-            }
+    }
 
+    .lesson-grid{
 
-            .quiz-card {
+        grid-template-columns:1fr;
 
-                padding: 21px;
+    }
 
-                border-radius: 18px;
+    .all-chapters{
 
-            }
+        grid-column:auto;
 
+    }
 
-            .quiz-footer {
+    .selection-info{
 
-                align-items:
-                    stretch;
+        align-items:flex-start;
 
-                flex-direction:
-                    column;
+        flex-direction:column;
 
-            }
+    }
 
+    .start-area{
 
-            .next-btn {
+        display:block;
 
-                width: 100%;
+    }
 
-            }
+    .start-btn{
 
+        width:100%;
 
-            .selection-status {
+    }
 
-                text-align: center;
+    .quiz-footer{
 
-            }
+        flex-direction:column;
 
+        align-items:stretch;
 
-            .result-card {
+    }
 
-                padding:
-                    40px 17px;
+    .next-btn{
 
-            }
+        width:100%;
 
+    }
 
-            .review-item {
+}
 
-                padding: 17px;
-
-            }
-
-        }
-
-
-        /* =================================================
-           ACCESSIBILITY
-        ================================================== */
-
-        button:focus-visible,
-        a:focus-visible {
-
-            outline:
-                2px solid
-                var(--cyan);
-
-            outline-offset: 3px;
-
-        }
-
-
-        @media (prefers-reduced-motion: reduce) {
-
-            * {
-
-                animation-duration:
-                    0.01ms !important;
-
-                transition-duration:
-                    0.01ms !important;
-
-            }
-
-        }
-
-    </style>
+</style>
 
 </head>
 
@@ -1762,980 +1792,2033 @@
 <body>
 
 
-    <!-- =====================================================
-         FLOATING SCIENCE PARTICLES
-    ====================================================== -->
+<!-- =======================================================
+     PARTICLES
+======================================================== -->
 
-    <div class="particles">
+<div class="particles">
 
-        <span class="particle"></span>
-        <span class="particle"></span>
-        <span class="particle"></span>
-        <span class="particle"></span>
-        <span class="particle"></span>
-        <span class="particle"></span>
-        <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+
+</div>
+
+
+<!-- =======================================================
+     NAVIGATION
+======================================================== -->
+
+<nav class="navbar">
+
+    <a
+        href="index.html"
+        class="logo">
+
+        <span class="logo-icon">
+            ⚗
+        </span>
+
+        Kandel Sarkar
+
+    </a>
+
+
+    <div class="nav-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="projects.html">
+            Projects
+        </a>
+
+        <a href="mcq.html">
+            MCQ Lab
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- =======================================================
+     MAIN
+======================================================== -->
+
+<main class="container">
+
+
+<!-- =======================================================
+     HERO
+======================================================== -->
+
+<section class="hero">
+
+    <div class="badge">
+
+        <span class="badge-dot"></span>
+
+        CLASS 10 • SCIENCE • NEPAL
+
+    </div>
+
+
+    <h1>
+
+        Science MCQ Lab
+
+    </h1>
+
+
+    <p>
+
+        Choose your lesson, decide how many questions
+        you want to solve, and test your scientific
+        understanding at your own pace.
+
+    </p>
+
+</section>
+
+
+
+<!-- =======================================================
+     SELECTION PANEL
+======================================================== -->
+
+<section
+    id="selection-section"
+    class="panel">
+
+
+    <div class="panel-header">
+
+        <h2>
+
+            🧬 Choose Your Experiment
+
+        </h2>
+
+
+        <p>
+
+            Select a lesson or practice questions from
+            the complete Science course.
+
+        </p>
 
     </div>
 
 
 
-    <!-- =====================================================
-         NAVIGATION
-    ====================================================== -->
+    <!-- LESSONS -->
 
-    <nav class="navbar">
+    <div
+        id="lesson-grid"
+        class="lesson-grid">
 
-        <a
-            href="index.html"
-            class="brand">
-
-            <span class="brand-icon">
-                ⚗
-            </span>
-
-            <span>
-                Kandel Sarkar
-            </span>
-
-        </a>
-
-
-        <div class="nav-links">
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="projects.html">
-                Projects
-            </a>
-
-            <a
-                href="mcq.html"
-                class="active">
-
-                MCQ Lab
-
-            </a>
-
-        </div>
-
-    </nav>
+    </div>
 
 
 
-    <!-- =====================================================
-         MAIN
-    ====================================================== -->
+    <!-- SELECTED LESSON -->
 
-    <main class="container">
+    <div class="selection-info">
 
+        <div>
 
-        <!-- =================================================
-             HERO
-        ================================================== -->
+            <div class="selection-label">
 
-        <section class="hero">
-
-            <div class="science-label">
-
-                <span class="pulse-dot"></span>
-
-                Class 10 • NEB • Science Lab
+                SELECTED LESSON
 
             </div>
 
 
-            <h1>
+            <div
+                id="selected-lesson"
+                class="selection-value">
 
-                Science MCQ Lab
-
-            </h1>
-
-
-            <p>
-
-                Think like a scientist. Test your knowledge,
-                complete the entire challenge, and discover
-                exactly where you need to improve.
-
-            </p>
-
-        </section>
-
-
-
-        <!-- =================================================
-             STATS
-        ================================================== -->
-
-        <div class="stats">
-
-            <div class="stat">
-
-                <strong>
-                    20
-                </strong>
-
-                <span>
-                    Questions
-                </span>
-
-            </div>
-
-
-            <div class="stat">
-
-                <strong>
-                    4
-                </strong>
-
-                <span>
-                    Options / Question
-                </span>
-
-            </div>
-
-
-            <div class="stat">
-
-                <strong>
-                    SEE
-                </strong>
-
-                <span>
-                    Class 10 Preparation
-                </span>
+                Select a lesson to continue
 
             </div>
 
         </div>
 
 
+        <div>
 
-        <!-- =================================================
-             QUIZ CARD
-        ================================================== -->
+            <div class="selection-label">
 
-        <section
-            id="quiz-card"
-            class="quiz-card">
-
-
-            <div class="quiz-header">
-
-                <span
-                    id="question-count"
-                    class="question-count">
-
-                    Question 1 of 20
-
-                </span>
-
-
-                <span
-                    id="answered-count"
-                    class="score-preview">
-
-                    Answered: 0 / 20
-
-                </span>
+                QUESTION LIMIT
 
             </div>
 
 
+            <div class="selection-value">
 
-            <!-- Progress -->
-
-            <div class="progress-track">
-
-                <div
-                    id="progress-fill"
-                    class="progress-fill">
-                </div>
+                Maximum 100
 
             </div>
 
+        </div>
+
+    </div>
 
 
-            <!-- Question -->
 
-            <div class="question-label">
+    <!-- QUESTION COUNT -->
 
-                Scientific Challenge
+    <div class="question-settings">
+
+        <h3>
+
+            🎯 How many questions?
+
+        </h3>
+
+
+        <p>
+
+            You can choose any number from 1 to 100.
+
+        </p>
+
+
+        <div
+            id="number-buttons"
+            class="number-buttons">
+
+            <button
+                class="number-btn"
+                data-number="10">
+
+                10
+
+            </button>
+
+
+            <button
+                class="number-btn"
+                data-number="20">
+
+                20
+
+            </button>
+
+
+            <button
+                class="number-btn selected"
+                data-number="25">
+
+                25
+
+            </button>
+
+
+            <button
+                class="number-btn"
+                data-number="50">
+
+                50
+
+            </button>
+
+
+            <button
+                class="number-btn"
+                data-number="75">
+
+                75
+
+            </button>
+
+
+            <button
+                class="number-btn"
+                data-number="100">
+
+                100
+
+            </button>
+
+        </div>
+
+
+        <div class="custom-count">
+
+            <input
+                id="custom-count"
+                type="number"
+                min="1"
+                max="100"
+                placeholder="Custom: 1–100">
+
+        </div>
+
+    </div>
+
+
+
+    <!-- START -->
+
+    <div class="start-area">
+
+        <button
+            id="start-btn"
+            class="start-btn"
+            disabled>
+
+            🔬 Select a Lesson First
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     QUIZ SECTION
+======================================================== -->
+
+<section
+    id="quiz-section"
+    class="panel hidden">
+
+
+    <div class="quiz-top">
+
+        <span
+            id="quiz-count"
+            class="quiz-count">
+
+            Question 1
+
+        </span>
+
+
+        <span
+            id="quiz-answered"
+            class="quiz-answered">
+
+            Answered: 0
+
+        </span>
+
+    </div>
+
+
+    <div class="progress">
+
+        <div
+            id="progress-bar"
+            class="progress-bar">
+
+        </div>
+
+    </div>
+
+
+    <div class="question-tag">
+
+        SCIENTIFIC CHALLENGE
+
+    </div>
+
+
+    <h2 id="quiz-question">
+
+        Question loading...
+
+    </h2>
+
+
+    <div
+        id="quiz-options"
+        class="options">
+
+    </div>
+
+
+    <div class="quiz-footer">
+
+        <span
+            id="quiz-status"
+            class="status">
+
+            Select an answer.
+
+        </span>
+
+
+        <button
+            id="next-btn"
+            class="next-btn"
+            disabled>
+
+            Next Question →
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     RESULT SECTION
+======================================================== -->
+
+<section
+    id="result-section"
+    class="result hidden">
+
+
+    <div class="result-icon">
+
+        🧪
+
+    </div>
+
+
+    <h2>
+
+        Experiment Complete
+
+    </h2>
+
+
+    <p class="result-subtitle">
+
+        Your Science MCQ session is finished.
+
+    </p>
+
+
+    <div
+        id="score"
+        class="score">
+
+        0 / 0
+
+    </div>
+
+
+    <div
+        id="score-percent"
+        class="score-percent">
+
+        0%
+
+    </div>
+
+
+    <p
+        id="result-message"
+        class="result-message">
+
+    </p>
+
+
+    <button
+        id="restart-btn"
+        class="restart-btn">
+
+        🔄 Practice Again
+
+    </button>
+
+
+
+    <!-- REVIEW -->
+
+    <div class="review">
+
+        <h3>
+
+            📊 Detailed Answer Analysis
+
+        </h3>
+
+
+        <p class="review-intro">
+
+            Correct answers and scientific explanations
+            are revealed only after completing the test.
+
+        </p>
+
+
+        <div
+            id="review-container">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =======================================================
+     FOOTER
+======================================================== -->
+
+<footer>
+
+    Kandel Sarkar • Science MCQ Lab
+
+    <br>
+
+    Class 10 Science Practice Platform
+
+</footer>
+
+
+
+<script>
+
+/* =========================================================
+   LESSON DATABASE
+
+   Based on the 19 units shown in your uploaded
+   Science Grade 10 contents page.
+========================================================= */
+
+const lessons = [
+
+    {
+        id:1,
+        name:"Scientific Study"
+    },
+
+    {
+        id:2,
+        name:"Classification of Living Beings"
+    },
+
+    {
+        id:3,
+        name:"Honey Bee"
+    },
+
+    {
+        id:4,
+        name:"Heredity"
+    },
+
+    {
+        id:5,
+        name:"Physiological Structure and Life Process"
+    },
+
+    {
+        id:6,
+        name:"Nature and Environment"
+    },
+
+    {
+        id:7,
+        name:"Motion and Force"
+    },
+
+    {
+        id:8,
+        name:"Pressure"
+    },
+
+    {
+        id:9,
+        name:"Heat"
+    },
+
+    {
+        id:10,
+        name:"Wave"
+    },
+
+    {
+        id:11,
+        name:"Electricity and Magnetism"
+    },
+
+    {
+        id:12,
+        name:"Universe"
+    },
+
+    {
+        id:13,
+        name:"Information and Communication Technology"
+    },
+
+    {
+        id:14,
+        name:"Classification of Elements"
+    },
+
+    {
+        id:15,
+        name:"Chemical Reaction"
+    },
+
+    {
+        id:16,
+        name:"Gases"
+    },
+
+    {
+        id:17,
+        name:"Metal and Not metals"
+    },
+
+    {
+        id:18,
+        name:"Hydrocarbon and its Compounds"
+    },
+
+    {
+        id:19,
+        name:"Chemicals used in Daily Life"
+    }
+
+];
+
+
+/* =========================================================
+   QUESTION DATABASE
+
+   IMPORTANT:
+
+   This is where we will put the complete MCQ bank.
+
+   Each question has:
+
+   question
+   options
+   answer
+   reason
+   lesson
+
+========================================================= */
+
+const questionBank = [
+
+    /* =====================================================
+       LESSON 1
+       SCIENTIFIC STUDY
+    ====================================================== */
+
+    {
+        lesson:1,
+
+        question:
+            "Which of the following is an important feature of scientific study?",
+
+        options:[
+            "Guessing without evidence",
+            "Systematic investigation",
+            "Ignoring observations",
+            "Accepting every claim"
+        ],
+
+        answer:1,
+
+        reason:
+            "Scientific study uses systematic observation, evidence, experimentation and logical analysis to investigate phenomena."
+    },
+
+
+    {
+        lesson:1,
+
+        question:
+            "What is a variable in scientific research?",
+
+        options:[
+            "A factor that can change",
+            "A fixed conclusion",
+            "A scientific instrument",
+            "A laboratory building"
+        ],
+
+        answer:0,
+
+        reason:
+            "A variable is a characteristic or factor that can change or take different values during an investigation."
+    },
+
+
+    /* =====================================================
+       LESSON 2
+       CLASSIFICATION OF LIVING BEINGS
+    ====================================================== */
+
+    {
+        lesson:2,
+
+        question:
+            "What is the main purpose of biological classification?",
+
+        options:[
+            "To make organisms larger",
+            "To organize organisms based on similarities and differences",
+            "To change organisms",
+            "To eliminate species"
+        ],
+
+        answer:1,
+
+        reason:
+            "Classification organizes living organisms into groups based on shared characteristics, making identification and study easier."
+    },
+
+
+    {
+        lesson:2,
+
+        question:
+            "Which group contains organisms that generally lack a true nucleus?",
+
+        options:[
+            "Prokaryotes",
+            "Mammals",
+            "Birds",
+            "Flowering plants"
+        ],
+
+        answer:0,
+
+        reason:
+            "Prokaryotic cells do not have a membrane-bound true nucleus. Their genetic material is located in the nucleoid region."
+    },
+
+
+    /* =====================================================
+       LESSON 3
+       HONEY BEE
+    ====================================================== */
+
+    {
+        lesson:3,
+
+        question:
+            "Which caste of honey bee is the main reproductive female of the colony?",
+
+        options:[
+            "Worker",
+            "Queen",
+            "Drone",
+            "Larva"
+        ],
+
+        answer:1,
+
+        reason:
+            "The queen is the principal reproductive female in a honey bee colony and lays eggs."
+    },
+
+
+    {
+        lesson:3,
+
+        question:
+            "Which honey bee caste is male?",
+
+        options:[
+            "Queen",
+            "Worker",
+            "Drone",
+            "Nurse bee"
+        ],
+
+        answer:2,
+
+        reason:
+            "Drones are male honey bees. Their main biological role is to mate with a queen."
+    },
+
+
+    /* =====================================================
+       LESSON 4
+       HEREDITY
+    ====================================================== */
+
+    {
+        lesson:4,
+
+        question:
+            "What is heredity?",
+
+        options:[
+            "Transfer of characteristics from parents to offspring",
+            "Movement of animals",
+            "Growth of plants only",
+            "Production of energy"
+        ],
+
+        answer:0,
+
+        reason:
+            "Heredity is the transmission of genetic characteristics from parents to their offspring."
+    },
+
+
+    {
+        lesson:4,
+
+        question:
+            "What is the basic unit of heredity?",
+
+        options:[
+            "Tissue",
+            "Gene",
+            "Organ",
+            "Cell wall"
+        ],
+
+        answer:1,
+
+        reason:
+            "A gene is a unit of heredity that contains information influencing particular biological characteristics."
+    },
+
+
+    /* =====================================================
+       LESSON 5
+       PHYSIOLOGICAL STRUCTURE AND LIFE PROCESS
+    ====================================================== */
+
+    {
+        lesson:5,
+
+        question:
+            "Which organ pumps blood throughout the human body?",
+
+        options:[
+            "Lungs",
+            "Heart",
+            "Kidney",
+            "Stomach"
+        ],
+
+        answer:1,
+
+        reason:
+            "The heart is a muscular organ that contracts rhythmically to pump blood through the circulatory system."
+    },
+
+
+    {
+        lesson:5,
+
+        question:
+            "Which organ is mainly responsible for filtering wastes from the blood?",
+
+        options:[
+            "Kidney",
+            "Heart",
+            "Lung",
+            "Brain"
+        ],
+
+        answer:0,
+
+        reason:
+            "The kidneys filter blood and remove metabolic wastes and excess substances through urine formation."
+    },
+
+
+    /* =====================================================
+       LESSON 6
+       NATURE AND ENVIRONMENT
+    ====================================================== */
+
+    {
+        lesson:6,
+
+        question:
+            "Which organisms are primary producers in most ecosystems?",
+
+        options:[
+            "Green plants",
+            "Carnivores",
+            "Decomposers",
+            "Parasites"
+        ],
+
+        answer:0,
+
+        reason:
+            "Green plants produce organic food through photosynthesis and form the primary energy base of many ecosystems."
+    },
+
+
+    {
+        lesson:6,
+
+        question:
+            "Which gas is strongly associated with the enhanced greenhouse effect?",
+
+        options:[
+            "Carbon dioxide",
+            "Helium",
+            "Neon",
+            "Argon"
+        ],
+
+        answer:0,
+
+        reason:
+            "Carbon dioxide is an important greenhouse gas that contributes to warming by absorbing outgoing infrared radiation."
+    },
+
+
+    /* =====================================================
+       LESSON 7
+       MOTION AND FORCE
+    ====================================================== */
+
+    {
+        lesson:7,
+
+        question:
+            "What is the SI unit of force?",
+
+        options:[
+            "Joule",
+            "Newton",
+            "Watt",
+            "Pascal"
+        ],
+
+        answer:1,
+
+        reason:
+            "The SI unit of force is the Newton (N). One Newton is equivalent to kg·m/s²."
+    },
+
+
+    {
+        lesson:7,
+
+        question:
+            "What is the approximate acceleration due to gravity near Earth's surface?",
+
+        options:[
+            "2.8 m/s²",
+            "5.6 m/s²",
+            "9.8 m/s²",
+            "19.6 m/s²"
+        ],
+
+        answer:2,
+
+        reason:
+            "The average acceleration due to gravity near Earth's surface is approximately 9.8 m/s²."
+    },
+
+
+    /* =====================================================
+       LESSON 8
+       PRESSURE
+    ====================================================== */
+
+    {
+        lesson:8,
+
+        question:
+            "What is the SI unit of pressure?",
+
+        options:[
+            "Newton",
+            "Joule",
+            "Pascal",
+            "Watt"
+        ],
+
+        answer:2,
+
+        reason:
+            "Pressure is measured in Pascal (Pa), which is equivalent to one Newton per square metre."
+    },
+
+
+    {
+        lesson:8,
+
+        question:
+            "Pressure is defined as:",
+
+        options:[
+            "Force multiplied by area",
+            "Force divided by area",
+            "Area divided by force",
+            "Mass divided by volume"
+        ],
+
+        answer:1,
+
+        reason:
+            "Pressure is the normal force acting per unit area: P = F/A."
+    },
+
+
+    /* =====================================================
+       LESSON 9
+       HEAT
+    ====================================================== */
+
+    {
+        lesson:9,
+
+        question:
+            "Which instrument is commonly used to measure temperature?",
+
+        options:[
+            "Barometer",
+            "Thermometer",
+            "Ammeter",
+            "Voltmeter"
+        ],
+
+        answer:1,
+
+        reason:
+            "A thermometer measures temperature by using a measurable physical property that changes with temperature."
+    },
+
+
+    {
+        lesson:9,
+
+        question:
+            "Heat naturally flows from:",
+
+        options:[
+            "Cold body to hot body",
+            "Hot body to cold body",
+            "Low pressure to high pressure",
+            "Small object to large object"
+        ],
+
+        answer:1,
+
+        reason:
+            "Thermal energy naturally transfers from a region of higher temperature to a region of lower temperature."
+    },
+
+
+    /* =====================================================
+       LESSON 10
+       WAVE
+    ====================================================== */
+
+    {
+        lesson:10,
+
+        question:
+            "Which quantity describes the maximum displacement of a particle from its mean position?",
+
+        options:[
+            "Frequency",
+            "Amplitude",
+            "Wavelength",
+            "Period"
+        ],
+
+        answer:1,
+
+        reason:
+            "Amplitude is the maximum displacement of a vibrating particle from its equilibrium or mean position."
+    },
+
+
+    {
+        lesson:10,
+
+        question:
+            "What is the SI unit of frequency?",
+
+        options:[
+            "Metre",
+            "Second",
+            "Hertz",
+            "Newton"
+        ],
+
+        answer:2,
+
+        reason:
+            "Frequency is measured in Hertz (Hz), meaning cycles or oscillations per second."
+    },
+
+
+    /* =====================================================
+       LESSON 11
+       ELECTRICITY AND MAGNETISM
+    ====================================================== */
+
+    {
+        lesson:11,
+
+        question:
+            "Which instrument measures electric current?",
+
+        options:[
+            "Voltmeter",
+            "Ammeter",
+            "Barometer",
+            "Thermometer"
+        ],
+
+        answer:1,
+
+        reason:
+            "An ammeter is used to measure electric current and is connected in series in a circuit."
+    },
+
+
+    {
+        lesson:11,
+
+        question:
+            "Which instrument measures potential difference?",
+
+        options:[
+            "Ammeter",
+            "Voltmeter",
+            "Galvanometer only",
+            "Barometer"
+        ],
+
+        answer:1,
+
+        reason:
+            "A voltmeter measures potential difference between two points and is connected in parallel across the component."
+    },
+
+
+    /* =====================================================
+       LESSON 12
+       UNIVERSE
+    ====================================================== */
+
+    {
+        lesson:12,
+
+        question:
+            "Which star is at the centre of our solar system?",
+
+        options:[
+            "Sirius",
+            "Polaris",
+            "The Sun",
+            "Betelgeuse"
+        ],
+
+        answer:2,
+
+        reason:
+            "The Sun is the star at the centre of our solar system, and the planets orbit it due to gravity."
+    },
+
+
+    {
+        lesson:12,
+
+        question:
+            "Which galaxy contains our solar system?",
+
+        options:[
+            "Andromeda Galaxy",
+            "Milky Way Galaxy",
+            "Whirlpool Galaxy",
+            "Sombrero Galaxy"
+        ],
+
+        answer:1,
+
+        reason:
+            "Our solar system is located in the Milky Way galaxy."
+    },
+
+
+    /* =====================================================
+       LESSON 13
+       ICT
+    ====================================================== */
+
+    {
+        lesson:13,
+
+        question:
+            "What does ICT stand for?",
+
+        options:[
+            "Information and Communication Technology",
+            "International Computer Theory",
+            "Internet Control Technology",
+            "Information Calculation Technique"
+        ],
+
+        answer:0,
+
+        reason:
+            "ICT stands for Information and Communication Technology and covers technologies used to process, store and communicate information."
+    },
+
+
+    {
+        lesson:13,
+
+        question:
+            "Which device is primarily used to process data in a computer?",
+
+        options:[
+            "CPU",
+            "Monitor",
+            "Keyboard",
+            "Speaker"
+        ],
+
+        answer:0,
+
+        reason:
+            "The CPU, or central processing unit, executes instructions and performs calculations needed to process data."
+    },
+
+
+    /* =====================================================
+       LESSON 14
+       CLASSIFICATION OF ELEMENTS
+    ====================================================== */
+
+    {
+        lesson:14,
+
+        question:
+            "What is the modern periodic table mainly arranged according to?",
+
+        options:[
+            "Atomic number",
+            "Colour",
+            "Density only",
+            "Melting point only"
+        ],
+
+        answer:0,
+
+        reason:
+            "The modern periodic table arranges elements in increasing order of atomic number."
+    },
+
+
+    {
+        lesson:14,
+
+        question:
+            "Which element is a noble gas?",
+
+        options:[
+            "Sodium",
+            "Chlorine",
+            "Neon",
+            "Calcium"
+        ],
+
+        answer:2,
+
+        reason:
+            "Neon belongs to Group 18, the noble gases, which have very low chemical reactivity under ordinary conditions."
+    },
+
+
+    /* =====================================================
+       LESSON 15
+       CHEMICAL REACTION
+    ====================================================== */
+
+    {
+        lesson:15,
+
+        question:
+            "What is a chemical reaction?",
+
+        options:[
+            "A process in which new substances are formed",
+            "Only a change in shape",
+            "Only melting",
+            "Only breaking an object"
+        ],
+
+        answer:0,
+
+        reason:
+            "A chemical reaction involves rearrangement of atoms and results in the formation of one or more new substances."
+    },
+
+
+    {
+        lesson:15,
+
+        question:
+            "Which gas is commonly produced when an acid reacts with a carbonate?",
+
+        options:[
+            "Oxygen",
+            "Carbon dioxide",
+            "Nitrogen",
+            "Hydrogen"
+        ],
+
+        answer:1,
+
+        reason:
+            "Acids react with carbonates to produce a salt, water and carbon dioxide gas."
+    },
+
+
+    /* =====================================================
+       LESSON 16
+       GASES
+    ====================================================== */
+
+    {
+        lesson:16,
+
+        question:
+            "Which gas is necessary for normal combustion?",
+
+        options:[
+            "Oxygen",
+            "Nitrogen",
+            "Helium",
+            "Neon"
+        ],
+
+        answer:0,
+
+        reason:
+            "Oxygen supports combustion by participating in oxidation reactions that release energy."
+    },
+
+
+    {
+        lesson:16,
+
+        question:
+            "Which gas is the most abundant component of Earth's atmosphere?",
+
+        options:[
+            "Oxygen",
+            "Carbon dioxide",
+            "Nitrogen",
+            "Hydrogen"
+        ],
+
+        answer:2,
+
+        reason:
+            "Nitrogen makes up the largest fraction of Earth's atmosphere, approximately 78% by volume."
+    },
+
+
+    /* =====================================================
+       LESSON 17
+       METALS AND NON-METALS
+    ====================================================== */
+
+    {
+        lesson:17,
+
+        question:
+            "Which property is generally associated with metals?",
+
+        options:[
+            "Good electrical conductivity",
+            "Complete lack of conductivity",
+            "Always brittle",
+            "Always gaseous"
+        ],
+
+        answer:0,
+
+        reason:
+            "Many metals contain mobile electrons that allow them to conduct heat and electricity effectively."
+    },
+
+
+    {
+        lesson:17,
+
+        question:
+            "Which of the following is a non-metal?",
+
+        options:[
+            "Iron",
+            "Copper",
+            "Sulfur",
+            "Aluminium"
+        ],
+
+        answer:2,
+
+        reason:
+            "Sulfur is classified as a non-metal and generally lacks the typical metallic properties of elements such as iron and copper."
+    },
+
+
+    /* =====================================================
+       LESSON 18
+       HYDROCARBON
+    ====================================================== */
+
+    {
+        lesson:18,
+
+        question:
+            "Hydrocarbons contain which two elements?",
+
+        options:[
+            "Carbon and hydrogen",
+            "Carbon and oxygen",
+            "Hydrogen and nitrogen",
+            "Oxygen and nitrogen"
+        ],
+
+        answer:0,
+
+        reason:
+            "Hydrocarbons are organic compounds made exclusively of carbon and hydrogen."
+    },
+
+
+    {
+        lesson:18,
+
+        question:
+            "Which of the following is an alkane?",
+
+        options:[
+            "Methane",
+            "Ethene",
+            "Ethyne",
+            "Benzene"
+        ],
+
+        answer:0,
+
+        reason:
+            "Methane (CH₄) is the simplest alkane. Alkanes contain only single carbon-carbon bonds."
+    },
+
+
+    /* =====================================================
+       LESSON 19
+       CHEMICALS USED IN DAILY LIFE
+    ====================================================== */
+
+    {
+        lesson:19,
+
+        question:
+            "Which substance is commonly used as a disinfectant?",
+
+        options:[
+            "Some chlorine-based compounds",
+            "Sand",
+            "Pure nitrogen",
+            "Graphite"
+        ],
+
+        answer:0,
+
+        reason:
+            "Appropriate chlorine-based compounds can release active chlorine species that destroy many microorganisms and are therefore used in disinfection."
+    },
+
+
+    {
+        lesson:19,
+
+        question:
+            "Why should household chemicals be handled carefully?",
+
+        options:[
+            "Some can be toxic, corrosive or reactive",
+            "All household chemicals are harmless",
+            "They never react with anything",
+            "They cannot affect humans"
+        ],
+
+        answer:0,
+
+        reason:
+            "Some household chemicals can cause poisoning, burns, irritation or dangerous reactions, so labels and safety instructions should be followed."
+    }
+
+];
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+let selectedLesson = null;
+
+let selectedQuestionCount = 25;
+
+let currentQuestion = 0;
+
+let userAnswers = [];
+
+let activeQuestions = [];
+
+
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
+const lessonGrid =
+    document.getElementById("lesson-grid");
+
+const selectedLessonText =
+    document.getElementById("selected-lesson");
+
+const startButton =
+    document.getElementById("start-btn");
+
+const selectionSection =
+    document.getElementById("selection-section");
+
+const quizSection =
+    document.getElementById("quiz-section");
+
+const resultSection =
+    document.getElementById("result-section");
+
+const quizQuestion =
+    document.getElementById("quiz-question");
+
+const quizOptions =
+    document.getElementById("quiz-options");
+
+const nextButton =
+    document.getElementById("next-btn");
+
+const quizCount =
+    document.getElementById("quiz-count");
+
+const quizAnswered =
+    document.getElementById("quiz-answered");
+
+const quizStatus =
+    document.getElementById("quiz-status");
+
+const progressBar =
+    document.getElementById("progress-bar");
+
+const scoreElement =
+    document.getElementById("score");
+
+const scorePercent =
+    document.getElementById("score-percent");
+
+const resultMessage =
+    document.getElementById("result-message");
+
+const reviewContainer =
+    document.getElementById("review-container");
+
+const customCount =
+    document.getElementById("custom-count");
+
+
+/* =========================================================
+   CREATE LESSON CARDS
+========================================================= */
+
+function createLessonCards(){
+
+    lessonGrid.innerHTML="";
+
+
+    lessons.forEach(lesson=>{
+
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "lesson-card";
+
+
+        card.innerHTML = `
+
+            <div class="lesson-number">
+
+                UNIT ${String(lesson.id).padStart(2,"0")}
 
             </div>
 
+            <div class="lesson-name">
 
-            <h2 id="question">
-
-                Loading question...
-
-            </h2>
-
-
-
-            <!-- Options -->
-
-            <div
-                id="options"
-                class="options">
+                ${escapeHTML(lesson.name)}
 
             </div>
 
+            <div class="lesson-meta">
 
-
-            <!-- Footer -->
-
-            <div class="quiz-footer">
-
-                <span
-                    id="selection-status"
-                    class="selection-status">
-
-                    Select one answer to continue.
-
-                </span>
-
-
-                <button
-                    id="next-btn"
-                    class="next-btn"
-                    type="button"
-                    disabled>
-
-                    Next Question →
-
-                </button>
+                Chapter practice
 
             </div>
 
-        </section>
+        `;
 
 
+        card.addEventListener(
+            "click",
+            ()=>{
 
-        <!-- =================================================
-             RESULT CARD
-        ================================================== -->
+                selectLesson(
+                    lesson.id,
+                    lesson.name,
+                    card
+                );
 
-        <section
-            id="result-card"
-            class="result-card hidden">
+            }
+        );
 
 
-            <div class="result-orbit">
+        lessonGrid.appendChild(card);
 
-                🧬
+    });
 
-            </div>
 
+    /* =====================================================
+       ALL CHAPTER OPTION
+    ====================================================== */
 
-            <h2>
+    const all =
+        document.createElement("div");
 
-                Experiment Complete
+    all.className =
+        "all-chapters";
 
-            </h2>
 
+    all.innerHTML = `
 
-            <p class="result-subtitle">
+        <div class="all-icon">
+            🌎
+        </div>
 
-                Your Science MCQ challenge has been completed.
-
-            </p>
-
-
-
-            <!-- SCORE -->
-
-            <div
-                id="final-score"
-                class="score-number">
-
-                0 / 20
-
-            </div>
-
-
-            <div class="score-caption">
-
-                Total Score
-
-            </div>
-
-
-            <div
-                id="percentage"
-                class="percentage">
-
-                0%
-
-            </div>
-
-
-
-            <div
-                id="result-message"
-                class="result-message">
-
-                Your result will appear here.
-
-            </div>
-
-
-
-            <!-- ACTIONS -->
-
-            <div class="result-actions">
-
-                <button
-                    id="restart-btn"
-                    class="restart-btn"
-                    type="button">
-
-                    🔄 Retake Science Test
-
-                </button>
-
-
-                <a
-                    href="mcq.html"
-                    class="secondary-btn">
-
-                    ← Other Subjects
-
-                </a>
-
-            </div>
-
-
-
-            <!-- =================================================
-                 REVIEW
-            ================================================== -->
-
-            <div class="review">
-
-
-                <div class="review-title">
-
-                    <h3>
-
-                        📊 Detailed Answer Analysis
-
-                    </h3>
-
-
-                    <p>
-
-                        Your answers are shown below with
-                        the correct answer and the scientific
-                        reason behind it.
-
-                    </p>
-
-                </div>
-
-
-                <div
-                    id="review-container">
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             INFORMATION
-        ================================================== -->
-
-        <section class="info-section">
+        <div>
 
             <h3>
-
-                🔬 How this Science Lab works
-
+                Full Science Course
             </h3>
 
-
             <p>
-
-                Choose the answer for every question first.
-                Your correct answers are not revealed during
-                the test. Once you complete all questions,
-                your final score and detailed scientific
-                explanations will be displayed.
-
+                Randomly practice questions from
+                all available Science chapters.
+                Choose up to 100 questions.
             </p>
 
-        </section>
-
-    </main>
-
-
-
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
-
-    <footer>
-
-        <div>
-            Kandel Sarkar • Class 10 Science MCQ Lab
         </div>
 
-        <div>
-            Built for learning • Nepal
-        </div>
+    `;
 
-    </footer>
 
+    all.addEventListener(
+        "click",
+        ()=>{
 
+            selectAllChapters(all);
 
-    <!-- =====================================================
-         ALL JAVASCRIPT
-    ====================================================== -->
+        }
+    );
 
-    <script>
 
+    lessonGrid.appendChild(all);
 
-        /* =================================================
-           QUESTION BANK
-        ================================================== */
+}
 
-        const questions = [
 
-            {
-                question:
-                    "Which of the following is the SI unit of force?",
+/* =========================================================
+   SELECT LESSON
+========================================================= */
 
-                options: [
-                    "Joule",
-                    "Newton",
-                    "Watt",
-                    "Pascal"
-                ],
+function selectLesson(
+    id,
+    name,
+    selectedCard
+){
 
-                answer: 1,
+    selectedLesson = id;
 
-                reason:
-                    "Force is measured in Newton (N) in the SI system. One Newton is the force required to produce an acceleration of 1 m/s² in a mass of 1 kg."
-            },
 
+    document
+        .querySelectorAll(".lesson-card")
+        .forEach(card=>{
 
-            {
-                question:
-                    "What is the approximate acceleration due to gravity near the surface of Earth?",
+            card.classList.remove(
+                "selected"
+            );
 
-                options: [
-                    "4.9 m/s²",
-                    "9.8 m/s²",
-                    "19.6 m/s²",
-                    "98 m/s²"
-                ],
+        });
 
-                answer: 1,
 
-                reason:
-                    "The average acceleration due to Earth's gravity near the surface is approximately 9.8 m/s²."
-            },
+    selectedCard.classList.add(
+        "selected"
+    );
 
 
-            {
-                question:
-                    "Which type of lens is used to correct myopia?",
+    selectedLessonText.textContent =
+        `Unit ${id}: ${name}`;
 
-                options: [
-                    "Convex lens",
-                    "Concave lens",
-                    "Plane lens",
-                    "Cylindrical mirror"
-                ],
 
-                answer: 1,
+    updateStartButton();
 
-                reason:
-                    "Myopia causes distant objects to form an image in front of the retina. A concave lens diverges incoming light rays and moves the image back onto the retina."
-            },
+}
 
 
-            {
-                question:
-                    "Which of the following is a renewable source of energy?",
+/* =========================================================
+   SELECT ALL
+========================================================= */
 
-                options: [
-                    "Coal",
-                    "Petroleum",
-                    "Solar energy",
-                    "Natural gas"
-                ],
+function selectAllChapters(card){
 
-                answer: 2,
+    selectedLesson = "all";
 
-                reason:
-                    "Solar energy is renewable because sunlight is continuously supplied by the Sun and is not consumed in the way fossil fuels are."
-            },
 
+    document
+        .querySelectorAll(".lesson-card")
+        .forEach(element=>{
 
-            {
-                question:
-                    "What is the pH of a neutral aqueous solution at 25°C?",
+            element.classList.remove(
+                "selected"
+            );
 
-                options: [
-                    "0",
-                    "5",
-                    "7",
-                    "14"
-                ],
+        });
 
-                answer: 2,
 
-                reason:
-                    "At 25°C, a neutral aqueous solution has equal concentrations of hydrogen ions and hydroxide ions, corresponding to a pH of 7."
-            },
+    card.classList.add(
+        "selected"
+    );
 
 
-            {
-                question:
-                    "Which gas is released as a product during photosynthesis?",
+    selectedLessonText.textContent =
+        "🌎 All Science Chapters";
 
-                options: [
-                    "Carbon dioxide",
-                    "Oxygen",
-                    "Nitrogen",
-                    "Hydrogen"
-                ],
 
-                answer: 1,
+    updateStartButton();
 
-                reason:
-                    "During photosynthesis, green plants use carbon dioxide and water to produce glucose. Oxygen is released as a by-product."
-            },
+}
 
 
-            {
-                question:
-                    "Which cell organelle is commonly called the powerhouse of the cell?",
+/* =========================================================
+   QUESTION NUMBER BUTTONS
+========================================================= */
 
-                options: [
-                    "Nucleus",
-                    "Ribosome",
-                    "Mitochondria",
-                    "Golgi apparatus"
-                ],
+document
+    .querySelectorAll(".number-btn")
+    .forEach(button=>{
 
-                answer: 2,
-
-                reason:
-                    "Mitochondria produce ATP through cellular respiration. ATP provides usable energy for many cellular processes."
-            },
-
-
-            {
-                question:
-                    "Which blood cells play the major role in defending the body against infections?",
-
-                options: [
-                    "Red blood cells",
-                    "White blood cells",
-                    "Platelets",
-                    "Plasma"
-                ],
-
-                answer: 1,
-
-                reason:
-                    "White blood cells are important parts of the immune system and help recognize and fight pathogens."
-            },
-
-
-            {
-                question:
-                    "What is the chemical formula of water?",
-
-                options: [
-                    "CO₂",
-                    "H₂O",
-                    "O₂",
-                    "H₂"
-                ],
-
-                answer: 1,
-
-                reason:
-                    "Each water molecule contains two hydrogen atoms chemically bonded to one oxygen atom, giving it the formula H₂O."
-            },
-
-
-            {
-                question:
-                    "Which metal is liquid at ordinary room temperature?",
-
-                options: [
-                    "Iron",
-                    "Copper",
-                    "Mercury",
-                    "Aluminium"
-                ],
-
-                answer: 2,
-
-                reason:
-                    "Mercury has a melting point below ordinary room temperature, so it remains liquid under normal conditions."
-            },
-
-
-            {
-                question:
-                    "Which component of blood is mainly involved in blood clotting?",
-
-                options: [
-                    "Red blood cells",
-                    "White blood cells",
-                    "Platelets",
-                    "Plasma"
-                ],
-
-                answer: 2,
-
-                reason:
-                    "Platelets gather around damaged blood vessels and participate in the chain of reactions that forms a blood clot."
-            },
-
-
-            {
-                question:
-                    "Which process changes liquid water into water vapour from its surface?",
-
-                options: [
-                    "Condensation",
-                    "Evaporation",
-                    "Freezing",
-                    "Melting"
-                ],
-
-                answer: 1,
-
-                reason:
-                    "Evaporation occurs when energetic molecules escape from the surface of a liquid and enter the gaseous state."
-            },
-
-
-            {
-                question:
-                    "Which force keeps planets in orbit around the Sun?",
-
-                options: [
-                    "Magnetic force",
-                    "Frictional force",
-                    "Gravitational force",
-                    "Electrostatic force"
-                ],
-
-                answer: 2,
-
-                reason:
-                    "The gravitational attraction between the Sun and a planet provides the inward force required to keep the planet in orbit."
-            },
-
-
-            {
-                question:
-                    "Which part of a plant mainly absorbs water and minerals from the soil?",
-
-                options: [
-                    "Flower",
-                    "Leaf",
-                    "Root",
-                    "Fruit"
-                ],
-
-                answer: 2,
-
-                reason:
-                    "Roots, particularly their root hairs, provide a large surface area for absorbing water and dissolved mineral nutrients from soil."
-            },
-
-
-            {
-                question:
-                    "Which vitamin can be produced in the skin with the help of sunlight?",
-
-                options: [
-                    "Vitamin A",
-                    "Vitamin B",
-                    "Vitamin C",
-                    "Vitamin D"
-                ],
-
-                answer: 3,
-
-                reason:
-                    "Ultraviolet B radiation from sunlight triggers a chemical process in the skin that helps produce vitamin D."
-            },
-
-
-            {
-                question:
-                    "Which of the following is an acid?",
-
-                options: [
-                    "Sodium hydroxide",
-                    "Hydrochloric acid",
-                    "Calcium hydroxide",
-                    "Ammonia"
-                ],
-
-                answer: 1,
-
-                reason:
-                    "Hydrochloric acid (HCl) is an acid. When dissolved in water, it produces hydrogen ions and gives an acidic solution."
-            },
-
-
-            {
-                question:
-                    "What generally happens to the resistance of a metallic conductor when its temperature increases?",
-
-                options: [
-                    "It generally decreases",
-                    "It generally increases",
-                    "It becomes zero",
-                    "It always remains unchanged"
-                ],
-
-                answer: 1,
-
-                reason:
-                    "In metals, increasing temperature increases lattice vibrations, which generally makes it more difficult for charge carriers to move through the conductor."
-            },
-
-
-            {
-                question:
-                    "Which planet is known as the Red Planet?",
-
-                options: [
-                    "Venus",
-                    "Mars",
-                    "Jupiter",
-                    "Mercury"
-                ],
-
-                answer: 1,
-
-                reason:
-                    "Mars appears reddish because iron-bearing minerals on its surface have reacted with oxygen and formed iron oxides."
-            },
-
-
-            {
-                question:
-                    "Which type of reproduction generally requires only one parent?",
-
-                options: [
-                    "Sexual reproduction",
-                    "Asexual reproduction",
-                    "Cross-fertilization",
-                    "Internal fertilization"
-                ],
-
-                answer: 1,
-
-                reason:
-                    "Asexual reproduction generally involves a single parent and does not require the fusion of male and female gametes."
-            },
-
-
-            {
-                question:
-                    "Which instrument is used to measure electric current in a circuit?",
-
-                options: [
-                    "Voltmeter",
-                    "Ammeter",
-                    "Barometer",
-                    "Thermometer"
-                ],
-
-                answer: 1,
-
-                reason:
-                    "An ammeter measures electric current and is normally connected in series with the part of the circuit whose current is being measured."
-            }
-
-        ];
-
-
-
-        /* =================================================
-           QUIZ STATE
-        ================================================== */
-
-        let currentQuestion = 0;
-
-        let selectedAnswer = null;
-
-        let userAnswers = [];
-
-
-
-        /* =================================================
-           HTML ELEMENTS
-        ================================================== */
-
-        const quizCard =
-            document.getElementById("quiz-card");
-
-        const resultCard =
-            document.getElementById("result-card");
-
-        const questionElement =
-            document.getElementById("question");
-
-        const optionsElement =
-            document.getElementById("options");
-
-        const questionCountElement =
-            document.getElementById("question-count");
-
-        const answeredCountElement =
-            document.getElementById("answered-count");
-
-        const progressFill =
-            document.getElementById("progress-fill");
-
-        const nextButton =
-            document.getElementById("next-btn");
-
-        const selectionStatus =
-            document.getElementById("selection-status");
-
-        const finalScoreElement =
-            document.getElementById("final-score");
-
-        const percentageElement =
-            document.getElementById("percentage");
-
-        const resultMessageElement =
-            document.getElementById("result-message");
-
-        const reviewContainer =
-            document.getElementById("review-container");
-
-        const restartButton =
-            document.getElementById("restart-btn");
-
-
-
-        /* =================================================
-           LOAD QUESTION
-        ================================================== */
-
-        function loadQuestion() {
-
-            const data =
-                questions[currentQuestion];
-
-
-            selectedAnswer = null;
-
-
-            /*
-                Question number
-            */
-
-            questionCountElement.textContent =
-                `Question ${currentQuestion + 1} of ${questions.length}`;
-
-
-            /*
-                Progress represents questions
-                already reached.
-            */
-
-            const progress =
-                ((currentQuestion + 1) /
-                questions.length) * 100;
-
-
-            progressFill.style.width =
-                `${progress}%`;
-
-
-            /*
-                Question
-            */
-
-            questionElement.textContent =
-                data.question;
-
-
-            /*
-                Remove old options
-            */
-
-            optionsElement.innerHTML = "";
-
-
-            /*
-                Create options
-            */
-
-            data.options.forEach(
-                (optionText, index) => {
-
-                    const button =
-                        document.createElement("button");
-
-
-                    button.type = "button";
-
-                    button.className =
-                        "option";
-
-
-                    /*
-                        IMPORTANT:
-
-                        We do NOT show whether
-                        the answer is correct.
-
-                        The student only sees
-                        their selection.
-                    */
-
-                    button.innerHTML = `
-
-                        <span class="option-letter">
-
-                            ${String.fromCharCode(65 + index)}
-
-                        </span>
-
-                        <span>
-
-                            ${escapeHTML(optionText)}
-
-                        </span>
-
-                    `;
-
-
-                    button.addEventListener(
-                        "click",
-                        function () {
-
-                            chooseAnswer(index);
-
-                        }
+        button.addEventListener(
+            "click",
+            ()=>{
+
+                const number =
+                    Number(
+                        button.dataset.number
                     );
 
 
-                    optionsElement.appendChild(
+                selectedQuestionCount =
+                    number;
+
+
+                document
+                    .querySelectorAll(".number-btn")
+                    .forEach(btn=>{
+
+                        btn.classList.remove(
+                            "selected"
+                        );
+
+                    });
+
+
+                button.classList.add(
+                    "selected"
+                );
+
+
+                customCount.value="";
+
+
+            }
+        );
+
+    });
+
+
+/* =========================================================
+   CUSTOM QUESTION COUNT
+========================================================= */
+
+customCount.addEventListener(
+    "input",
+    ()=>{
+
+        let value =
+            Number(
+                customCount.value
+            );
+
+
+        if(value > 100){
+
+            value=100;
+
+            customCount.value=100;
+
+        }
+
+
+        if(value < 1){
+
+            value=1;
+
+        }
+
+
+        if(value){
+
+            selectedQuestionCount =
+                value;
+
+
+            document
+                .querySelectorAll(".number-btn")
+                .forEach(btn=>{
+
+                    btn.classList.remove(
+                        "selected"
+                    );
+
+                });
+
+        }
+
+
+    }
+);
+
+
+/* =========================================================
+   START BUTTON
+========================================================= */
+
+function updateStartButton(){
+
+    if(selectedLesson){
+
+        startButton.disabled=false;
+
+        startButton.textContent =
+            `🚀 Start ${selectedQuestionCount} Questions`;
+
+    }
+
+}
+
+
+/* =========================================================
+   START PRACTICE
+========================================================= */
+
+startButton.addEventListener(
+    "click",
+    startQuiz
+);
+
+
+function startQuiz(){
+
+    let pool;
+
+
+    /*
+       If user selected ALL,
+       use every question.
+    */
+
+    if(selectedLesson === "all"){
+
+        pool =
+            [...questionBank];
+
+    }
+
+    else{
+
+        pool =
+            questionBank.filter(
+                question =>
+                    question.lesson ===
+                    selectedLesson
+            );
+
+    }
+
+
+    /*
+       Shuffle question pool.
+    */
+
+    pool =
+        shuffle(pool);
+
+
+    /*
+       IMPORTANT:
+
+       Never allow more questions than
+       available questions.
+
+       Maximum is also hard limited
+       to 100.
+    */
+
+    const number =
+        Math.min(
+            selectedQuestionCount,
+            100,
+            pool.length
+        );
+
+
+    activeQuestions =
+        pool.slice(
+            0,
+            number
+        );
+
+
+    /*
+       Reset state.
+    */
+
+    currentQuestion=0;
+
+    userAnswers=[];
+
+
+    /*
+       Show quiz.
+    */
+
+    selectionSection.classList.add(
+        "hidden"
+    );
+
+    quizSection.classList.remove(
+        "hidden"
+    );
+
+    resultSection.classList.add(
+        "hidden"
+    );
+
+
+    loadQuizQuestion();
+
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+}
+
+
+/* =========================================================
+   LOAD QUIZ QUESTION
+========================================================= */
+
+function loadQuizQuestion(){
+
+    const question =
+        activeQuestions[
+            currentQuestion
+        ];
+
+
+    quizCount.textContent =
+        `Question ${currentQuestion+1} of ${activeQuestions.length}`;
+
+
+    quizQuestion.textContent =
+        question.question;
+
+
+    quizOptions.innerHTML="";
+
+
+    question.options.forEach(
+        (option,index)=>{
+
+            const button =
+                document.createElement("button");
+
+
+            button.className =
+                "option";
+
+
+            button.type="button";
+
+
+            button.innerHTML = `
+
+                <span class="option-letter">
+
+                    ${String.fromCharCode(
+                        65 + index
+                    )}
+
+                </span>
+
+                <span>
+
+                    ${escapeHTML(option)}
+
+                </span>
+
+            `;
+
+
+            button.addEventListener(
+                "click",
+                ()=>{
+
+                    chooseQuizAnswer(
+                        index,
                         button
                     );
 
@@ -2743,556 +3826,577 @@
             );
 
 
-            /*
-                Reset footer
-            */
+            quizOptions.appendChild(
+                button
+            );
 
-            nextButton.disabled = true;
-
-            nextButton.textContent =
-                currentQuestion === questions.length - 1
-                    ? "Submit Test →"
-                    : "Next Question →";
+        }
+    );
 
 
-            selectionStatus.textContent =
-                "Select one answer to continue.";
+    nextButton.disabled=true;
 
 
-            updateAnsweredCount();
+    nextButton.textContent =
+        currentQuestion ===
+        activeQuestions.length - 1
+
+        ? "Submit Test →"
+
+        : "Next Question →";
+
+
+    quizStatus.textContent =
+        "Select an answer. Correctness will be revealed after submission.";
+
+
+    updateQuizProgress();
+
+}
+
+
+/* =========================================================
+   SELECT ANSWER
+========================================================= */
+
+function chooseQuizAnswer(
+    index,
+    button
+){
+
+    /*
+       Remove previous selection.
+    */
+
+    document
+        .querySelectorAll(".option")
+        .forEach(option=>{
+
+            option.classList.remove(
+                "selected"
+            );
+
+        });
+
+
+    /*
+       Highlight student's selection.
+
+       NOTICE:
+
+       We DO NOT check whether it is
+       correct here.
+    */
+
+    button.classList.add(
+        "selected"
+    );
+
+
+    userAnswers[
+        currentQuestion
+    ] = index;
+
+
+    nextButton.disabled=false;
+
+
+    quizStatus.textContent =
+        "Answer saved. Your result will be revealed after the test.";
+
+
+    updateQuizProgress();
+
+}
+
+
+/* =========================================================
+   NEXT QUESTION
+========================================================= */
+
+nextButton.addEventListener(
+    "click",
+    ()=>{
+
+        if(
+            userAnswers[currentQuestion] ===
+            undefined
+        ){
+
+            return;
 
         }
 
 
+        if(
+            currentQuestion <
+            activeQuestions.length - 1
+        ){
 
-        /* =================================================
-           CHOOSE ANSWER
-        ================================================== */
+            currentQuestion++;
 
-        function chooseAnswer(index) {
-
-            selectedAnswer = index;
-
-
-            /*
-                Remove previous selection
-            */
-
-            const buttons =
-                document.querySelectorAll(".option");
-
-
-            buttons.forEach(
-                button => {
-
-                    button.classList.remove(
-                        "selected"
-                    );
-
-                }
-            );
-
-
-            /*
-                Highlight ONLY the
-                student's selected answer.
-
-                No correct/wrong information.
-            */
-
-            if (buttons[index]) {
-
-                buttons[index].classList.add(
-                    "selected"
-                );
-
-            }
-
-
-            /*
-                Enable next button
-            */
-
-            nextButton.disabled = false;
-
-
-            selectionStatus.textContent =
-                "Answer selected • Your result will be revealed after the test.";
-
-
-            /*
-                Store answer temporarily
-            */
-
-            userAnswers[currentQuestion] =
-                index;
-
-
-            updateAnsweredCount();
-
-        }
-
-
-
-        /* =================================================
-           UPDATE ANSWER COUNT
-        ================================================== */
-
-        function updateAnsweredCount() {
-
-            const answered =
-                userAnswers.filter(
-                    answer => answer !== undefined
-                ).length;
-
-
-            answeredCountElement.textContent =
-                `Answered: ${answered} / ${questions.length}`;
-
-        }
-
-
-
-        /* =================================================
-           NEXT / SUBMIT
-        ================================================== */
-
-        nextButton.addEventListener(
-            "click",
-            function () {
-
-                if (selectedAnswer === null) {
-
-                    return;
-
-                }
-
-
-                /*
-                    Move to next question
-                */
-
-                if (
-                    currentQuestion <
-                    questions.length - 1
-                ) {
-
-                    currentQuestion++;
-
-                    loadQuestion();
-
-                    window.scrollTo({
-
-                        top: 0,
-
-                        behavior: "smooth"
-
-                    });
-
-                    return;
-
-                }
-
-
-                /*
-                    Last question:
-                    submit the complete test.
-                */
-
-                submitTest();
-
-            }
-        );
-
-
-
-        /* =================================================
-           SUBMIT TEST
-        ================================================== */
-
-        function submitTest() {
-
-            /*
-                Safety check:
-
-                Every question must have
-                an answer before submission.
-            */
-
-            const unanswered =
-                questions.some(
-                    (_, index) =>
-                        userAnswers[index] === undefined
-                );
-
-
-            if (unanswered) {
-
-                alert(
-                    "Please answer every question before submitting the test."
-                );
-
-                return;
-
-            }
-
-
-            /*
-                Calculate score only NOW.
-
-                The answer is never revealed
-                during the test.
-            */
-
-            let score = 0;
-
-
-            questions.forEach(
-                (question, index) => {
-
-                    if (
-                        userAnswers[index] ===
-                        question.answer
-                    ) {
-
-                        score++;
-
-                    }
-
-                }
-            );
-
-
-            showResult(score);
-
-        }
-
-
-
-        /* =================================================
-           SHOW RESULT
-        ================================================== */
-
-        function showResult(score) {
-
-            quizCard.classList.add(
-                "hidden"
-            );
-
-
-            resultCard.classList.remove(
-                "hidden"
-            );
-
-
-            /*
-                Score
-            */
-
-            finalScoreElement.textContent =
-                `${score} / ${questions.length}`;
-
-
-            /*
-                Percentage
-            */
-
-            const percentage =
-                Math.round(
-                    (score /
-                    questions.length) *
-                    100
-                );
-
-
-            percentageElement.textContent =
-                `${percentage}%`;
-
-
-
-            /*
-                Result message
-            */
-
-            if (percentage >= 90) {
-
-                resultMessageElement.textContent =
-                    "Outstanding performance! 🧬 Your Science fundamentals are very strong. Continue practicing to maintain this level.";
-
-            }
-
-            else if (percentage >= 75) {
-
-                resultMessageElement.textContent =
-                    "Excellent work! 🔬 You have a strong understanding of the concepts. Review the questions you missed and aim even higher.";
-
-            }
-
-            else if (percentage >= 60) {
-
-                resultMessageElement.textContent =
-                    "Good progress! ⚡ You have a useful foundation, but a little more concept-based practice can improve your SEE preparation.";
-
-            }
-
-            else if (percentage >= 40) {
-
-                resultMessageElement.textContent =
-                    "Keep going! 📚 Use the explanations below to understand your mistakes, then retake the test.";
-
-            }
-
-            else {
-
-                resultMessageElement.textContent =
-                    "Don't be discouraged. 🧪 Science becomes easier when you understand the reason behind every answer. Study the explanations and try again.";
-
-            }
-
-
-            /*
-                Create complete answer review
-            */
-
-            createReview();
-
-
-            /*
-                Scroll to top
-            */
+            loadQuizQuestion();
 
             window.scrollTo({
 
-                top: 0,
+                top:0,
 
-                behavior: "smooth"
+                behavior:"smooth"
 
             });
 
         }
 
+        else{
 
-
-        /* =================================================
-           CREATE REVIEW
-        ================================================== */
-
-        function createReview() {
-
-            reviewContainer.innerHTML = "";
-
-
-            questions.forEach(
-                (question, index) => {
-
-                    const userAnswer =
-                        userAnswers[index];
-
-
-                    const correct =
-                        userAnswer ===
-                        question.answer;
-
-
-                    const item =
-                        document.createElement("div");
-
-
-                    item.className =
-                        correct
-                            ? "review-item correct"
-                            : "review-item wrong";
-
-
-                    /*
-                        Student answer text
-                    */
-
-                    const userAnswerText =
-                        question.options[userAnswer];
-
-
-                    /*
-                        Correct answer text
-                    */
-
-                    const correctAnswerText =
-                        question.options[
-                            question.answer
-                        ];
-
-
-                    /*
-                        Status text
-                    */
-
-                    const status =
-                        correct
-                            ? "✓ Correct"
-                            : "✕ Incorrect";
-
-
-                    /*
-                        Generate complete review.
-
-                        IMPORTANT:
-
-                        This is the FIRST TIME
-                        correct answer is shown.
-                    */
-
-                    item.innerHTML = `
-
-                        <div class="review-number">
-
-                            Question ${index + 1}
-                            • ${status}
-
-                        </div>
-
-
-                        <div class="review-question">
-
-                            ${escapeHTML(question.question)}
-
-                        </div>
-
-
-                        <div
-                            class="
-                                answer-line
-                                student
-                                ${correct
-                                    ? "correct"
-                                    : "wrong"}
-                            ">
-
-                            <strong>
-                                Your answer:
-                            </strong>
-
-                            ${escapeHTML(userAnswerText)}
-
-                        </div>
-
-
-                        <div
-                            class="
-                                answer-line
-                                correct-answer
-                            ">
-
-                            <strong>
-                                Correct answer:
-                            </strong>
-
-                            ${escapeHTML(correctAnswerText)}
-
-                        </div>
-
-
-                        <div class="reason">
-
-                            <strong>
-                                💡 Why is this correct?
-                            </strong>
-
-                            <br>
-
-                            ${escapeHTML(question.reason)}
-
-                        </div>
-
-                    `;
-
-
-                    reviewContainer.appendChild(
-                        item
-                    );
-
-                }
-            );
+            submitQuiz();
 
         }
 
+    }
+);
 
 
-        /* =================================================
-           RESTART
-        ================================================== */
+/* =========================================================
+   PROGRESS
+========================================================= */
 
-        restartButton.addEventListener(
-            "click",
-            function () {
+function updateQuizProgress(){
 
-                currentQuestion = 0;
-
-                selectedAnswer = null;
-
-                userAnswers = [];
+    const answered =
+        userAnswers.filter(
+            answer =>
+                answer !== undefined
+        ).length;
 
 
-                resultCard.classList.add(
-                    "hidden"
-                );
+    quizAnswered.textContent =
+        `Answered: ${answered} / ${activeQuestions.length}`;
 
 
-                quizCard.classList.remove(
-                    "hidden"
-                );
+    const progress =
+        (
+            (currentQuestion + 1)
+            /
+            activeQuestions.length
+        )
+        *
+        100;
 
 
-                loadQuestion();
+    progressBar.style.width =
+        `${progress}%`;
+
+}
 
 
-                window.scrollTo({
+/* =========================================================
+   SUBMIT QUIZ
+========================================================= */
 
-                    top: 0,
+function submitQuiz(){
 
-                    behavior: "smooth"
+    /*
+       Safety check.
 
-                });
+       User must answer every question.
+    */
 
-            }
+    const unanswered =
+        activeQuestions.some(
+            (_,index)=>
+                userAnswers[index] ===
+                undefined
         );
 
 
+    if(unanswered){
 
-        /* =================================================
-           MOUSE TRACKING
-        ================================================== */
+        alert(
+            "Please answer all questions before submitting."
+        );
 
-        document.addEventListener(
-            "mousemove",
-            function (event) {
+        return;
 
-                document.body.style.setProperty(
-                    "--mouse-x",
-                    `${event.clientX}px`
-                );
+    }
 
 
-                document.body.style.setProperty(
-                    "--mouse-y",
-                    `${event.clientY}px`
+    let score=0;
 
-                );
+
+    activeQuestions.forEach(
+        (question,index)=>{
+
+            if(
+                userAnswers[index] ===
+                question.answer
+            ){
+
+                score++;
 
             }
+
+        }
+    );
+
+
+    showResult(score);
+
+}
+
+
+/* =========================================================
+   SHOW RESULT
+========================================================= */
+
+function showResult(score){
+
+    quizSection.classList.add(
+        "hidden"
+    );
+
+
+    resultSection.classList.remove(
+        "hidden"
+    );
+
+
+    scoreElement.textContent =
+        `${score} / ${activeQuestions.length}`;
+
+
+    const percentage =
+        Math.round(
+            (
+                score /
+                activeQuestions.length
+            )
+            *
+            100
         );
 
 
+    scorePercent.textContent =
+        `${percentage}%`;
 
-        /* =================================================
-           QUIZ CARD MOUSE TRACKING
-        ================================================== */
 
-        quizCard.addEventListener(
+    /*
+       Result message.
+    */
+
+    if(percentage >= 90){
+
+        resultMessage.textContent =
+            "Outstanding! 🧬 Your scientific understanding is very strong. Keep practicing to maintain this performance.";
+
+    }
+
+    else if(percentage >= 75){
+
+        resultMessage.textContent =
+            "Excellent work! 🔬 You have a strong foundation. Review the explanations for the questions you missed.";
+
+    }
+
+    else if(percentage >= 60){
+
+        resultMessage.textContent =
+            "Good progress! ⚡ Strengthen the concepts behind your incorrect answers and try another practice session.";
+
+    }
+
+    else if(percentage >= 40){
+
+        resultMessage.textContent =
+            "You are making progress. 📚 Study the explanations carefully and practice the lesson again.";
+
+    }
+
+    else{
+
+        resultMessage.textContent =
+            "Every experiment teaches something. 🧪 Review the explanations, understand the concepts, and try again.";
+
+    }
+
+
+    createReview();
+
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+}
+
+
+/* =========================================================
+   CREATE ANSWER REVIEW
+========================================================= */
+
+function createReview(){
+
+    reviewContainer.innerHTML="";
+
+
+    activeQuestions.forEach(
+        (question,index)=>{
+
+            const studentAnswer =
+                userAnswers[index];
+
+
+            const isCorrect =
+                studentAnswer ===
+                question.answer;
+
+
+            const item =
+                document.createElement("div");
+
+
+            item.className =
+                isCorrect
+                    ? "review-item correct"
+                    : "review-item wrong";
+
+
+            const studentText =
+                question.options[
+                    studentAnswer
+                ];
+
+
+            const correctText =
+                question.options[
+                    question.answer
+                ];
+
+
+            item.innerHTML = `
+
+                <div class="review-number">
+
+                    QUESTION ${index+1}
+                    •
+                    ${isCorrect
+                        ? "✓ CORRECT"
+                        : "✕ INCORRECT"}
+
+                </div>
+
+
+                <div class="review-question">
+
+                    ${escapeHTML(
+                        question.question
+                    )}
+
+                </div>
+
+
+                <div class="answer student-answer">
+
+                    <strong>
+                        Your answer:
+                    </strong>
+
+                    ${escapeHTML(
+                        studentText
+                    )}
+
+                </div>
+
+
+                <div class="answer correct-answer">
+
+                    <strong>
+                        Correct answer:
+                    </strong>
+
+                    ${escapeHTML(
+                        correctText
+                    )}
+
+                </div>
+
+
+                <div class="reason">
+
+                    <strong>
+                        💡 Why is this correct?
+                    </strong>
+
+                    <br>
+
+                    ${escapeHTML(
+                        question.reason
+                    )}
+
+                </div>
+
+            `;
+
+
+            reviewContainer.appendChild(
+                item
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   RESTART
+========================================================= */
+
+document
+    .getElementById("restart-btn")
+    .addEventListener(
+        "click",
+        ()=>{
+
+            resultSection.classList.add(
+                "hidden"
+            );
+
+
+            selectionSection.classList.remove(
+                "hidden"
+            );
+
+
+            window.scrollTo({
+
+                top:0,
+
+                behavior:"smooth"
+
+            });
+
+        }
+    );
+
+
+/* =========================================================
+   SHUFFLE
+========================================================= */
+
+function shuffle(array){
+
+    const copy =
+        [...array];
+
+
+    for(
+        let i=copy.length-1;
+        i>0;
+        i--
+    ){
+
+        const j =
+            Math.floor(
+                Math.random() *
+                (i+1)
+            );
+
+
+        [
+            copy[i],
+            copy[j]
+        ] =
+        [
+            copy[j],
+            copy[i]
+        ];
+
+    }
+
+
+    return copy;
+
+}
+
+
+/* =========================================================
+   SECURITY / HTML ESCAPING
+========================================================= */
+
+function escapeHTML(text){
+
+    return String(text)
+
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+
+        .replace(
+            /</g,
+            "&lt;"
+        )
+
+        .replace(
+            />/g,
+            "&gt;"
+        )
+
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
+}
+
+
+/* =========================================================
+   MOUSE TRACKING
+========================================================= */
+
+document.addEventListener(
+    "mousemove",
+    event=>{
+
+        document.body.style.setProperty(
+            "--mouse-x",
+            `${event.clientX}px`
+        );
+
+
+        document.body.style.setProperty(
+            "--mouse-y",
+            `${event.clientY}px`
+        );
+
+    }
+);
+
+
+/* =========================================================
+   PANEL MOUSE TRACKING
+========================================================= */
+
+document
+    .querySelectorAll(".panel")
+    .forEach(panel=>{
+
+        panel.addEventListener(
             "mousemove",
-            function (event) {
+            event=>{
 
                 const rect =
-                    quizCard.getBoundingClientRect();
+                    panel.getBoundingClientRect();
 
 
                 const x =
@@ -3305,49 +4409,30 @@
                     rect.top;
 
 
-                quizCard.style.setProperty(
-                    "--card-x",
+                panel.style.setProperty(
+                    "--panel-x",
                     `${x}px`
                 );
 
 
-                quizCard.style.setProperty(
-                    "--card-y",
+                panel.style.setProperty(
+                    "--panel-y",
                     `${y}px`
                 );
 
             }
         );
 
+    });
 
 
-        /* =================================================
-           ESCAPE HTML
+/* =========================================================
+   INITIALIZE
+========================================================= */
 
-           This prevents question/option text from
-           accidentally breaking the HTML structure.
-        ================================================== */
+createLessonCards();
 
-        function escapeHTML(text) {
-
-            return String(text)
-                .replace(/&/g, "&amp;")
-                .replace(/</g, "&lt;")
-                .replace(/>/g, "&gt;")
-                .replace(/"/g, "&quot;")
-                .replace(/'/g, "&#039;");
-
-        }
-
-
-
-        /* =================================================
-           START
-        ================================================== */
-
-        loadQuestion();
-
-    </script>
+</script>
 
 
 </body>
