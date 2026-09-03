@@ -2419,45 +2419,1734 @@ const questionBank = [
        LESSON 1
        SCIENTIFIC STUDY
     ====================================================== */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Kandel Sarkar Science MCQ Practice — Grade 10 Nepal">
+<title>Kandel Sarkar | Grade 10 Science MCQ Practice</title>
+<style>
+:root{
+  --bg:#07111f; --bg2:#0b1d32; --panel:rgba(15,34,55,.86);
+  --panel2:rgba(20,48,74,.92); --text:#edf7ff; --muted:#9db6c9;
+  --cyan:#36d9ff; --blue:#5b8cff; --green:#49e3a2; --red:#ff6b7a;
+  --yellow:#ffd166; --line:rgba(133,202,240,.18);
+  --shadow:0 24px 70px rgba(0,0,0,.38); --radius:22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0; min-height:100vh; color:var(--text);
+ font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ background:
+ radial-gradient(circle at 15% 15%,rgba(54,217,255,.13),transparent 28%),
+ radial-gradient(circle at 85% 20%,rgba(91,140,255,.13),transparent 30%),
+ linear-gradient(145deg,var(--bg),var(--bg2));
+ overflow-x:hidden;
+}
+body:before{
+ content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;
+ background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+ linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+ background-size:42px 42px;
+ mask-image:linear-gradient(to bottom,black,transparent 85%);
+}
+#mouseGlow{
+ position:fixed;width:280px;height:280px;border-radius:50%;pointer-events:none;z-index:0;
+ background:radial-gradient(circle,rgba(54,217,255,.12),transparent 68%);
+ transform:translate(-50%,-50%);transition:left .08s linear,top .08s linear;
+}
+.app{position:relative;z-index:1;max-width:1180px;margin:auto;padding:26px 18px 60px}
+header{
+ display:flex;align-items:center;justify-content:space-between;gap:18px;
+ padding:12px 4px 28px;
+}
+.brand{display:flex;align-items:center;gap:13px}
+.logo{
+ width:48px;height:48px;border-radius:15px;display:grid;place-items:center;
+ background:linear-gradient(135deg,var(--cyan),var(--blue));box-shadow:0 0 35px rgba(54,217,255,.25);
+ font-size:24px;font-weight:900;color:#03111c;
+}
+.brand h1{font-size:18px;margin:0}.brand p{font-size:12px;color:var(--muted);margin:3px 0 0}
+.pill{padding:9px 13px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:12px;background:rgba(255,255,255,.035)}
+.screen{display:none}.screen.active{display:block;animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.hero{
+ padding:40px 32px;border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(18,48,73,.88),rgba(8,25,42,.9));
+ box-shadow:var(--shadow);overflow:hidden;position:relative;
+}
+.hero:after{content:"";position:absolute;width:380px;height:380px;right:-160px;top:-170px;border-radius:50%;border:1px solid rgba(54,217,255,.25);box-shadow:0 0 0 40px rgba(54,217,255,.025),0 0 0 80px rgba(54,217,255,.018)}
+.eyebrow{color:var(--cyan);font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.hero h2{font-size:clamp(30px,5vw,58px);line-height:1.03;margin:12px 0 14px;max-width:760px}
+.hero p{color:var(--muted);max-width:720px;line-height:1.7}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:22px}
+.card{
+ border:1px solid var(--line);background:var(--panel);border-radius:var(--radius);padding:22px;
+ box-shadow:0 16px 45px rgba(0,0,0,.2);transition:.25s;
+}
+.card:hover{transform:translateY(-4px);border-color:rgba(54,217,255,.42)}
+.unit-card{cursor:pointer;min-height:150px;display:flex;flex-direction:column;justify-content:space-between}
+.unit-number{font-size:12px;color:var(--cyan);font-weight:800}.unit-card h3{margin:8px 0;font-size:19px}.unit-card p{color:var(--muted);font-size:13px;margin:0}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+button{
+ border:0;border-radius:13px;padding:12px 17px;font-weight:800;cursor:pointer;color:#06121d;
+ background:linear-gradient(135deg,var(--cyan),#7cecff);transition:.2s;box-shadow:0 8px 25px rgba(54,217,255,.13);
+}
+button:hover{transform:translateY(-2px);filter:brightness(1.06)}
+button.secondary{background:rgba(255,255,255,.06);color:var(--text);border:1px solid var(--line);box-shadow:none}
+button.danger{background:rgba(255,107,122,.13);color:#ff9aa5;border:1px solid rgba(255,107,122,.3);box-shadow:none}
+button:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.section-title{display:flex;justify-content:space-between;align-items:end;gap:15px;margin:30px 0 14px}
+.section-title h2{margin:0;font-size:26px}.section-title p{margin:0;color:var(--muted);font-size:13px}
+.selector{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.option{
+ cursor:pointer;border:1px solid var(--line);background:rgba(255,255,255,.035);border-radius:18px;padding:19px;transition:.2s;
+}
+.option:hover,.option.selected{border-color:var(--cyan);background:rgba(54,217,255,.08);transform:translateY(-2px)}
+.option strong{display:block;margin-bottom:5px}.option span{font-size:12px;color:var(--muted)}
+.field{margin-top:18px}.field label{display:block;color:var(--muted);font-size:13px;margin-bottom:8px}
+select,input[type=number]{
+ width:100%;padding:13px;border-radius:12px;border:1px solid var(--line);background:#0b1c2d;color:var(--text);outline:none;
+}
+.quiz-top{
+ position:sticky;top:0;z-index:5;padding:12px 0;background:rgba(7,17,31,.86);backdrop-filter:blur(15px)
+}
+.top-row{display:flex;justify-content:space-between;align-items:center;gap:12px}.progress{height:7px;background:#122a40;border-radius:99px;overflow:hidden;margin-top:10px}
+.progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--blue));transition:.3s}
+.question-card{margin-top:20px;padding:28px}
+.q-meta{display:flex;justify-content:space-between;color:var(--muted);font-size:12px}.q-meta b{color:var(--cyan)}
+.question{font-size:clamp(20px,3vw,30px);line-height:1.4;margin:22px 0}
+.options{display:grid;gap:12px}
+.answer{
+ display:flex;align-items:flex-start;gap:13px;text-align:left;width:100%;
+ color:var(--text);background:rgba(255,255,255,.035);border:1px solid var(--line);box-shadow:none;
+}
+.answer .letter{width:31px;height:31px;display:grid;place-items:center;border-radius:9px;background:rgba(54,217,255,.1);color:var(--cyan);flex:0 0 auto}
+.answer.chosen{border-color:var(--cyan);background:rgba(54,217,255,.10)}
+.answer.chosen .letter{background:var(--cyan);color:#04131e}
+.quiz-actions{display:flex;justify-content:space-between;gap:10px;margin-top:22px}
+.results-hero{text-align:center;padding:34px}
+.score{font-size:72px;font-weight:950;background:linear-gradient(135deg,var(--cyan),var(--green));-webkit-background-clip:text;color:transparent}
+.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0}
+.stat{padding:18px;border:1px solid var(--line);border-radius:17px;background:rgba(255,255,255,.035)}.stat b{font-size:25px;display:block}.stat span{font-size:12px;color:var(--muted)}
+.review{margin-top:18px}.review-item{padding:20px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.035);margin-bottom:12px}
+.review-item.correct{border-color:rgba(73,227,162,.35)}.review-item.wrong{border-color:rgba(255,107,122,.35)}
+.review-q{font-weight:800;line-height:1.5}.review-line{font-size:13px;color:var(--muted);margin-top:8px}.correct-text{color:var(--green)}.wrong-text{color:#ff9aa5}.explanation{margin-top:12px;padding:13px;border-radius:12px;background:rgba(54,217,255,.06);color:#c8e8f5;line-height:1.6;font-size:13px}
+.empty{padding:30px;text-align:center;color:var(--muted)}
+footer{text-align:center;color:#6e8da1;font-size:12px;margin-top:40px}
+@media(max-width:650px){.app{padding:16px 12px 40px}.hero{padding:27px 20px}.result-grid{grid-template-columns:1fr}.quiz-actions{flex-direction:column}.quiz-actions button{width:100%}}
+</style>
+</head>
+<body>
+<div id="mouseGlow"></div>
+<div class="app">
+<header>
+ <div class="brand"><div class="logo">⚛</div><div><h1>Kandel Sarkar</h1><p>Grade 10 Science • MCQ Lab</p></div></div>
+ <div class="pill">NEB • Science & Technology</div>
+</header>
 
-    {
-        lesson:1,
+<section id="home" class="screen active">
+ <div class="hero">
+  <div class="eyebrow">Interactive Science World</div>
+  <h2>Test what you know. Discover why it happens.</h2>
+  <p>Practice Grade 10 Science MCQs unit-by-unit or challenge yourself with questions from the full book. Answers stay hidden until you finish the test.</p>
+  <div class="actions"><button onclick="show('units')">Start Science Practice →</button></div>
+ </div>
+ <div class="section-title"><div><h2>How it works</h2><p>A focused practice flow for students.</p></div></div>
+ <div class="grid">
+  <div class="card"><b>01 • Choose a unit</b><p>Pick one of the 19 Science & Technology units or use the complete-book mode.</p></div>
+  <div class="card"><b>02 • Choose questions</b><p>Select 10–100 questions. The system never exceeds 100 in one attempt.</p></div>
+  <div class="card"><b>03 • Finish first</b><p>No instant answers. Submit the complete attempt to unlock the detailed review.</p></div>
+ </div>
+</section>
 
-        question:
-            "Which of the following is an important feature of scientific study?",
+<section id="units" class="screen">
+ <div class="section-title"><div><h2>Choose your Science lesson</h2><p>Select a unit, or practice from the whole textbook.</p></div><button class="secondary" onclick="show('home')">← Home</button></div>
+ <div id="unitGrid" class="grid"></div>
+</section>
 
-        options:[
-            "Guessing without evidence",
-            "Systematic investigation",
-            "Ignoring observations",
-            "Accepting every claim"
-        ],
+<section id="setup" class="screen">
+ <div class="section-title"><div><h2 id="setupTitle">Practice setup</h2><p>Customize your attempt before starting.</p></div><button class="secondary" onclick="show('units')">← Units</button></div>
+ <div class="card">
+  <div class="field"><label>Question count</label>
+   <select id="count"><option>10</option><option>20</option><option>30</option><option>50</option><option>75</option><option selected>100</option></select>
+  </div>
+  <div class="field"><label>Question order</label>
+   <select id="order"><option value="random">Randomized</option><option value="book">Book order</option></select>
+  </div>
+  <div class="actions"><button onclick="startQuiz()">Begin MCQ Test →</button></div>
+ </div>
+ <div class="card" style="margin-top:16px"><b>Content note</b><p id="contentNote" style="color:var(--muted);line-height:1.6"></p></div>
+</section>
 
-        answer:1,
+<section id="quiz" class="screen">
+ <div class="quiz-top">
+  <div class="top-row"><span id="quizUnit"></span><b id="counter"></b></div>
+  <div class="progress"><i id="bar"></i></div>
+ </div>
+ <div class="card question-card">
+  <div class="q-meta"><span id="qTopic"></span><b id="answered"></b></div>
+  <div class="question" id="question"></div>
+  <div class="options" id="options"></div>
+  <div class="quiz-actions">
+   <button class="secondary" id="prevBtn" onclick="prevQuestion()">← Previous</button>
+   <button id="nextBtn" onclick="nextQuestion()">Next →</button>
+  </div>
+ </div>
+</section>
 
-        reason:
-            "Scientific study uses systematic observation, evidence, experimentation and logical analysis to investigate phenomena."
-    },
+<section id="results" class="screen">
+ <div class="card results-hero">
+  <div class="eyebrow">Test complete</div>
+  <div class="score" id="score">0%</div>
+  <h2 id="resultTitle">Science Practice Result</h2>
+  <p id="resultMessage" style="color:var(--muted)"></p>
+  <div class="result-grid">
+   <div class="stat"><b id="correctStat">0</b><span>Correct</span></div>
+   <div class="stat"><b id="wrongStat">0</b><span>Wrong</span></div>
+   <div class="stat"><b id="unansweredStat">0</b><span>Unanswered</span></div>
+  </div>
+  <div class="actions" style="justify-content:center"><button onclick="show('units')">New Practice</button><button class="secondary" onclick="window.print()">Print Result</button></div>
+ </div>
+ <div class="section-title"><div><h2>Answer review</h2><p>Every answer is shown with its reason.</p></div></div>
+ <div id="review" class="review"></div>
+</section>
 
+<footer>Kandel Sarkar • Grade 10 Science MCQ Practice • Built as a single HTML file</footer>
+</div>
 
-    {
-        lesson:1,
+<script>
+/* =========================================================
+   KANDEL SARKAR SCIENCE MCQ LAB
+   Everything is intentionally contained in this one HTML file.
 
-        question:
-            "What is a variable in scientific research?",
+   QUESTION BANK FORMAT:
+   {
+     id:"U1-001",
+     unit:1,
+     topic:"Variables of scientific research",
+     q:"Question text",
+     options:["A","B","C","D"],
+     answer:0,
+     explanation:"Why the correct answer is correct."
+   }
 
-        options:[
-            "A factor that can change",
-            "A fixed conclusion",
-            "A scientific instrument",
-            "A laboratory building"
-        ],
+   CHAPTER 1 STATUS:
+   Unit 1 now contains 100 textbook-grounded MCQs.
+   The remaining units can be added using the same object format.
+   ========================================================= */
 
-        answer:0,
+const UNITS = [
+ [1,"Scientific Learning"],[2,"Classification of Living Beings"],[3,"Honey Bee"],
+ [4,"Heredity"],[5,"Physiological Structure and Life Process"],[6,"Nature and Environment"],
+ [7,"Motion and Force"],[8,"Pressure"],[9,"Heat"],[10,"Wave"],
+ [11,"Electricity and Magnetism"],[12,"Universe"],[13,"Information and Communication Technology"],
+ [14,"Classification of Elements"],[15,"Chemical Reaction"],[16,"Gases"],
+ [17,"Metal and Not metals"],[18,"Hydrocarbon and its Compounds"],[19,"Chemicals used in Daily Life"]
+];
 
-        reason:
-            "A variable is a characteristic or factor that can change or take different values during an investigation."
-    },
+const QUESTION_BANK = [
+ {
+  "id": "U1-001",
+  "unit": 1,
+  "topic": "Scientific study",
+  "q": "Which statement best describes scientific study according to Unit 1?",
+  "options": [
+   "It investigates natural objects and phenomena in a planned and organized way using scientific methods and measurable evidence",
+   "It depends only on personal belief",
+   "It avoids experiments",
+   "It accepts every explanation without testing"
+  ],
+  "answer": 0,
+  "explanation": "Unit 1 describes scientific study as the planned and organized investigation of objects and phenomena in nature using scientific facts, theories, models, experiments and measurable evidence."
+ },
+ {
+  "id": "U1-002",
+  "unit": 1,
+  "topic": "Scientific study",
+  "q": "Why is scientific curiosity useful when a phenomenon or change is observed?",
+  "options": [
+   "It helps us investigate causes and predict results more correctly",
+   "It proves the first guess is always correct",
+   "It removes the need for measurement",
+   "It makes controlled variables unnecessary"
+  ],
+  "answer": 0,
+  "explanation": "The chapter explains that curiosity about a change leads to investigation of the factors involved and helps prediction."
+ },
+ {
+  "id": "U1-003",
+  "unit": 1,
+  "topic": "Variables",
+  "q": "A factor or characteristic that has a direct or indirect relationship with an event or phenomenon is called a:",
+  "options": [
+   "variable",
+   "unit",
+   "model",
+   "fundamental quantity"
+  ],
+  "answer": 0,
+  "explanation": "The chapter defines a factor or characteristic related to an event or phenomenon as a variable."
+ },
+ {
+  "id": "U1-004",
+  "unit": 1,
+  "topic": "Variables",
+  "q": "In a scientific investigation, what is the main purpose of identifying variables?",
+  "options": [
+   "To understand and test relationships among changing quantities",
+   "To avoid collecting observations",
+   "To make all quantities identical",
+   "To replace experiments with opinions"
+  ],
+  "answer": 0,
+  "explanation": "Identifying variables makes it possible to study relationships between quantities and determine how a change in one relates to another."
+ },
+ {
+  "id": "U1-005",
+  "unit": 1,
+  "topic": "Variables",
+  "q": "In the wilted-plant example, which pair is presented as possible causal factors?",
+  "options": [
+   "Lack of water and excessive heat from the sun",
+   "Plant height and stem rigidity",
+   "Flower colour and leaf number",
+   "Pot colour and seed shape"
+  ],
+  "answer": 0,
+  "explanation": "The chapter gives lack of water and excessive heat from the sun as causal factors for wilting."
+ },
+ {
+  "id": "U1-006",
+  "unit": 1,
+  "topic": "Variables",
+  "q": "If the amount of water supplied to a plant is deliberately changed and plant growth is measured, the amount of water is the:",
+  "options": [
+   "independent variable",
+   "dependent variable",
+   "controlled variable",
+   "derived unit"
+  ],
+  "answer": 0,
+  "explanation": "The independent variable is the variable manipulated by the researcher; the chapter gives water as an example of a possible independent variable for plant growth."
+ },
+ {
+  "id": "U1-007",
+  "unit": 1,
+  "topic": "Variables",
+  "q": "If plant height is measured after changing the amount of water supplied, plant height is the:",
+  "options": [
+   "dependent variable",
+   "independent variable",
+   "controlled variable",
+   "fundamental unit"
+  ],
+  "answer": 0,
+  "explanation": "The dependent variable is the observed effect whose value depends on another variable."
+ },
+ {
+  "id": "U1-008",
+  "unit": 1,
+  "topic": "Variables",
+  "q": "The variable that a researcher deliberately manipulates is called the:",
+  "options": [
+   "independent variable",
+   "dependent variable",
+   "controlled variable",
+   "constant unit"
+  ],
+  "answer": 0,
+  "explanation": "The chapter defines the manipulated variable as the independent variable."
+ },
+ {
+  "id": "U1-009",
+  "unit": 1,
+  "topic": "Variables",
+  "q": "The variable whose value depends on another variable and is observed or measured is called the:",
+  "options": [
+   "dependent variable",
+   "independent variable",
+   "controlled variable",
+   "fundamental variable"
+  ],
+  "answer": 0,
+  "explanation": "The dependent variable changes in response to the independent variable and is measured by the researcher."
+ },
+ {
+  "id": "U1-010",
+  "unit": 1,
+  "topic": "Variables",
+  "q": "Why is the relationship between variables often expressed mathematically?",
+  "options": [
+   "To establish and represent the relationship between physical quantities",
+   "To avoid measuring quantities",
+   "To make units unnecessary",
+   "To ensure every equation is automatically valid"
+  ],
+  "answer": 0,
+  "explanation": "The chapter states that experiments establish relationships between physical quantities, and these relationships can be expressed mathematically."
+ },
+ {
+  "id": "U1-011",
+  "unit": 1,
+  "topic": "Rubber-band experiment",
+  "q": "In Activity 1.1, what is used as the projectile?",
+  "options": [
+   "A paper bullet",
+   "A metal ball",
+   "A glass bead",
+   "A wooden block"
+  ],
+  "answer": 0,
+  "explanation": "The activity makes a paper bullet and launches it with a rubber band."
+ },
+ {
+  "id": "U1-012",
+  "unit": 1,
+  "topic": "Rubber-band experiment",
+  "q": "In Activity 1.1, which quantity is changed among the trials?",
+  "options": [
+   "Extension of the rubber band",
+   "Size of the paper bullet",
+   "Thickness of the paper bullet",
+   "Type of measuring instrument"
+  ],
+  "answer": 0,
+  "explanation": "The activity uses different extensions of the rubber band, such as 4 cm, 6 cm, 8 cm and 10 cm."
+ },
+ {
+  "id": "U1-013",
+  "unit": 1,
+  "topic": "Rubber-band experiment",
+  "q": "In Activity 1.1, what is measured as the effect of changing rubber-band extension?",
+  "options": [
+   "Distance travelled by the paper bullet",
+   "Mass of the ruler",
+   "Colour of the rubber band",
+   "Length of the classroom"
+  ],
+  "answer": 0,
+  "explanation": "The activity records the distance travelled by the paper bullet for different rubber-band extensions."
+ },
+ {
+  "id": "U1-014",
+  "unit": 1,
+  "topic": "Rubber-band experiment",
+  "q": "Which statement correctly identifies the independent variable in Activity 1.1?",
+  "options": [
+   "Extension of the rubber band",
+   "Distance travelled by the paper bullet",
+   "Thickness of the rubber band",
+   "Size of the paper bullet"
+  ],
+  "answer": 0,
+  "explanation": "The chapter's summary for Activity 1.1 identifies extension of the rubber band as the independent variable."
+ },
+ {
+  "id": "U1-015",
+  "unit": 1,
+  "topic": "Rubber-band experiment",
+  "q": "Which statement correctly identifies the dependent variable in Activity 1.1?",
+  "options": [
+   "Distance travelled by the paper bullet",
+   "Extension of the rubber band",
+   "Thickness of the rubber band",
+   "Size of the paper bullet"
+  ],
+  "answer": 0,
+  "explanation": "Distance travelled depends on the extension of the rubber band, so it is the dependent variable."
+ },
+ {
+  "id": "U1-016",
+  "unit": 1,
+  "topic": "Rubber-band experiment",
+  "q": "Which pair is kept controlled in Activity 1.1?",
+  "options": [
+   "Thickness of the rubber band and size of the paper bullet",
+   "Extension and distance travelled",
+   "Distance and ruler length",
+   "Mass and time"
+  ],
+  "answer": 0,
+  "explanation": "The chapter identifies thickness of the rubber band and size of the paper bullet as controlled variables."
+ },
+ {
+  "id": "U1-017",
+  "unit": 1,
+  "topic": "Controlled variables",
+  "q": "Why should variables other than the specified independent and dependent variables be controlled?",
+  "options": [
+   "To make findings valid, reliable and accurate",
+   "To increase the number of independent variables",
+   "To prevent any measurement",
+   "To make the dependent variable disappear"
+  ],
+  "answer": 0,
+  "explanation": "Controlling other variables prevents them from influencing the result and improves validity, reliability and accuracy."
+ },
+ {
+  "id": "U1-018",
+  "unit": 1,
+  "topic": "Controlled variables",
+  "q": "If different rubber-band thicknesses are used in different trials of Activity 1.1, what is the main problem?",
+  "options": [
+   "The result may not be valid because another variable has changed",
+   "The dependent variable becomes a unit",
+   "The experiment becomes a fundamental quantity",
+   "The paper bullet becomes an independent unit"
+  ],
+  "answer": 0,
+  "explanation": "Thickness must remain the same so that changes in distance can be attributed to the specified independent variable."
+ },
+ {
+  "id": "U1-019",
+  "unit": 1,
+  "topic": "Controlled variables",
+  "q": "When studying the effect of light on plant growth, which should be kept uniform according to the chapter?",
+  "options": [
+   "Initial plant size, air, water and manure supplied",
+   "Only the colour of the pot",
+   "Only the plant height after the experiment",
+   "Only the amount of sunlight"
+  ],
+  "answer": 0,
+  "explanation": "The chapter specifically notes uniform initial plant size and uniform air, water and manure supply."
+ },
+ {
+  "id": "U1-020",
+  "unit": 1,
+  "topic": "Controlled variables",
+  "q": "When studying the rate of reaction between limestone and acid, which is an independent variable in the chapter's example?",
+  "options": [
+   "Surface area of limestone",
+   "Concentration of acid",
+   "Quantity of limestone",
+   "Weight of limestone"
+  ],
+  "answer": 0,
+  "explanation": "The chapter states that surface area is the independent variable in this example."
+ },
+ {
+  "id": "U1-021",
+  "unit": 1,
+  "topic": "Controlled variables",
+  "q": "In the limestone-and-acid example, the rate of reaction is the:",
+  "options": [
+   "dependent variable",
+   "independent variable",
+   "controlled variable",
+   "fundamental unit"
+  ],
+  "answer": 0,
+  "explanation": "The chapter identifies rate of reaction as the dependent variable."
+ },
+ {
+  "id": "U1-022",
+  "unit": 1,
+  "topic": "Controlled variables",
+  "q": "In the limestone-and-acid example, which factor is controlled?",
+  "options": [
+   "Concentration of acid",
+   "Surface area of limestone",
+   "Rate of reaction",
+   "Independent variable"
+  ],
+  "answer": 0,
+  "explanation": "Concentration of acid is kept the same; quantity and weight of limestone are also controlled."
+ },
+ {
+  "id": "U1-023",
+  "unit": 1,
+  "topic": "Types of variables",
+  "q": "How many main types of variables are classified in Unit 1?",
+  "options": [
+   "Three",
+   "Two",
+   "Four",
+   "Seven"
+  ],
+  "answer": 0,
+  "explanation": "The chapter classifies variables into independent, dependent and controlled variables."
+ },
+ {
+  "id": "U1-024",
+  "unit": 1,
+  "topic": "Types of variables",
+  "q": "Which variable is commonly described as the cause in a cause-and-effect relationship?",
+  "options": [
+   "Independent variable",
+   "Dependent variable",
+   "Controlled variable",
+   "Derived unit"
+  ],
+  "answer": 0,
+  "explanation": "The independent variable is the causative factor manipulated by the researcher."
+ },
+ {
+  "id": "U1-025",
+  "unit": 1,
+  "topic": "Types of variables",
+  "q": "Which variable is commonly described as the effect in a cause-and-effect relationship?",
+  "options": [
+   "Dependent variable",
+   "Independent variable",
+   "Controlled variable",
+   "Fundamental unit"
+  ],
+  "answer": 0,
+  "explanation": "The dependent variable is the effect that changes in response to the independent variable."
+ },
+ {
+  "id": "U1-026",
+  "unit": 1,
+  "topic": "Graphing variables",
+  "q": "When the relationship between variables is plotted on a graph, where is the independent variable generally placed?",
+  "options": [
+   "x-axis (horizontal axis)",
+   "y-axis (vertical axis)",
+   "both axes at the same time",
+   "outside the graph"
+  ],
+  "answer": 0,
+  "explanation": "The chapter states that the independent variable is generally plotted on the x-axis."
+ },
+ {
+  "id": "U1-027",
+  "unit": 1,
+  "topic": "Graphing variables",
+  "q": "When variables are plotted on a graph, the dependent variable is generally placed on the:",
+  "options": [
+   "y-axis (vertical axis)",
+   "x-axis (horizontal axis)",
+   "title only",
+   "legend only"
+  ],
+  "answer": 0,
+  "explanation": "The chapter states that the dependent variable is generally plotted on the y-axis."
+ },
+ {
+  "id": "U1-028",
+  "unit": 1,
+  "topic": "Graphing variables",
+  "q": "What does a graph of variables mainly show?",
+  "options": [
+   "How a change in the independent variable brings a change in the dependent variable",
+   "Only the names of units",
+   "Only controlled variables",
+   "The history of an experiment"
+  ],
+  "answer": 0,
+  "explanation": "The chapter explains that graph presentation depicts how a change in the independent variable brings a change in the dependent variable."
+ },
+ {
+  "id": "U1-029",
+  "unit": 1,
+  "topic": "Variables table",
+  "q": "In a study of the relation between rotating-knob rate and water flow, the amount of water flow per minute is the:",
+  "options": [
+   "dependent variable",
+   "independent variable",
+   "controlled variable",
+   "fundamental unit"
+  ],
+  "answer": 0,
+  "explanation": "The chapter's table identifies magnitude of knob rotation as independent and amount of water flow per minute as dependent."
+ },
+ {
+  "id": "U1-030",
+  "unit": 1,
+  "topic": "Variables table",
+  "q": "In the same rotating-knob and water-flow study, water pressure is listed as a:",
+  "options": [
+   "controlled variable",
+   "dependent variable",
+   "independent variable",
+   "derived unit"
+  ],
+  "answer": 0,
+  "explanation": "The chapter table lists water pressure as the controlled variable."
+ },
+ {
+  "id": "U1-031",
+  "unit": 1,
+  "topic": "Variables table",
+  "q": "In a study of electricity and magnetism in a solenoid, amount of electric current is the:",
+  "options": [
+   "independent variable",
+   "dependent variable",
+   "controlled variable",
+   "fundamental unit"
+  ],
+  "answer": 0,
+  "explanation": "The chapter table lists amount of electric current as the independent variable."
+ },
+ {
+  "id": "U1-032",
+  "unit": 1,
+  "topic": "Variables table",
+  "q": "In the solenoid study, number of pins attracted by the electromagnet is the:",
+  "options": [
+   "dependent variable",
+   "independent variable",
+   "controlled variable",
+   "unit"
+  ],
+  "answer": 0,
+  "explanation": "The number of pins attracted is the observed effect in the table."
+ },
+ {
+  "id": "U1-033",
+  "unit": 1,
+  "topic": "Variables table",
+  "q": "In the solenoid study, number of turns in the solenoid is the:",
+  "options": [
+   "controlled variable",
+   "dependent variable",
+   "independent variable",
+   "derived unit"
+  ],
+  "answer": 0,
+  "explanation": "The chapter table identifies number of turns in the solenoid as controlled."
+ },
+ {
+  "id": "U1-034",
+  "unit": 1,
+  "topic": "Variables table",
+  "q": "In a study of heat on sugar solubility, temperature of water is the:",
+  "options": [
+   "independent variable",
+   "dependent variable",
+   "controlled variable",
+   "unit of mass"
+  ],
+  "answer": 0,
+  "explanation": "The chapter table identifies water temperature as the independent variable."
+ },
+ {
+  "id": "U1-035",
+  "unit": 1,
+  "topic": "Variables table",
+  "q": "In the sugar-solubility study, amount of completely dissolved sugar is the:",
+  "options": [
+   "dependent variable",
+   "independent variable",
+   "controlled variable",
+   "fundamental unit"
+  ],
+  "answer": 0,
+  "explanation": "The amount of dissolved sugar is the measured effect."
+ },
+ {
+  "id": "U1-036",
+  "unit": 1,
+  "topic": "Variables table",
+  "q": "In the sugar-solubility study, the amount of water is kept at:",
+  "options": [
+   "100 grams",
+   "10 grams",
+   "1 kilogram",
+   "50 grams"
+  ],
+  "answer": 0,
+  "explanation": "The chapter table specifies the amount of water as 100 grams for each trial."
+ },
+ {
+  "id": "U1-037",
+  "unit": 1,
+  "topic": "Variables table",
+  "q": "In the study of immediate effect of physical exercise on heartbeat, duration of physical exercise is the:",
+  "options": [
+   "independent variable",
+   "dependent variable",
+   "controlled variable",
+   "derived unit"
+  ],
+  "answer": 0,
+  "explanation": "The chapter table lists exercise duration as the independent variable."
+ },
+ {
+  "id": "U1-038",
+  "unit": 1,
+  "topic": "Variables table",
+  "q": "In the same heartbeat study, number of heartbeats is the:",
+  "options": [
+   "dependent variable",
+   "independent variable",
+   "controlled variable",
+   "fundamental unit"
+  ],
+  "answer": 0,
+  "explanation": "The number of heartbeats is the measured response."
+ },
+ {
+  "id": "U1-039",
+  "unit": 1,
+  "topic": "Variables table",
+  "q": "In the heartbeat study, type of physical exercise is the:",
+  "options": [
+   "controlled variable",
+   "dependent variable",
+   "independent variable",
+   "unit"
+  ],
+  "answer": 0,
+  "explanation": "The chapter table lists type of physical exercise as controlled."
+ },
+ {
+  "id": "U1-040",
+  "unit": 1,
+  "topic": "Units",
+  "q": "Physical quantities in the chapter are measured using:",
+  "options": [
+   "units",
+   "models only",
+   "opinions",
+   "graphs only"
+  ],
+  "answer": 0,
+  "explanation": "The chapter begins its units section by stating that physical quantities are measured in units."
+ },
+ {
+  "id": "U1-041",
+  "unit": 1,
+  "topic": "Units",
+  "q": "According to Unit 1, units of physical quantities are divided into how many broad types?",
+  "options": [
+   "Two",
+   "Three",
+   "Four",
+   "Seven"
+  ],
+  "answer": 0,
+  "explanation": "The two types are fundamental units and derived units."
+ },
+ {
+  "id": "U1-042",
+  "unit": 1,
+  "topic": "Fundamental units",
+  "q": "Which statement best defines a fundamental unit?",
+  "options": [
+   "A unit with independent existence that does not depend on other units",
+   "A unit formed by multiplying two derived units",
+   "A unit used only in experiments",
+   "A unit that must always contain a newton"
+  ],
+  "answer": 0,
+  "explanation": "The chapter defines a fundamental unit as one having independent existence and not depending on other units."
+ },
+ {
+  "id": "U1-043",
+  "unit": 1,
+  "topic": "Fundamental units",
+  "q": "Which SI unit is the fundamental unit of length?",
+  "options": [
+   "metre (m)",
+   "newton (N)",
+   "joule (J)",
+   "pascal (Pa)"
+  ],
+  "answer": 0,
+  "explanation": "The SI fundamental unit table gives metre (m) for length."
+ },
+ {
+  "id": "U1-044",
+  "unit": 1,
+  "topic": "Fundamental units",
+  "q": "Which SI unit is the fundamental unit of mass?",
+  "options": [
+   "kilogram (kg)",
+   "gram (g)",
+   "newton (N)",
+   "joule (J)"
+  ],
+  "answer": 0,
+  "explanation": "The chapter's SI table gives kilogram (kg) as the fundamental unit of mass."
+ },
+ {
+  "id": "U1-045",
+  "unit": 1,
+  "topic": "Fundamental units",
+  "q": "Which SI unit is the fundamental unit of time?",
+  "options": [
+   "second (s)",
+   "minute (min)",
+   "hour (h)",
+   "hertz (Hz)"
+  ],
+  "answer": 0,
+  "explanation": "The chapter lists second (s) as the SI fundamental unit of time."
+ },
+ {
+  "id": "U1-046",
+  "unit": 1,
+  "topic": "Fundamental units",
+  "q": "Which SI unit is the fundamental unit of temperature?",
+  "options": [
+   "kelvin (K)",
+   "degree Celsius (°C)",
+   "joule (J)",
+   "watt (W)"
+  ],
+  "answer": 0,
+  "explanation": "The SI fundamental-unit table lists kelvin (K) for temperature."
+ },
+ {
+  "id": "U1-047",
+  "unit": 1,
+  "topic": "Fundamental units",
+  "q": "Which SI unit is the fundamental unit of luminous intensity?",
+  "options": [
+   "candela (cd)",
+   "ampere (A)",
+   "mole (mol)",
+   "kelvin (K)"
+  ],
+  "answer": 0,
+  "explanation": "Candela is the SI fundamental unit for luminous intensity."
+ },
+ {
+  "id": "U1-048",
+  "unit": 1,
+  "topic": "Fundamental units",
+  "q": "Which SI unit is the fundamental unit of electric current?",
+  "options": [
+   "ampere (A)",
+   "volt (V)",
+   "ohm (Ω)",
+   "coulomb (C)"
+  ],
+  "answer": 0,
+  "explanation": "The chapter lists ampere (A) as the fundamental unit of electric current."
+ },
+ {
+  "id": "U1-049",
+  "unit": 1,
+  "topic": "Fundamental units",
+  "q": "Which SI unit is the fundamental unit of amount of substance?",
+  "options": [
+   "mole (mol)",
+   "candela (cd)",
+   "kilogram (kg)",
+   "pascal (Pa)"
+  ],
+  "answer": 0,
+  "explanation": "The chapter lists mole (mol) as the fundamental unit of amount of substance."
+ },
+ {
+  "id": "U1-050",
+  "unit": 1,
+  "topic": "Fundamental units",
+  "q": "How many fundamental SI units are listed in the chapter's table?",
+  "options": [
+   "Seven",
+   "Five",
+   "Six",
+   "Nine"
+  ],
+  "answer": 0,
+  "explanation": "The table contains seven: metre, kilogram, second, kelvin, candela, ampere and mole."
+ },
+ {
+  "id": "U1-051",
+  "unit": 1,
+  "topic": "Derived units",
+  "q": "What is a derived unit?",
+  "options": [
+   "A unit formed by combining two or more fundamental units",
+   "A unit that exists independently of all other units",
+   "A unit used only for length",
+   "A unit without any symbol"
+  ],
+  "answer": 0,
+  "explanation": "The chapter defines a derived unit as a measurement unit composed of two or more fundamental units."
+ },
+ {
+  "id": "U1-052",
+  "unit": 1,
+  "topic": "Derived units",
+  "q": "Which of the following is a derived SI unit?",
+  "options": [
+   "Newton (N)",
+   "Kilogram (kg)",
+   "Kelvin (K)",
+   "Mole (mol)"
+  ],
+  "answer": 0,
+  "explanation": "Newton is derived from kilogram, metre and second."
+ },
+ {
+  "id": "U1-053",
+  "unit": 1,
+  "topic": "Derived units",
+  "q": "Which of the following is a fundamental unit?",
+  "options": [
+   "Kelvin (K)",
+   "Newton (N)",
+   "Joule (J)",
+   "Pascal (Pa)"
+  ],
+  "answer": 0,
+  "explanation": "Kelvin is one of the seven SI fundamental units."
+ },
+ {
+  "id": "U1-054",
+  "unit": 1,
+  "topic": "Derived units",
+  "q": "Which of the following is a derived unit?",
+  "options": [
+   "Joule (J)",
+   "Second (s)",
+   "Ampere (A)",
+   "Candela (cd)"
+  ],
+  "answer": 0,
+  "explanation": "Joule is a derived unit."
+ },
+ {
+  "id": "U1-055",
+  "unit": 1,
+  "topic": "Derived units",
+  "q": "Which pair contains only fundamental units?",
+  "options": [
+   "kilogram and second",
+   "newton and joule",
+   "pascal and watt",
+   "joule and metre"
+  ],
+  "answer": 0,
+  "explanation": "Kilogram and second are both SI fundamental units."
+ },
+ {
+  "id": "U1-056",
+  "unit": 1,
+  "topic": "Derived units",
+  "q": "Which pair contains only derived units?",
+  "options": [
+   "newton and joule",
+   "kilogram and metre",
+   "second and kelvin",
+   "ampere and mole"
+  ],
+  "answer": 0,
+  "explanation": "Newton and joule are both derived units."
+ },
+ {
+  "id": "U1-057",
+  "unit": 1,
+  "topic": "Area",
+  "q": "What is the SI unit of area?",
+  "options": [
+   "m²",
+   "m³",
+   "m/s",
+   "kg/m³"
+  ],
+  "answer": 0,
+  "explanation": "Area is length × breadth, so its unit is metre × metre = m²."
+ },
+ {
+  "id": "U1-058",
+  "unit": 1,
+  "topic": "Volume",
+  "q": "What is the SI unit of volume?",
+  "options": [
+   "m³",
+   "m²",
+   "m/s",
+   "kg/m³"
+  ],
+  "answer": 0,
+  "explanation": "Volume is length × breadth × height, giving m³."
+ },
+ {
+  "id": "U1-059",
+  "unit": 1,
+  "topic": "Density",
+  "q": "Which expression represents the SI unit of density?",
+  "options": [
+   "kg/m³",
+   "kg/m²",
+   "m/s",
+   "N/m²"
+  ],
+  "answer": 0,
+  "explanation": "Density is mass divided by volume, so kg/m³."
+ },
+ {
+  "id": "U1-060",
+  "unit": 1,
+  "topic": "Velocity",
+  "q": "Which expression is the SI unit of velocity?",
+  "options": [
+   "m/s",
+   "m/s²",
+   "kg/m³",
+   "N"
+  ],
+  "answer": 0,
+  "explanation": "Velocity is displacement divided by time, so its unit is metre per second."
+ },
+ {
+  "id": "U1-061",
+  "unit": 1,
+  "topic": "Acceleration",
+  "q": "Which expression is the SI unit of acceleration?",
+  "options": [
+   "m/s²",
+   "m/s",
+   "kg/m³",
+   "N/m²"
+  ],
+  "answer": 0,
+  "explanation": "Acceleration is change of velocity per unit time, giving m/s²."
+ },
+ {
+  "id": "U1-062",
+  "unit": 1,
+  "topic": "Force",
+  "q": "Which expression gives the SI unit of force in fundamental units?",
+  "options": [
+   "kg·m/s²",
+   "kg·m²/s²",
+   "kg/m³",
+   "m/s"
+  ],
+  "answer": 0,
+  "explanation": "From F = ma, force has unit kg × m/s² = kg·m/s²."
+ },
+ {
+  "id": "U1-063",
+  "unit": 1,
+  "topic": "Force",
+  "q": "The SI derived unit named newton (N) is the unit of:",
+  "options": [
+   "force",
+   "pressure",
+   "power",
+   "frequency"
+  ],
+  "answer": 0,
+  "explanation": "Newton is the named SI unit of force."
+ },
+ {
+  "id": "U1-064",
+  "unit": 1,
+  "topic": "Pressure",
+  "q": "Which expression gives the SI unit of pressure in fundamental units?",
+  "options": [
+   "kg/(m·s²)",
+   "kg·m/s²",
+   "kg·m²/s²",
+   "m/s"
+  ],
+  "answer": 0,
+  "explanation": "Pressure = force/area = (kg·m/s²)/m² = kg·m⁻¹·s⁻²."
+ },
+ {
+  "id": "U1-065",
+  "unit": 1,
+  "topic": "Pressure",
+  "q": "The SI derived unit named pascal (Pa) is the unit of:",
+  "options": [
+   "pressure",
+   "force",
+   "work",
+   "power"
+  ],
+  "answer": 0,
+  "explanation": "Pascal is the named SI unit of pressure."
+ },
+ {
+  "id": "U1-066",
+  "unit": 1,
+  "topic": "Work",
+  "q": "Which expression gives the SI unit of work in fundamental units?",
+  "options": [
+   "kg·m²/s²",
+   "kg·m/s²",
+   "kg/(m·s²)",
+   "m/s"
+  ],
+  "answer": 0,
+  "explanation": "Work = force × distance = (kg·m/s²) × m = kg·m²/s²."
+ },
+ {
+  "id": "U1-067",
+  "unit": 1,
+  "topic": "Work",
+  "q": "The SI derived unit named joule (J) is the unit of:",
+  "options": [
+   "work",
+   "force",
+   "pressure",
+   "frequency"
+  ],
+  "answer": 0,
+  "explanation": "Joule is the named SI unit of work."
+ },
+ {
+  "id": "U1-068",
+  "unit": 1,
+  "topic": "Power",
+  "q": "Which expression gives the SI unit of power in fundamental units?",
+  "options": [
+   "kg·m²/s³",
+   "kg·m²/s²",
+   "kg·m/s²",
+   "kg/(m·s²)"
+  ],
+  "answer": 0,
+  "explanation": "Power = work/time = (kg·m²/s²)/s = kg·m²/s³."
+ },
+ {
+  "id": "U1-069",
+  "unit": 1,
+  "topic": "Power",
+  "q": "The SI derived unit named watt (W) is the unit of:",
+  "options": [
+   "power",
+   "work",
+   "force",
+   "pressure"
+  ],
+  "answer": 0,
+  "explanation": "Watt is the named SI unit of power."
+ },
+ {
+  "id": "U1-070",
+  "unit": 1,
+  "topic": "Moment",
+  "q": "According to the chapter's derived-unit table, the unit of moment is:",
+  "options": [
+   "N·m",
+   "J/s",
+   "N/m²",
+   "m/s"
+  ],
+  "answer": 0,
+  "explanation": "The table gives moment = force × distance, with unit N·m."
+ },
+ {
+  "id": "U1-071",
+  "unit": 1,
+  "topic": "Frequency",
+  "q": "Which expression represents the unit of frequency?",
+  "options": [
+   "s⁻¹",
+   "m/s",
+   "m/s²",
+   "kg/m³"
+  ],
+  "answer": 0,
+  "explanation": "Frequency is 1/time, so its unit is s⁻¹."
+ },
+ {
+  "id": "U1-072",
+  "unit": 1,
+  "topic": "Frequency",
+  "q": "The SI derived unit named hertz (Hz) is the unit of:",
+  "options": [
+   "frequency",
+   "force",
+   "power",
+   "pressure"
+  ],
+  "answer": 0,
+  "explanation": "Hertz is the named SI unit of frequency."
+ },
+ {
+  "id": "U1-073",
+  "unit": 1,
+  "topic": "Unit names",
+  "q": "Which named unit is equivalent to kg·m/s²?",
+  "options": [
+   "newton",
+   "joule",
+   "pascal",
+   "watt"
+  ],
+  "answer": 0,
+  "explanation": "Newton is defined as kg·m/s²."
+ },
+ {
+  "id": "U1-074",
+  "unit": 1,
+  "topic": "Unit names",
+  "q": "Which named unit is equivalent to kg·m²/s²?",
+  "options": [
+   "joule",
+   "newton",
+   "pascal",
+   "watt"
+  ],
+  "answer": 0,
+  "explanation": "Joule is equivalent to kg·m²/s²."
+ },
+ {
+  "id": "U1-075",
+  "unit": 1,
+  "topic": "Unit names",
+  "q": "Which named unit is equivalent to kg·m²/s³?",
+  "options": [
+   "watt",
+   "joule",
+   "pascal",
+   "newton"
+  ],
+  "answer": 0,
+  "explanation": "Watt is equivalent to kg·m²/s³."
+ },
+ {
+  "id": "U1-076",
+  "unit": 1,
+  "topic": "Unit names",
+  "q": "Which named unit is equivalent to kg·m⁻¹·s⁻²?",
+  "options": [
+   "pascal",
+   "newton",
+   "joule",
+   "watt"
+  ],
+  "answer": 0,
+  "explanation": "Pascal is equivalent to kg·m⁻¹·s⁻²."
+ },
+ {
+  "id": "U1-077",
+  "unit": 1,
+  "topic": "Unit analysis",
+  "q": "What is unit analysis used for in Unit 1?",
+  "options": [
+   "To check the validity and uniformity of physical equations",
+   "To find the colour of an object",
+   "To eliminate all variables",
+   "To measure only mass"
+  ],
+  "answer": 0,
+  "explanation": "The chapter states that the validity and uniformity of formulae and equations can be checked by analyzing their units."
+ },
+ {
+  "id": "U1-078",
+  "unit": 1,
+  "topic": "Unit analysis",
+  "q": "For an equation to be valid by unit analysis, what must be true?",
+  "options": [
+   "The fundamental units on both sides must be the same",
+   "Only the numerical values must be different",
+   "The left side must have no unit",
+   "The right side must always be a fundamental unit"
+  ],
+  "answer": 0,
+  "explanation": "Unit analysis requires uniformity of the units of physical quantities on both sides."
+ },
+ {
+  "id": "U1-079",
+  "unit": 1,
+  "topic": "Unit analysis",
+  "q": "Which equation is used in the chapter as an example of a valid unit-wise relation?",
+  "options": [
+   "v² = u² + 2as",
+   "s = ut + 1/2 at²",
+   "v = ut",
+   "P = mv²"
+  ],
+  "answer": 0,
+  "explanation": "The chapter checks v² = u² + 2as and finds the units uniform on both sides."
+ },
+ {
+  "id": "U1-080",
+  "unit": 1,
+  "topic": "Unit analysis",
+  "q": "What is the unit of v² when velocity has unit m/s?",
+  "options": [
+   "m²/s²",
+   "m/s²",
+   "m²/s",
+   "kg·m/s²"
+  ],
+  "answer": 0,
+  "explanation": "Squaring m/s gives m²/s²."
+ },
+ {
+  "id": "U1-081",
+  "unit": 1,
+  "topic": "Unit analysis",
+  "q": "What is the unit of the term 2as when a has unit m/s² and s has unit m?",
+  "options": [
+   "m²/s²",
+   "m/s",
+   "m/s²",
+   "kg·m/s²"
+  ],
+  "answer": 0,
+  "explanation": "The numerical factor 2 has no unit; (m/s²)×m = m²/s²."
+ },
+ {
+  "id": "U1-082",
+  "unit": 1,
+  "topic": "Unit analysis",
+  "q": "Why does v² = u² + 2as pass the unit test?",
+  "options": [
+   "v², u² and 2as all have the same fundamental unit m²/s²",
+   "Only v² has a unit",
+   "The numerical factor 2 changes the unit",
+   "u and v have different dimensions"
+  ],
+  "answer": 0,
+  "explanation": "Each term reduces to m²/s², so the equation is uniform in units."
+ },
+ {
+  "id": "U1-083",
+  "unit": 1,
+  "topic": "Unit analysis",
+  "q": "Which relation is shown as invalid in the chapter because its sides do not have the same fundamental units?",
+  "options": [
+   "s = ut + 1/2 at²",
+   "v² = u² + 2as",
+   "F = ma",
+   "W = Fd"
+  ],
+  "answer": 0,
+  "explanation": "The chapter's example finds the displayed relation invalid because the units on its two sides are not uniform."
+ },
+ {
+  "id": "U1-084",
+  "unit": 1,
+  "topic": "Unit analysis",
+  "q": "If s has unit m, u has unit m/s and t has unit s, what is the unit of ut?",
+  "options": [
+   "m",
+   "m/s",
+   "m/s²",
+   "s"
+  ],
+  "answer": 0,
+  "explanation": "(m/s)×s = m."
+ },
+ {
+  "id": "U1-085",
+  "unit": 1,
+  "topic": "Unit analysis",
+  "q": "If a has unit m/s² and t has unit s, what is the unit of at?",
+  "options": [
+   "m/s",
+   "m/s²",
+   "m",
+   "s⁻¹"
+  ],
+  "answer": 0,
+  "explanation": "(m/s²)×s = m/s."
+ },
+ {
+  "id": "U1-086",
+  "unit": 1,
+  "topic": "Unit analysis",
+  "q": "Why cannot physical quantities with different fundamental-unit compositions generally be added or subtracted?",
+  "options": [
+   "They represent different physical quantities and are not dimensionally comparable",
+   "Their numerical values are always zero",
+   "They are all derived units",
+   "They have no symbols"
+  ],
+  "answer": 0,
+  "explanation": "The chapter states that addition/subtraction is possible when quantities have the same fundamental-unit composition; otherwise they are dissimilar."
+ },
+ {
+  "id": "U1-087",
+  "unit": 1,
+  "topic": "Unit analysis",
+  "q": "Which operation is illustrated as valid when adding physical quantities with the same fundamental unit?",
+  "options": [
+   "m + m",
+   "m + m/s",
+   "s + kg",
+   "kg + m/s²"
+  ],
+  "answer": 0,
+  "explanation": "Quantities with the same fundamental-unit composition can be added, such as metre plus metre."
+ },
+ {
+  "id": "U1-088",
+  "unit": 1,
+  "topic": "Unit analysis",
+  "q": "What does dimensional/unit analysis help determine besides checking equations?",
+  "options": [
+   "Inter-relations of physical quantities and conversion among systems of measurement",
+   "The colour of laboratory equipment",
+   "The age of a sample",
+   "The number of chapters in a book"
+  ],
+  "answer": 0,
+  "explanation": "The chapter states that unit analysis is required to prove equation accuracy, find inter-relations of quantities and convert between measurement systems."
+ },
+ {
+  "id": "U1-089",
+  "unit": 1,
+  "topic": "Exercise",
+  "q": "Which of these was listed in the Unit 1 exercise as a fundamental unit?",
+  "options": [
+   "kilogram",
+   "newton",
+   "pascal",
+   "joule"
+  ],
+  "answer": 0,
+  "explanation": "The exercise asks this exact classification concept; kilogram is a fundamental SI unit."
+ },
+ {
+  "id": "U1-090",
+  "unit": 1,
+  "topic": "Exercise",
+  "q": "Which physical quantity has the unit m·s⁻¹?",
+  "options": [
+   "velocity",
+   "acceleration",
+   "force",
+   "density"
+  ],
+  "answer": 0,
+  "explanation": "Velocity is measured in m/s in the chapter's derived-unit discussion."
+ },
+ {
+  "id": "U1-091",
+  "unit": 1,
+  "topic": "Exercise",
+  "q": "Which of these was listed in the Unit 1 exercise as a derived unit?",
+  "options": [
+   "joule",
+   "candela",
+   "ampere",
+   "kelvin"
+  ],
+  "answer": 0,
+  "explanation": "Joule is a derived unit, while candela, ampere and kelvin are fundamental units."
+ },
+ {
+  "id": "U1-092",
+  "unit": 1,
+  "topic": "Exercise",
+  "q": "Which expression denotes newton in fundamental SI units?",
+  "options": [
+   "kg·m·s⁻²",
+   "kg·m²·s⁻²",
+   "kg·m⁻¹·s⁻²",
+   "m·s⁻¹"
+  ],
+  "answer": 0,
+  "explanation": "Newton is kg·m/s², equivalent to kg·m·s⁻²."
+ },
+ {
+  "id": "U1-093",
+  "unit": 1,
+  "topic": "Application",
+  "q": "A researcher changes the amount of fertilizer but keeps sunlight, water and initial plant size uniform. Which variable is the controlled variable?",
+  "options": [
+   "Sunlight",
+   "Amount of fertilizer",
+   "Plant growth",
+   "Number of observations"
+  ],
+  "answer": 0,
+  "explanation": "In a plant-growth experiment, factors other than the specified independent variable should be controlled; the chapter explicitly gives sunlight and water as examples of factors that may need control."
+ },
+ {
+  "id": "U1-094",
+  "unit": 1,
+  "topic": "Application",
+  "q": "A student studies how exercise duration affects heartbeat and keeps the type of exercise unchanged. What is the controlled variable?",
+  "options": [
+   "Type of physical exercise",
+   "Exercise duration",
+   "Number of heartbeats",
+   "Time of measurement"
+  ],
+  "answer": 0,
+  "explanation": "The chapter's table identifies exercise duration as independent, number of heartbeats as dependent, and type of physical exercise as controlled."
+ },
+ {
+  "id": "U1-095",
+  "unit": 1,
+  "topic": "Application",
+  "q": "A student measures the distance travelled by a paper bullet for rubber-band extensions of 4 cm, 6 cm, 8 cm and 10 cm. What is being investigated?",
+  "options": [
+   "The relationship between rubber-band extension and distance travelled",
+   "The relationship between mass and density",
+   "The relation between pressure and area",
+   "The relation between work and power"
+  ],
+  "answer": 0,
+  "explanation": "Activity 1.1 investigates how changing rubber-band extension affects the distance travelled by the paper bullet."
+ },
+ {
+  "id": "U1-096",
+  "unit": 1,
+  "topic": "Application",
+  "q": "If the paper bullet size changes between trials in Activity 1.1, which principle of experimental design is violated?",
+  "options": [
+   "Keeping a controlled variable constant",
+   "Changing the independent variable",
+   "Measuring the dependent variable",
+   "Using a unit"
+  ],
+  "answer": 0,
+  "explanation": "The size of the paper bullet is a controlled variable and should remain the same throughout the trials."
+ },
+ {
+  "id": "U1-097",
+  "unit": 1,
+  "topic": "Application",
+  "q": "A graph shows rubber-band extension on the horizontal axis and distance travelled on the vertical axis. Which variable is the dependent variable?",
+  "options": [
+   "Distance travelled",
+   "Rubber-band extension",
+   "Paper-bullet size",
+   "Rubber-band thickness"
+  ],
+  "answer": 0,
+  "explanation": "The dependent variable is generally plotted on the y-axis, and in Activity 1.1 distance travelled is the dependent variable."
+ },
+ {
+  "id": "U1-098",
+  "unit": 1,
+  "topic": "Application",
+  "q": "A student claims an equation is correct. Unit analysis gives m²/s² on the left and m/s on the right. What should the student conclude?",
+  "options": [
+   "The equation is not valid by unit analysis",
+   "The equation is definitely valid",
+   "The units can be ignored",
+   "Only the numerical coefficient must be changed"
+  ],
+  "answer": 0,
+  "explanation": "A valid physical equation must have uniform units on both sides."
+ },
+ {
+  "id": "U1-099",
+  "unit": 1,
+  "topic": "Application",
+  "q": "Which sequence correctly represents the logic of the rubber-band experiment?",
+  "options": [
+   "Change extension → measure distance travelled → keep thickness and bullet size constant",
+   "Change thickness and size → ignore distance → change extension randomly",
+   "Measure distance first → change all variables → draw no conclusion",
+   "Keep extension fixed → change every other variable → compare opinions"
+  ],
+  "answer": 0,
+  "explanation": "The activity changes extension, measures distance travelled, and controls rubber-band thickness and paper-bullet size."
+ },
+ {
+  "id": "U1-100",
+  "unit": 1,
+  "topic": "Application",
+  "q": "Which statement best distinguishes fundamental and derived units?",
+  "options": [
+   "Fundamental units are independent; derived units are formed from combinations of fundamental units",
+   "Fundamental units are always larger; derived units are always smaller",
+   "Derived units are independent; fundamental units depend on them",
+   "There is no difference"
+  ],
+  "answer": 0,
+  "explanation": "This is the central distinction made in Unit 1."
+ }
+];
+
+let selectedUnit = null, quizQuestions = [], userAnswers = [], current = 0;
+
+const $ = id => document.getElementById(id);
+function show(id){
+ document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active"));
+ $(id).classList.add("active");
+ window.scrollTo({top:0,behavior:"smooth"});
+}
+function renderUnits(){
+ const grid=$("unitGrid"); grid.innerHTML="";
+ UNITS.forEach(([num,name])=>{
+  const div=document.createElement("div"); div.className="card unit-card";
+  div.innerHTML=`<div><div class="unit-number">UNIT ${num}</div><h3>${name}</h3><p>${QUESTION_BANK.filter(x=>x.unit===num).length} question(s) currently loaded</p></div><div style="color:var(--cyan);font-weight:800">Practice →</div>`;
+  div.onclick=()=>selectUnit(num,name); grid.appendChild(div);
+ });
+ const full=document.createElement("div"); full.className="card unit-card";
+ full.innerHTML=`<div><div class="unit-number">ALL UNITS</div><h3>Full Science Book</h3><p>Mix questions from all loaded units • Maximum 100</p></div><div style="color:var(--green);font-weight:800">Full Book →</div>`;
+ full.onclick=()=>selectUnit("all","Full Science Book"); grid.appendChild(full);
+}
+function selectUnit(unit,name){
+ selectedUnit={unit,name};
+ $("setupTitle").textContent=name+" • Practice Setup";
+ const loaded=unit==="all"?QUESTION_BANK.length:QUESTION_BANK.filter(q=>q.unit===unit).length;
+ $("contentNote").textContent=`${loaded} question(s) are currently loaded in this single-file question bank for this selection. The final system supports up to 100 questions per attempt.`;
+ show("setup");
+}
+function shuffle(a){
+ const x=[...a]; for(let i=x.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[x[i],x[j]]=[x[j],x[i]]} return x;
+}
+function startQuiz(){
+ let pool=selectedUnit.unit==="all"?QUESTION_BANK:QUESTION_BANK.filter(q=>q.unit===selectedUnit.unit);
+ const requested=Math.min(100,Number($("count").value));
+ if(pool.length===0){alert("No questions have been loaded for this unit yet. Add textbook-derived MCQs to QUESTION_BANK.");return;}
+ quizQuestions=($("order").value==="random"?shuffle(pool):[...pool]).slice(0,Math.min(requested,pool.length));
+ userAnswers=new Array(quizQuestions.length).fill(null); current=0;
+ $("quizUnit").textContent=selectedUnit.name;
+ show("quiz"); renderQuestion();
+}
+function renderQuestion(){
+ const q=quizQuestions[current], n=quizQuestions.length;
+ $("counter").textContent=`Question ${current+1} / ${n}`;
+ $("bar").style.width=((current+1)/n*100)+"%";
+ $("qTopic").textContent=q.topic;
+ $("answered").textContent=`${userAnswers.filter(x=>x!==null).length} answered`;
+ $("question").textContent=q.q;
+ const box=$("options"); box.innerHTML="";
+ q.options.forEach((text,i)=>{
+  const b=document.createElement("button"); b.className="answer"+(userAnswers[current]===i?" chosen":"");
+  b.innerHTML=`<span class="letter">${String.fromCharCode(65+i)}</span><span>${text}</span>`;
+  b.onclick=()=>{userAnswers[current]=i;renderQuestion()};
+  box.appendChild(b);
+ });
+ $("prevBtn").disabled=current===0;
+ $("nextBtn").textContent=current===n-1?"Finish Test ✓":"Next →";
+}
+function prevQuestion(){if(current>0){current--;renderQuestion();}}
+function nextQuestion(){
+ if(current<quizQuestions.length-1){current++;renderQuestion();return;}
+ finishQuiz();
+}
+function finishQuiz(){
+ const unanswered=userAnswers.filter(x=>x===null).length;
+ let correct=0; quizQuestions.forEach((q,i)=>{if(userAnswers[i]===q.answer)correct++});
+ const wrong=quizQuestions.length-correct-unanswered;
+ const pct=Math.round(correct/quizQuestions.length*100);
+ $("score").textContent=pct+"%";
+ $("correctStat").textContent=correct;
+ $("wrongStat").textContent=wrong;
+ $("unansweredStat").textContent=unanswered;
+ $("resultTitle").textContent=pct>=80?"Excellent work!":pct>=60?"Good progress!":"Keep practicing — you can improve!";
+ $("resultMessage").textContent=`You scored ${correct} out of ${quizQuestions.length}. Review the explanations below to understand the science behind each answer.`;
+ const review=$("review"); review.innerHTML="";
+ quizQuestions.forEach((q,i)=>{
+  const ok=userAnswers[i]===q.answer;
+  const unanswered=userAnswers[i]===null;
+  const item=document.createElement("div");
+  item.className="review-item "+(ok?"correct":"wrong");
+  const yours=unanswered?"Not answered":q.options[userAnswers[i]];
+  item.innerHTML=`
+   <div class="review-q">${i+1}. ${q.q}</div>
+   <div class="review-line">Your answer: <span class="${ok?"correct-text":"wrong-text"}">${yours}</span></div>
+   <div class="review-line">Correct answer: <span class="correct-text">${q.options[q.answer]}</span></div>
+   <div class="explanation"><b>Why?</b> ${q.explanation}</div>`;
+  review.appendChild(item);
+ });
+ show("results");
+}
+document.addEventListener("keydown",e=>{
+ if(!$("quiz").classList.contains("active"))return;
+ if(e.key==="ArrowRight")nextQuestion();
+ if(e.key==="ArrowLeft")prevQuestion();
+});
+const glow=$("mouseGlow");
+document.addEventListener("mousemove",e=>{glow.style.left=e.clientX+"px";glow.style.top=e.clientY+"px"});
+renderUnits();
+</script>
+</body>
+</html>
 
 
     /* =====================================================
