@@ -2420,8 +2420,7 @@ const questionBank = [
        SCIENTIFIC STUDY
     ====================================================== */
 
-
-
+{
   "id": "U1-001",
   "unit": 1,
   "topic": "Scientific study",
