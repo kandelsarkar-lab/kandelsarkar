@@ -278,7 +278,7 @@ const unit1Questions = [
         answer: 0,
         reason: "Keeping relevant conditions constant helps make the investigation a fair comparison."
     }
-];
+]
     {
         id: "U1-021",
         lesson: 1,
