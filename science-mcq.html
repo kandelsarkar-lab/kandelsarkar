@@ -2421,10 +2421,9 @@ const legacyQuestionBank = [
        LESSON 1
        SCIENTIFIC STUDY
     ====================================================== */
-<script src="science-unit-01.js"></script>
 
-<script>
-
+       
+      
     /* =====================================================
        LESSON 2
        CLASSIFICATION OF LIVING BEINGS
@@ -3234,6 +3233,13 @@ const legacyQuestionBank = [
             "Some household chemicals can cause poisoning, burns, irritation or dangerous reactions, so labels and safety instructions should be followed."
     }
 
+];
+      const questionBank = [
+    ...unit1Questions,
+
+    ...legacyQuestionBank.filter(
+        question => Number(question.lesson ?? question.unit) !== 1
+    )
 ];
 
 
