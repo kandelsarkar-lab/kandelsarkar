@@ -2285,11 +2285,30 @@ footer{
 
 </footer>
 
-<script src="science-unit-01.js"></script>
+<script src="science-unit-01.js" onerror="console.error('Failed to load science-unit-01.js');"></script>
+<script src="science-unit-02.js" onerror="console.error('Failed to load science-unit-02.js');"></script>
+<script src="science-unit-03.js" onerror="console.error('Failed to load science-unit-03.js');"></script>
+<script src="science-unit-04.js" onerror="console.error('Failed to load science-unit-04.js');"></script>
+<script src="science-unit-05.js" onerror="console.error('Failed to load science-unit-05.js');"></script>
+<script src="science-unit-06.js" onerror="console.error('Failed to load science-unit-06.js');"></script>
+<script src="science-unit-07.js" onerror="console.error('Failed to load science-unit-07.js');"></script>
+<script src="science-unit-08.js" onerror="console.error('Failed to load science-unit-08.js');"></script>
+<script src="science-unit-09.js" onerror="console.error('Failed to load science-unit-09.js');"></script>
+<script src="science-unit-10.js" onerror="console.error('Failed to load science-unit-10.js');"></script>
+<script src="science-unit-11.js" onerror="console.error('Failed to load science-unit-11.js');"></script>
+<script src="science-unit-12.js" onerror="console.error('Failed to load science-unit-12.js');"></script>
+<script src="science-unit-13.js" onerror="console.error('Failed to load science-unit-13.js');"></script>
+<script src="science-unit-14.js" onerror="console.error('Failed to load science-unit-14.js');"></script>
+<script src="science-unit-15.js" onerror="console.error('Failed to load science-unit-15.js');"></script>
+<script src="science-unit-16.js" onerror="console.error('Failed to load science-unit-16.js');"></script>
+<script src="science-unit-17.js" onerror="console.error('Failed to load science-unit-17.js');"></script>
+<script src="science-unit-18.js" onerror="console.error('Failed to load science-unit-18.js');"></script>
+<script src="science-unit-19.js" onerror="console.error('Failed to load science-unit-19.js');"></script>
 
 
 
 <script>
+try {
 
 /* =========================================================
    LESSON DATABASE
@@ -3235,11 +3254,32 @@ const legacyQuestionBank = [
 
 ];
       const questionBank = [
-    ...unit1Questions,
+    ...(typeof unit1Questions !== 'undefined' ? unit1Questions : []),
+    ...(typeof unit2Questions !== 'undefined' ? unit2Questions : []),
+    ...(typeof unit3Questions !== 'undefined' ? unit3Questions : []),
+    ...(typeof unit4Questions !== 'undefined' ? unit4Questions : []),
+    ...(typeof unit5Questions !== 'undefined' ? unit5Questions : []),
+    ...(typeof unit6Questions !== 'undefined' ? unit6Questions : []),
+    ...(typeof unit7Questions !== 'undefined' ? unit7Questions : []),
+    ...(typeof unit8Questions !== 'undefined' ? unit8Questions : []),
+    ...(typeof unit9Questions !== 'undefined' ? unit9Questions : []),
+    ...(typeof unit10Questions !== 'undefined' ? unit10Questions : []),
+    ...(typeof unit11Questions !== 'undefined' ? unit11Questions : []),
+    ...(typeof unit12Questions !== 'undefined' ? unit12Questions : []),
+    ...(typeof unit13Questions !== 'undefined' ? unit13Questions : []),
+    ...(typeof unit14Questions !== 'undefined' ? unit14Questions : []),
+    ...(typeof unit15Questions !== 'undefined' ? unit15Questions : []),
+    ...(typeof unit16Questions !== 'undefined' ? unit16Questions : []),
+    ...(typeof unit17Questions !== 'undefined' ? unit17Questions : []),
+    ...(typeof unit18Questions !== 'undefined' ? unit18Questions : []),
+    ...(typeof unit19Questions !== 'undefined' ? unit19Questions : []),
 
-    ...legacyQuestionBank.filter(
-        question => Number(question.lesson ?? question.unit) !== 1
-    )
+    ...(typeof legacyQuestionBank !== 'undefined' ? legacyQuestionBank.filter(
+        question => {
+            const l = Number(question.lesson ?? question.unit);
+            return l >= 1 && l <= 19 && !((typeof window !== 'undefined') ? false : true); // keep old if needed
+        }
+    ) : [])
 ];
 
 
@@ -4402,6 +4442,11 @@ document
 ========================================================= */
 
 createLessonCards();
+
+} catch(e) {
+    console.error('Quiz initialization error:', e);
+    document.body.innerHTML = '<div style="padding:40px;text-align:center;color:#ff6879;">Something went wrong loading the quiz. Please refresh the page.</div>';
+}
 
 </script>
 
