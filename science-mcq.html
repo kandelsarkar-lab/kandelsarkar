@@ -3254,32 +3254,27 @@ const legacyQuestionBank = [
 
 ];
       const questionBank = [
-    ...(typeof unit1Questions !== 'undefined' ? unit1Questions : []),
-    ...(typeof unit2Questions !== 'undefined' ? unit2Questions : []),
-    ...(typeof unit3Questions !== 'undefined' ? unit3Questions : []),
-    ...(typeof unit4Questions !== 'undefined' ? unit4Questions : []),
-    ...(typeof unit5Questions !== 'undefined' ? unit5Questions : []),
-    ...(typeof unit6Questions !== 'undefined' ? unit6Questions : []),
-    ...(typeof unit7Questions !== 'undefined' ? unit7Questions : []),
-    ...(typeof unit8Questions !== 'undefined' ? unit8Questions : []),
-    ...(typeof unit9Questions !== 'undefined' ? unit9Questions : []),
-    ...(typeof unit10Questions !== 'undefined' ? unit10Questions : []),
-    ...(typeof unit11Questions !== 'undefined' ? unit11Questions : []),
-    ...(typeof unit12Questions !== 'undefined' ? unit12Questions : []),
-    ...(typeof unit13Questions !== 'undefined' ? unit13Questions : []),
-    ...(typeof unit14Questions !== 'undefined' ? unit14Questions : []),
-    ...(typeof unit15Questions !== 'undefined' ? unit15Questions : []),
-    ...(typeof unit16Questions !== 'undefined' ? unit16Questions : []),
-    ...(typeof unit17Questions !== 'undefined' ? unit17Questions : []),
-    ...(typeof unit18Questions !== 'undefined' ? unit18Questions : []),
-    ...(typeof unit19Questions !== 'undefined' ? unit19Questions : []),
+    ...(typeof window !== 'undefined' && window.unit1Questions ? window.unit1Questions : (typeof unit1Questions !== 'undefined' ? unit1Questions : [])),
+    ...(typeof window !== 'undefined' && window.unit2Questions ? window.unit2Questions : (typeof unit2Questions !== 'undefined' ? unit2Questions : [])),
+    ...(typeof window !== 'undefined' && window.unit3Questions ? window.unit3Questions : (typeof unit3Questions !== 'undefined' ? unit3Questions : [])),
+    ...(typeof window !== 'undefined' && window.unit4Questions ? window.unit4Questions : (typeof unit4Questions !== 'undefined' ? unit4Questions : [])),
+    ...(typeof window !== 'undefined' && window.unit5Questions ? window.unit5Questions : (typeof unit5Questions !== 'undefined' ? unit5Questions : [])),
+    ...(typeof window !== 'undefined' && window.unit6Questions ? window.unit6Questions : (typeof unit6Questions !== 'undefined' ? unit6Questions : [])),
+    ...(typeof window !== 'undefined' && window.unit7Questions ? window.unit7Questions : (typeof unit7Questions !== 'undefined' ? unit7Questions : [])),
+    ...(typeof window !== 'undefined' && window.unit8Questions ? window.unit8Questions : (typeof unit8Questions !== 'undefined' ? unit8Questions : [])),
+    ...(typeof window !== 'undefined' && window.unit9Questions ? window.unit9Questions : (typeof unit9Questions !== 'undefined' ? unit9Questions : [])),
+    ...(typeof window !== 'undefined' && window.unit10Questions ? window.unit10Questions : (typeof unit10Questions !== 'undefined' ? unit10Questions : [])),
+    ...(typeof window !== 'undefined' && window.unit11Questions ? window.unit11Questions : (typeof unit11Questions !== 'undefined' ? unit11Questions : [])),
+    ...(typeof window !== 'undefined' && window.unit12Questions ? window.unit12Questions : (typeof unit12Questions !== 'undefined' ? unit12Questions : [])),
+    ...(typeof window !== 'undefined' && window.unit13Questions ? window.unit13Questions : (typeof unit13Questions !== 'undefined' ? unit13Questions : [])),
+    ...(typeof window !== 'undefined' && window.unit14Questions ? window.unit14Questions : (typeof unit14Questions !== 'undefined' ? unit14Questions : [])),
+    ...(typeof window !== 'undefined' && window.unit15Questions ? window.unit15Questions : (typeof unit15Questions !== 'undefined' ? unit15Questions : [])),
+    ...(typeof window !== 'undefined' && window.unit16Questions ? window.unit16Questions : (typeof unit16Questions !== 'undefined' ? unit16Questions : [])),
+    ...(typeof window !== 'undefined' && window.unit17Questions ? window.unit17Questions : (typeof unit17Questions !== 'undefined' ? unit17Questions : [])),
+    ...(typeof window !== 'undefined' && window.unit18Questions ? window.unit18Questions : (typeof unit18Questions !== 'undefined' ? unit18Questions : [])),
+    ...(typeof window !== 'undefined' && window.unit19Questions ? window.unit19Questions : (typeof unit19Questions !== 'undefined' ? unit19Questions : [])),
 
-    ...(typeof legacyQuestionBank !== 'undefined' ? legacyQuestionBank.filter(
-        question => {
-            const l = Number(question.lesson ?? question.unit);
-            return l >= 1 && l <= 19 && !((typeof window !== 'undefined') ? false : true); // keep old if needed
-        }
-    ) : [])
+    ...(typeof legacyQuestionBank !== 'undefined' ? legacyQuestionBank : [])
 ];
 
 
