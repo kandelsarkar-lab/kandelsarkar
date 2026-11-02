@@ -1,4 +1,4 @@
-const unit13Questions = [
+window.unit13Questions = [
     {
         id: "U13-001",
         lesson: 13,
