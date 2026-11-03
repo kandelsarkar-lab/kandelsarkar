@@ -9,7 +9,7 @@
       content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-      content="Class 10 Science MCQ Practice">
+      content="Practice 244+ NEB Class 10 Science MCQs with timed tests, instant scoring and detailed explanations.">
 
 <title>
     Science MCQ Lab | Kandel Sarkar
@@ -1784,6 +1784,598 @@ footer{
 
 }
 
+
+/* =========================================================
+   PROFESSIONAL POLISH
+========================================================= */
+
+:root{
+
+    --gold:#f7c66b;
+
+    --danger:#ff6879;
+
+}
+
+
+body{
+
+    background-attachment:fixed;
+
+}
+
+
+.hero{
+
+    position:relative;
+
+}
+
+
+.hero h1{
+
+    text-shadow:
+        0 0 45px
+        rgba(53,216,255,.16);
+}
+
+
+.hero-stats{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:10px;
+
+    margin-top:27px;
+}
+
+
+.hero-stat{
+
+    min-width:118px;
+
+    padding:
+        12px 18px;
+
+    border:
+        1px solid
+        rgba(86,196,255,.16);
+
+    border-radius:14px;
+
+    background:
+        rgba(5,20,34,.5);
+
+    backdrop-filter:
+        blur(8px);
+
+}
+
+
+.hero-stat strong{
+
+    display:block;
+
+    color:var(--cyan);
+
+    font-size:22px;
+
+    letter-spacing:-.5px;
+}
+
+
+.hero-stat span{
+
+    display:block;
+
+    margin-top:3px;
+
+    color:var(--muted);
+
+    font-size:10px;
+
+    letter-spacing:1.1px;
+
+    text-transform:uppercase;
+}
+
+
+.panel{
+
+    animation:
+        riseIn .45s ease both;
+}
+
+
+@keyframes riseIn{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+
+.panel::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    pointer-events:none;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255,255,255,.04);
+}
+
+
+.lesson-card{
+
+    overflow:hidden;
+}
+
+
+.lesson-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    bottom:0;
+
+    width:3px;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--cyan),
+            transparent
+        );
+
+    opacity:0;
+
+    transition:
+        opacity .2s ease;
+}
+
+
+.lesson-card:hover::before,
+.lesson-card.selected::before{
+
+    opacity:1;
+}
+
+
+.lesson-card::after{
+
+    content:"→";
+
+    position:absolute;
+
+    right:14px;
+
+    top:13px;
+
+    color:var(--cyan);
+
+    font-size:15px;
+
+    opacity:0;
+
+    transform:
+        translateX(-4px);
+
+    transition:.2s ease;
+}
+
+
+.lesson-card:hover::after,
+.lesson-card.selected::after{
+
+    opacity:1;
+
+    transform:none;
+}
+
+
+.lesson-card.selected{
+
+    transform:
+        translateY(-2px);
+}
+
+
+.lesson-meta{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+}
+
+
+.lesson-meta::before{
+
+    content:"";
+
+    width:5px;
+
+    height:5px;
+
+    border-radius:50%;
+
+    background:var(--green);
+
+    box-shadow:
+        0 0 8px
+        var(--green);
+}
+
+
+.selection-info{
+
+    flex-wrap:wrap;
+}
+
+
+.selection-info > div{
+
+    flex:
+        1 1 160px;
+}
+
+
+.timer-hint{
+
+    margin-top:14px;
+
+    color:var(--muted);
+
+    font-size:11px;
+
+    line-height:1.6;
+
+    text-align:center;
+}
+
+
+.quiz-top{
+
+    gap:14px;
+
+    flex-wrap:wrap;
+}
+
+
+.quiz-meta-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:4px;
+}
+
+
+.quiz-meta-right{
+
+    align-items:flex-end;
+}
+
+
+.quiz-unit{
+
+    color:var(--muted);
+
+    font-size:10px;
+
+    letter-spacing:.4px;
+}
+
+
+.quiz-timer{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:6px;
+
+    min-width:96px;
+
+    padding:
+        8px 12px;
+
+    border:
+        1px solid
+        rgba(53,216,255,.3);
+
+    border-radius:10px;
+
+    background:
+        rgba(5,20,34,.8);
+
+    color:var(--cyan);
+
+    font-size:14px;
+
+    font-weight:900;
+
+    font-variant-numeric:
+        tabular-nums;
+
+    letter-spacing:.5px;
+
+    transition:.2s ease;
+}
+
+
+.quiz-timer.warning{
+
+    color:var(--yellow);
+
+    border-color:
+        rgba(255,209,102,.5);
+
+    background:
+        rgba(255,209,102,.08);
+}
+
+
+.quiz-timer.danger{
+
+    color:var(--red);
+
+    border-color:
+        rgba(255,104,121,.6);
+
+    background:
+        rgba(255,104,121,.1);
+
+    animation:
+        timerPulse 1s infinite;
+}
+
+
+@keyframes timerPulse{
+
+    0%,100%{
+
+        box-shadow:
+            0 0 0 0
+            rgba(255,104,121,0);
+
+    }
+
+    50%{
+
+        box-shadow:
+            0 0 0 5px
+            rgba(255,104,121,.08);
+
+    }
+
+}
+
+
+.option{
+
+    position:relative;
+}
+
+
+.option:focus-visible,
+.number-btn:focus-visible,
+.start-btn:focus-visible,
+.next-btn:focus-visible,
+.restart-btn:focus-visible,
+.lesson-card:focus-visible{
+
+    outline:
+        2px solid
+        var(--cyan);
+
+    outline-offset:2px;
+}
+
+
+.option.selected::after{
+
+    content:"✓";
+
+    position:absolute;
+
+    right:14px;
+
+    color:var(--cyan);
+
+    font-weight:900;
+}
+
+
+.quiz-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:9px;
+}
+
+
+.exit-btn{
+
+    min-height:46px;
+
+    padding:
+        0 16px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    border-radius:11px;
+
+    background:
+        transparent;
+
+    color:var(--muted);
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    transition:.2s ease;
+}
+
+
+.exit-btn:hover{
+
+    color:var(--white);
+
+    border-color:
+        rgba(255,255,255,.3);
+
+    background:
+        rgba(255,255,255,.04);
+}
+
+
+.result-meta{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:10px;
+
+    margin-top:14px;
+
+    color:var(--muted);
+
+    font-size:11px;
+}
+
+
+.result-timeout{
+
+    padding:
+        5px 10px;
+
+    border:
+        1px solid
+        rgba(255,209,102,.3);
+
+    border-radius:100px;
+
+    background:
+        rgba(255,209,102,.08);
+
+    color:var(--yellow);
+
+    font-weight:800;
+}
+
+
+.review-item.skipped{
+
+    border-color:
+        rgba(255,209,102,.3);
+}
+
+
+.review-item.skipped
+.review-number{
+
+    color:var(--yellow);
+}
+
+
+@media (max-width:700px){
+
+    .hero-stat{
+
+        flex:
+            1 1 40%;
+
+    }
+
+    .quiz-meta-right{
+
+        align-items:flex-start;
+
+    }
+
+    .quiz-timer{
+
+        font-size:13px;
+
+    }
+
+    .quiz-actions{
+
+        width:100%;
+
+    }
+
+    .quiz-actions .next-btn{
+
+        width:auto;
+
+        flex:1;
+
+    }
+
+}
+
+
+@media (prefers-reduced-motion: reduce){
+
+    *,
+    *::before,
+    *::after{
+
+        animation-duration:
+            .01ms !important;
+
+        transition-duration:
+            .01ms !important;
+
+    }
+
+}
+
 </style>
 
 </head>
@@ -1880,9 +2472,46 @@ footer{
 
         Choose your lesson, decide how many questions
         you want to solve, and test your scientific
-        understanding at your own pace.
+        understanding with a focused, timed practice session.
 
     </p>
+
+
+    <div class="hero-stats">
+
+        <div class="hero-stat">
+
+            <strong id="hero-total-questions">240+</strong>
+
+            <span>Real MCQs</span>
+
+        </div>
+
+        <div class="hero-stat">
+
+            <strong>19</strong>
+
+            <span>Units</span>
+
+        </div>
+
+        <div class="hero-stat">
+
+            <strong>60s</strong>
+
+            <span>Per question</span>
+
+        </div>
+
+        <div class="hero-stat">
+
+            <strong>NEB</strong>
+
+            <span>Grade 10</span>
+
+        </div>
+
+    </div>
 
 </section>
 
@@ -1963,6 +2592,24 @@ footer{
             <div class="selection-value">
 
                 Maximum 100
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <div class="selection-label">
+
+                TIMED PRACTICE
+
+            </div>
+
+
+            <div class="selection-value">
+
+                60 sec / question
 
             </div>
 
@@ -2078,6 +2725,14 @@ footer{
 
         </button>
 
+
+        <p class="timer-hint">
+
+            ⏱ Timed practice: 60 seconds per question.
+            The quiz submits automatically when time runs out.
+
+        </p>
+
     </div>
 
 </section>
@@ -2095,22 +2750,50 @@ footer{
 
     <div class="quiz-top">
 
-        <span
-            id="quiz-count"
-            class="quiz-count">
+        <div class="quiz-meta-group">
 
-            Question 1
+            <span
+                id="quiz-count"
+                class="quiz-count">
 
-        </span>
+                Question 1
+
+            </span>
 
 
-        <span
-            id="quiz-answered"
-            class="quiz-answered">
+            <span
+                id="quiz-unit-label"
+                class="quiz-unit">
 
-            Answered: 0
+                Practice session
 
-        </span>
+            </span>
+
+        </div>
+
+
+        <div class="quiz-meta-group quiz-meta-right">
+
+            <span
+                id="quiz-answered"
+                class="quiz-answered">
+
+                Answered: 0
+
+            </span>
+
+
+            <span
+                id="quiz-timer"
+                class="quiz-timer"
+                role="timer"
+                aria-live="polite">
+
+                ⏱ 00:00
+
+            </span>
+
+        </div>
 
     </div>
 
@@ -2158,14 +2841,28 @@ footer{
         </span>
 
 
-        <button
-            id="next-btn"
-            class="next-btn"
-            disabled>
+        <div class="quiz-actions">
 
-            Next Question →
+            <button
+                id="exit-btn"
+                class="exit-btn"
+                type="button">
 
-        </button>
+                Exit
+
+            </button>
+
+
+            <button
+                id="next-btn"
+                class="next-btn"
+                disabled>
+
+                Next Question →
+
+            </button>
+
+        </div>
 
     </div>
 
@@ -2217,6 +2914,26 @@ footer{
         class="score-percent">
 
         0%
+
+    </div>
+
+
+    <div class="result-meta">
+
+        <span id="result-time">
+
+            Time used: 00:00
+
+        </span>
+
+
+        <span
+            id="result-timed-out"
+            class="result-timeout hidden">
+
+            ⏱ Time limit reached
+
+        </span>
 
     </div>
 
@@ -2283,9 +3000,14 @@ footer{
 
     Class 10 Science Practice Platform
 
+    <br>
+
+    Aligned with the NEB Grade 10 Science &amp; Technology textbook
+
 </footer>
 
 <script src="science-unit-01.js?v=2" onerror="console.error('Failed to load science-unit-01.js');"></script>
+<script src="science-extra-questions.js?v=1" onerror="console.error('Failed to load science-extra-questions.js');"></script>
 
 
 
@@ -3238,6 +3960,8 @@ const legacyQuestionBank = [
       const questionBank = [
     ...( (typeof window !== 'undefined' && window.unit1Questions) ? window.unit1Questions : [] ),
 
+    ...( (typeof window !== 'undefined' && window.scienceExtraQuestions) ? window.scienceExtraQuestions : [] ),
+
     ...legacyQuestionBank.filter(
         question => Number(question.lesson ?? question.unit) !== 1
     )
@@ -3250,6 +3974,8 @@ const legacyQuestionBank = [
 
 let selectedLesson = null;
 
+let selectedLessonName = "";
+
 let selectedQuestionCount = 25;
 
 let currentQuestion = 0;
@@ -3257,6 +3983,18 @@ let currentQuestion = 0;
 let userAnswers = [];
 
 let activeQuestions = [];
+
+let timerInterval = null;
+
+let remainingSeconds = 0;
+
+let quizTotalSeconds = 0;
+
+let quizStartedAt = 0;
+
+let timerEndAt = 0;
+
+const SECONDS_PER_QUESTION = 60;
 
 
 /* =========================================================
@@ -3290,11 +4028,20 @@ const quizOptions =
 const nextButton =
     document.getElementById("next-btn");
 
+const exitButton =
+    document.getElementById("exit-btn");
+
 const quizCount =
     document.getElementById("quiz-count");
 
 const quizAnswered =
     document.getElementById("quiz-answered");
+
+const quizUnitLabel =
+    document.getElementById("quiz-unit-label");
+
+const quizTimer =
+    document.getElementById("quiz-timer");
 
 const quizStatus =
     document.getElementById("quiz-status");
@@ -3308,6 +4055,12 @@ const scoreElement =
 const scorePercent =
     document.getElementById("score-percent");
 
+const resultTime =
+    document.getElementById("result-time");
+
+const resultTimedOut =
+    document.getElementById("result-timed-out");
+
 const resultMessage =
     document.getElementById("result-message");
 
@@ -3316,6 +4069,9 @@ const reviewContainer =
 
 const customCount =
     document.getElementById("custom-count");
+
+const heroTotalQuestions =
+    document.getElementById("hero-total-questions");
 
 
 /* =========================================================
@@ -3445,6 +4201,8 @@ function selectLesson(
 
     selectedLesson = id;
 
+    selectedLessonName = name;
+
 
     document
         .querySelectorAll(".lesson-card")
@@ -3478,6 +4236,8 @@ function selectLesson(
 function selectAllChapters(card){
 
     selectedLesson = "all";
+
+    selectedLessonName = "All Science Chapters";
 
 
     document
@@ -3738,6 +4498,159 @@ startButton.addEventListener(
 );
 
 
+/* =========================================================
+   QUIZ TIMER
+========================================================= */
+
+function formatTime(totalSeconds){
+
+    const safeSeconds =
+        Math.max(
+            0,
+            Math.floor(totalSeconds)
+        );
+
+
+    const minutes =
+        String(
+            Math.floor(safeSeconds / 60)
+        ).padStart(2, "0");
+
+
+    const seconds =
+        String(
+            safeSeconds % 60
+        ).padStart(2, "0");
+
+
+    return `${minutes}:${seconds}`;
+
+}
+
+
+function updateTimerDisplay(){
+
+    quizTimer.textContent =
+        `⏱ ${formatTime(remainingSeconds)}`;
+
+
+    quizTimer.classList.toggle(
+        "warning",
+        remainingSeconds <= 30 &&
+        remainingSeconds > 10
+    );
+
+
+    quizTimer.classList.toggle(
+        "danger",
+        remainingSeconds <= 10
+    );
+
+}
+
+
+function stopTimer(){
+
+    if(timerInterval !== null){
+
+        clearInterval(
+            timerInterval
+        );
+
+        timerInterval = null;
+
+    }
+
+}
+
+
+function startTimer(){
+
+    stopTimer();
+
+
+    quizTotalSeconds =
+        activeQuestions.length *
+        SECONDS_PER_QUESTION;
+
+
+    remainingSeconds =
+        quizTotalSeconds;
+
+
+    quizStartedAt =
+        Date.now();
+
+
+    timerEndAt =
+        quizStartedAt +
+        quizTotalSeconds * 1000;
+
+
+    updateTimerDisplay();
+
+
+    timerInterval =
+        setInterval(
+            ()=>{
+
+                remainingSeconds =
+                    Math.max(
+                        0,
+                        Math.ceil(
+                            (
+                                timerEndAt -
+                                Date.now()
+                            ) /
+                            1000
+                        )
+                    );
+
+
+                updateTimerDisplay();
+
+
+                if(remainingSeconds <= 0){
+
+                    stopTimer();
+
+                    submitQuiz(true);
+
+                }
+
+            },
+            250
+        );
+
+}
+
+
+function getElapsedSeconds(){
+
+    if(!quizStartedAt){
+
+        return 0;
+
+    }
+
+
+    return Math.min(
+        quizTotalSeconds,
+        Math.max(
+            0,
+            Math.round(
+                (
+                    Date.now() -
+                    quizStartedAt
+                ) /
+                1000
+            )
+        )
+    );
+
+}
+
+
 function startQuiz(){
 
     /*
@@ -3798,6 +4711,20 @@ function startQuiz(){
     resultSection.classList.add(
         "hidden"
     );
+
+
+    quizUnitLabel.textContent =
+        selectedLesson === "all"
+            ? "All chapters • mixed practice"
+            : `Unit ${selectedLesson} • ${selectedLessonName}`;
+
+
+    resultTimedOut.classList.add(
+        "hidden"
+    );
+
+
+    startTimer();
 
 
     loadQuizQuestion();
@@ -4015,6 +4942,50 @@ nextButton.addEventListener(
 
 
 /* =========================================================
+   EXIT PRACTICE
+========================================================= */
+
+exitButton.addEventListener(
+    "click",
+    ()=>{
+
+        stopTimer();
+
+
+        quizTimer.textContent = "⏱ 00:00";
+
+        quizTimer.classList.remove(
+            "warning",
+            "danger"
+        );
+
+
+        quizSection.classList.add(
+            "hidden"
+        );
+
+        resultSection.classList.add(
+            "hidden"
+        );
+
+        selectionSection.classList.remove(
+            "hidden"
+        );
+
+
+        window.scrollTo({
+
+            top:0,
+
+            behavior:"smooth"
+
+        });
+
+    }
+);
+
+
+/* =========================================================
    PROGRESS
 ========================================================= */
 
@@ -4051,12 +5022,14 @@ function updateQuizProgress(){
    SUBMIT QUIZ
 ========================================================= */
 
-function submitQuiz(){
+function submitQuiz(timedOut = false){
 
     /*
        Safety check.
 
-       User must answer every question.
+       In normal mode, the user must answer
+       every question. On timeout, unanswered
+       questions are marked as not answered.
     */
 
     const unanswered =
@@ -4067,7 +5040,7 @@ function submitQuiz(){
         );
 
 
-    if(unanswered){
+    if(unanswered && !timedOut){
 
         alert(
             "Please answer all questions before submitting."
@@ -4076,6 +5049,15 @@ function submitQuiz(){
         return;
 
     }
+
+
+    stopTimer();
+
+
+    const timeUsed =
+        timedOut
+            ? quizTotalSeconds
+            : getElapsedSeconds();
 
 
     let score=0;
@@ -4097,7 +5079,11 @@ function submitQuiz(){
     );
 
 
-    showResult(score);
+    showResult(
+        score,
+        timedOut,
+        timeUsed
+    );
 
 }
 
@@ -4106,7 +5092,11 @@ function submitQuiz(){
    SHOW RESULT
 ========================================================= */
 
-function showResult(score){
+function showResult(
+    score,
+    timedOut = false,
+    timeUsed = 0
+){
 
     quizSection.classList.add(
         "hidden"
@@ -4137,11 +5127,28 @@ function showResult(score){
         `${percentage}%`;
 
 
+    resultTime.textContent =
+        `Time used: ${formatTime(timeUsed)} / ${formatTime(quizTotalSeconds)}`;
+
+
+    resultTimedOut.classList.toggle(
+        "hidden",
+        !timedOut
+    );
+
+
     /*
        Result message.
     */
 
-    if(percentage >= 90){
+    if(timedOut){
+
+        resultMessage.textContent =
+            "Time is up! Your answered questions have been scored. Review the explanations below and try again to improve your speed.";
+
+    }
+
+    else if(percentage >= 90){
 
         resultMessage.textContent =
             "Outstanding! 🧬 Your scientific understanding is very strong. Keep practicing to maintain this performance.";
@@ -4207,7 +5214,14 @@ function createReview(){
                 userAnswers[index];
 
 
+            const hasAnswer =
+                Number.isInteger(
+                    studentAnswer
+                );
+
+
             const isCorrect =
+                hasAnswer &&
                 studentAnswer ===
                 question.answer;
 
@@ -4217,15 +5231,19 @@ function createReview(){
 
 
             item.className =
-                isCorrect
-                    ? "review-item correct"
-                    : "review-item wrong";
+                !hasAnswer
+                    ? "review-item skipped"
+                    : isCorrect
+                        ? "review-item correct"
+                        : "review-item wrong";
 
 
             const studentText =
-                question.options[
-                    studentAnswer
-                ];
+                hasAnswer
+                    ? question.options[
+                        studentAnswer
+                    ]
+                    : "Not answered";
 
 
             const correctText =
@@ -4240,9 +5258,11 @@ function createReview(){
 
                     QUESTION ${index+1}
                     •
-                    ${isCorrect
-                        ? "✓ CORRECT"
-                        : "✕ INCORRECT"}
+                    ${!hasAnswer
+                        ? "— NOT ANSWERED"
+                        : isCorrect
+                            ? "✓ CORRECT"
+                            : "✕ INCORRECT"}
 
                 </div>
 
@@ -4318,6 +5338,16 @@ document
     .addEventListener(
         "click",
         ()=>{
+
+            stopTimer();
+
+            quizTimer.textContent = "⏱ 00:00";
+
+            quizTimer.classList.remove(
+                "warning",
+                "danger"
+            );
+
 
             resultSection.classList.add(
                 "hidden"
@@ -4446,6 +5476,10 @@ document
 /* =========================================================
    INITIALIZE
 ========================================================= */
+
+heroTotalQuestions.textContent =
+    String(questionBank.length);
+
 
 createLessonCards();
 
