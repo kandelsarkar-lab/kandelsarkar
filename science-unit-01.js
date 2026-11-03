@@ -2,1301 +2,1396 @@ window.unit1Questions = [
     {
         id: "U1-001",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 1: Which of the following is correct regarding scientific learning?",
+        question: "Scientific study investigates natural phenomena using which approach?",
         options: [
-            "Correct answer for Scientific Learning question 1",
-            "Incorrect option 1 for question 1",
-            "Incorrect option 2 for question 1",
-            "Incorrect option 3 for question 1"
+            "A planned and organized approach",
+            "Random guessing",
+            "Personal opinion",
+            "Imagination only"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Scientific study investigates objects and phenomena in nature in a planned and organized way."
     },
+
     {
         id: "U1-002",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 2: Which of the following is correct regarding scientific learning?",
+        question: "Which of the following is included in scientific study?",
         options: [
-            "Correct answer for Scientific Learning question 2",
-            "Incorrect option 1 for question 2",
-            "Incorrect option 2 for question 2",
-            "Incorrect option 3 for question 2"
+            "Facts, theories, models and experiments",
+            "Only opinions",
+            "Only guesses",
+            "Only stories"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The textbook describes scientific study in relation to facts, theories, models, experiments and physical situations."
     },
+
     {
         id: "U1-003",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 3: Which of the following is correct regarding scientific learning?",
+        question: "Scientific investigation is based on which type of evidence?",
         options: [
-            "Correct answer for Scientific Learning question 3",
-            "Incorrect option 1 for question 3",
-            "Incorrect option 2 for question 3",
-            "Incorrect option 3 for question 3"
+            "Empirical and measurable evidence",
+            "Rumours",
+            "Personal preference",
+            "Unverified assumptions"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The textbook states that scientific investigation is based on scientific methods and empirical/measurable evidence."
     },
+
     {
         id: "U1-004",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 4: Which of the following is correct regarding scientific learning?",
+        question: "What is a variable?",
         options: [
-            "Correct answer for Scientific Learning question 4",
-            "Incorrect option 1 for question 4",
-            "Incorrect option 2 for question 4",
-            "Incorrect option 3 for question 4"
+            "A causative factor, characteristic or trait related to an event or phenomenon",
+            "A fixed conclusion",
+            "A measuring instrument",
+            "A unit of measurement"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The textbook defines a variable as a causative factor, characteristic or trait related to an event or phenomenon."
     },
+
     {
         id: "U1-005",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 5: Which of the following is correct regarding scientific learning?",
+        question: "In the catapult activity, which material is used to make the catapult?",
         options: [
-            "Correct answer for Scientific Learning question 5",
-            "Incorrect option 1 for question 5",
-            "Incorrect option 2 for question 5",
-            "Incorrect option 3 for question 5"
+            "Rubber band",
+            "Glass tube",
+            "Magnet",
+            "Thermometer"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The textbook activity involves making a catapult using a rubber band."
     },
+
     {
         id: "U1-006",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 6: Which of the following is correct regarding scientific learning?",
+        question: "Approximately how long is the rubber band used in the catapult activity?",
         options: [
-            "Correct answer for Scientific Learning question 6",
-            "Incorrect option 1 for question 6",
-            "Incorrect option 2 for question 6",
-            "Incorrect option 3 for question 6"
+            "5 cm",
+            "50 cm",
+            "1 m",
+            "15 m"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The activity specifies a rubber band of approximately 5 cm."
     },
+
     {
         id: "U1-007",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 7: Which of the following is correct regarding scientific learning?",
+        question: "What is the size of each paper piece used in the catapult activity?",
         options: [
-            "Correct answer for Scientific Learning question 7",
-            "Incorrect option 1 for question 7",
-            "Incorrect option 2 for question 7",
-            "Incorrect option 3 for question 7"
+            "2 cm × 2 cm",
+            "5 cm × 5 cm",
+            "10 cm × 10 cm",
+            "1 cm × 5 cm"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The activity specifies paper pieces of 2 cm × 2 cm."
     },
+
     {
         id: "U1-008",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 8: Which of the following is correct regarding scientific learning?",
+        question: "Which measuring instrument is specified for measuring the distance travelled by the paper?",
         options: [
-            "Correct answer for Scientific Learning question 8",
-            "Incorrect option 1 for question 8",
-            "Incorrect option 2 for question 8",
-            "Incorrect option 3 for question 8"
+            "Measuring tape",
+            "Thermometer",
+            "Balance",
+            "Stopwatch"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The catapult activity uses a measuring tape to measure the distance travelled."
     },
+
     {
         id: "U1-009",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 9: Which of the following is correct regarding scientific learning?",
+        question: "In the catapult activity, which factor is changed?",
         options: [
-            "Correct answer for Scientific Learning question 9",
-            "Incorrect option 1 for question 9",
-            "Incorrect option 2 for question 9",
-            "Incorrect option 3 for question 9"
+            "Extension of the rubber band",
+            "Size of the classroom",
+            "Colour of the paper",
+            "Time of day"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The activity changes the extension of the rubber band."
     },
+
     {
         id: "U1-010",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 10: Which of the following is correct regarding scientific learning?",
+        question: "Which values of rubber-band extension are used in the catapult activity?",
         options: [
-            "Correct answer for Scientific Learning question 10",
-            "Incorrect option 1 for question 10",
-            "Incorrect option 2 for question 10",
-            "Incorrect option 3 for question 10"
+            "4, 6, 8 and 10 cm",
+            "1, 2, 3 and 4 cm",
+            "10, 20, 30 and 40 cm",
+            "2, 4, 6 and 8 m"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The activity instructs the learner to stretch the rubber band by 4, 6, 8 and 10 cm."
     },
+
     {
         id: "U1-011",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 11: Which of the following is correct regarding scientific learning?",
+        question: "In the catapult activity, what is measured as the result?",
         options: [
-            "Correct answer for Scientific Learning question 11",
-            "Incorrect option 1 for question 11",
-            "Incorrect option 2 for question 11",
-            "Incorrect option 3 for question 11"
+            "Distance travelled by the paper",
+            "Mass of the ruler",
+            "Length of the classroom",
+            "Temperature of the paper"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The distance travelled by the paper is measured for different rubber-band extensions."
     },
+
     {
         id: "U1-012",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 12: Which of the following is correct regarding scientific learning?",
+        question: "In the catapult activity, extension of the rubber band is which type of variable?",
         options: [
-            "Correct answer for Scientific Learning question 12",
-            "Incorrect option 1 for question 12",
-            "Incorrect option 2 for question 12",
-            "Incorrect option 3 for question 12"
+            "Independent variable",
+            "Dependent variable",
+            "Controlled variable",
+            "Constant unit"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The extension of the rubber band is deliberately changed, so it is the independent variable."
     },
+
     {
         id: "U1-013",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 13: Which of the following is correct regarding scientific learning?",
+        question: "In the catapult activity, distance travelled by the paper is which type of variable?",
         options: [
-            "Correct answer for Scientific Learning question 13",
-            "Incorrect option 1 for question 13",
-            "Incorrect option 2 for question 13",
-            "Incorrect option 3 for question 13"
+            "Dependent variable",
+            "Independent variable",
+            "Controlled variable",
+            "Fundamental unit"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The distance travelled changes in response to rubber-band extension, so it is the dependent variable."
     },
+
     {
         id: "U1-014",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 14: Which of the following is correct regarding scientific learning?",
+        question: "Which variable is manipulated by the investigator?",
         options: [
-            "Correct answer for Scientific Learning question 14",
-            "Incorrect option 1 for question 14",
-            "Incorrect option 2 for question 14",
-            "Incorrect option 3 for question 14"
+            "Independent variable",
+            "Dependent variable",
+            "Controlled variable",
+            "Derived unit"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The independent variable is the variable deliberately manipulated in an investigation."
     },
+
     {
         id: "U1-015",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 15: Which of the following is correct regarding scientific learning?",
+        question: "Which variable is kept the same during an investigation?",
         options: [
-            "Correct answer for Scientific Learning question 15",
-            "Incorrect option 1 for question 15",
-            "Incorrect option 2 for question 15",
-            "Incorrect option 3 for question 15"
+            "Controlled variable",
+            "Independent variable",
+            "Dependent variable",
+            "Derived quantity"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "A controlled variable is kept unchanged during the investigation."
     },
+
     {
         id: "U1-016",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 16: Which of the following is correct regarding scientific learning?",
+        question: "If fertilizer amount is changed and plant growth is measured, fertilizer amount is the:",
         options: [
-            "Correct answer for Scientific Learning question 16",
-            "Incorrect option 1 for question 16",
-            "Incorrect option 2 for question 16",
-            "Incorrect option 3 for question 16"
+            "Independent variable",
+            "Dependent variable",
+            "Controlled variable",
+            "Unit"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The textbook uses fertilizer as an example of an independent variable."
     },
+
     {
         id: "U1-017",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 17: Which of the following is correct regarding scientific learning?",
+        question: "If fertilizer amount is changed and plant growth is measured, plant growth is the:",
         options: [
-            "Correct answer for Scientific Learning question 17",
-            "Incorrect option 1 for question 17",
-            "Incorrect option 2 for question 17",
-            "Incorrect option 3 for question 17"
+            "Dependent variable",
+            "Independent variable",
+            "Controlled variable",
+            "Fundamental unit"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Plant growth is the measured response and therefore the dependent variable."
     },
+
     {
         id: "U1-018",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 18: Which of the following is correct regarding scientific learning?",
+        question: "Which of the following can be an independent variable in a plant-growth investigation?",
         options: [
-            "Correct answer for Scientific Learning question 18",
-            "Incorrect option 1 for question 18",
-            "Incorrect option 2 for question 18",
-            "Incorrect option 3 for question 18"
+            "Amount of water",
+            "Measured plant growth",
+            "Final conclusion",
+            "SI unit"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The textbook gives water as an example of an independent variable affecting plant growth."
     },
+
     {
         id: "U1-019",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 19: Which of the following is correct regarding scientific learning?",
+        question: "Which of the following can be a dependent variable in a plant-growth investigation?",
         options: [
-            "Correct answer for Scientific Learning question 19",
-            "Incorrect option 1 for question 19",
-            "Incorrect option 2 for question 19",
-            "Incorrect option 3 for question 19"
+            "Plant growth",
+            "Amount of water supplied",
+            "Amount of fertilizer supplied",
+            "Amount of sunlight provided"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Plant growth is measured as the response in the examples given."
     },
+
     {
         id: "U1-020",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 20: Which of the following is correct regarding scientific learning?",
+        question: "Why are controlled variables kept constant?",
         options: [
-            "Correct answer for Scientific Learning question 20",
-            "Incorrect option 1 for question 20",
-            "Incorrect option 2 for question 20",
-            "Incorrect option 3 for question 20"
+            "To make the investigation fair",
+            "To prevent measurement",
+            "To change the conclusion",
+            "To increase the number of variables"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Keeping relevant conditions constant helps make the investigation a fair comparison."
     },
     {
         id: "U1-021",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 21: Which of the following is correct regarding scientific learning?",
+        question: "Which variable is usually written on the left side of an equation?",
         options: [
-            "Correct answer for Scientific Learning question 21",
-            "Incorrect option 1 for question 21",
-            "Incorrect option 2 for question 21",
-            "Incorrect option 3 for question 21"
+            "Dependent variable",
+            "Independent variable",
+            "Controlled variable",
+            "Constant variable"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The textbook states that the dependent variable is usually written on the left side of an equation."
     },
+
     {
         id: "U1-022",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 22: Which of the following is correct regarding scientific learning?",
+        question: "Which variable is usually written on the right side of an equation?",
         options: [
-            "Correct answer for Scientific Learning question 22",
-            "Incorrect option 1 for question 22",
-            "Incorrect option 2 for question 22",
-            "Incorrect option 3 for question 22"
+            "Independent variable",
+            "Dependent variable",
+            "Controlled variable",
+            "Measured variable"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The independent variable is usually written on the right side of an equation."
     },
+
     {
         id: "U1-023",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 23: Which of the following is correct regarding scientific learning?",
+        question: "The dependent variable is plotted on which axis of a graph?",
         options: [
-            "Correct answer for Scientific Learning question 23",
-            "Incorrect option 1 for question 23",
-            "Incorrect option 2 for question 23",
-            "Incorrect option 3 for question 23"
+            "Y-axis",
+            "X-axis",
+            "Both axes",
+            "Neither axis"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The textbook states that the dependent variable is plotted on the y-axis."
     },
+
     {
         id: "U1-024",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 24: Which of the following is correct regarding scientific learning?",
+        question: "The independent variable is plotted on which axis of a graph?",
         options: [
-            "Correct answer for Scientific Learning question 24",
-            "Incorrect option 1 for question 24",
-            "Incorrect option 2 for question 24",
-            "Incorrect option 3 for question 24"
+            "X-axis",
+            "Y-axis",
+            "Z-axis",
+            "Vertical axis"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The independent variable is plotted on the x-axis."
     },
+
     {
         id: "U1-025",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 25: Which of the following is correct regarding scientific learning?",
+        question: "In the equation s = vt, what does s represent?",
         options: [
-            "Correct answer for Scientific Learning question 25",
-            "Incorrect option 1 for question 25",
-            "Incorrect option 2 for question 25",
-            "Incorrect option 3 for question 25"
+            "Distance travelled",
+            "Time",
+            "Speed",
+            "Mass"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "In the textbook example s = vt, s represents distance travelled."
     },
+
     {
         id: "U1-026",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 26: Which of the following is correct regarding scientific learning?",
+        question: "In the equation s = vt, which is the independent variable?",
         options: [
-            "Correct answer for Scientific Learning question 26",
-            "Incorrect option 1 for question 26",
-            "Incorrect option 2 for question 26",
-            "Incorrect option 3 for question 26"
+            "Time (t)",
+            "Distance (s)",
+            "Speed (v)",
+            "Mass (m)"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "In the textbook example, time is the independent variable."
     },
+
     {
         id: "U1-027",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 27: Which of the following is correct regarding scientific learning?",
+        question: "In the equation s = vt, which quantity is treated as the controlled variable?",
         options: [
-            "Correct answer for Scientific Learning question 27",
-            "Incorrect option 1 for question 27",
-            "Incorrect option 2 for question 27",
-            "Incorrect option 3 for question 27"
+            "Speed (v)",
+            "Distance (s)",
+            "Time (t)",
+            "Length"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The textbook example treats speed as the controlled variable."
     },
+
     {
         id: "U1-028",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 28: Which of the following is correct regarding scientific learning?",
+        question: "How many fundamental units are there in the SI system?",
         options: [
-            "Correct answer for Scientific Learning question 28",
-            "Incorrect option 1 for question 28",
-            "Incorrect option 2 for question 28",
-            "Incorrect option 3 for question 28"
+            "7",
+            "3",
+            "5",
+            "10"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The textbook states that there are seven fundamental units in the SI system."
     },
+
     {
         id: "U1-029",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 29: Which of the following is correct regarding scientific learning?",
+        question: "Which of the following is a fundamental unit of mass?",
         options: [
-            "Correct answer for Scientific Learning question 29",
-            "Incorrect option 1 for question 29",
-            "Incorrect option 2 for question 29",
-            "Incorrect option 3 for question 29"
+            "Kilogram",
+            "Newton",
+            "Pascal",
+            "Watt"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Kilogram is the SI fundamental unit of mass."
     },
+
     {
         id: "U1-030",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 30: Which of the following is correct regarding scientific learning?",
+        question: "Which is the fundamental SI unit of time?",
         options: [
-            "Correct answer for Scientific Learning question 30",
-            "Incorrect option 1 for question 30",
-            "Incorrect option 2 for question 30",
-            "Incorrect option 3 for question 30"
+            "Second",
+            "Minute",
+            "Hour",
+            "Hertz"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Second is the SI fundamental unit of time."
     },
+
     {
         id: "U1-031",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 31: Which of the following is correct regarding scientific learning?",
+        question: "Which is the fundamental SI unit of length?",
         options: [
-            "Correct answer for Scientific Learning question 31",
-            "Incorrect option 1 for question 31",
-            "Incorrect option 2 for question 31",
-            "Incorrect option 3 for question 31"
+            "Metre",
+            "Kilometre",
+            "Centimetre",
+            "Newton"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Metre is the SI fundamental unit of length."
     },
+
     {
         id: "U1-032",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 32: Which of the following is correct regarding scientific learning?",
+        question: "Which of the following is a derived unit?",
         options: [
-            "Correct answer for Scientific Learning question 32",
-            "Incorrect option 1 for question 32",
-            "Incorrect option 2 for question 32",
-            "Incorrect option 3 for question 32"
+            "Newton",
+            "Kilogram",
+            "Metre",
+            "Second"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Newton is a derived unit formed from fundamental units."
     },
+
     {
         id: "U1-033",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 33: Which of the following is correct regarding scientific learning?",
+        question: "Which unit is used for density in SI?",
         options: [
-            "Correct answer for Scientific Learning question 33",
-            "Incorrect option 1 for question 33",
-            "Incorrect option 2 for question 33",
-            "Incorrect option 3 for question 33"
+            "kg/m³",
+            "kg/m",
+            "m/kg",
+            "N/m"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The textbook gives kg/m³ as the SI unit of density."
     },
+
     {
         id: "U1-034",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 34: Which of the following is correct regarding scientific learning?",
+        question: "Which unit is the SI unit of force?",
         options: [
-            "Correct answer for Scientific Learning question 34",
-            "Incorrect option 1 for question 34",
-            "Incorrect option 2 for question 34",
-            "Incorrect option 3 for question 34"
+            "Newton",
+            "Pascal",
+            "Watt",
+            "Hertz"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Newton is the SI unit of force."
     },
+
     {
         id: "U1-035",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 35: Which of the following is correct regarding scientific learning?",
+        question: "Which unit is the SI unit of pressure?",
         options: [
-            "Correct answer for Scientific Learning question 35",
-            "Incorrect option 1 for question 35",
-            "Incorrect option 2 for question 35",
-            "Incorrect option 3 for question 35"
+            "Pascal",
+            "Newton",
+            "Watt",
+            "Hertz"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Pascal is the SI unit of pressure."
     },
+
     {
         id: "U1-036",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 36: Which of the following is correct regarding scientific learning?",
+        question: "Which unit is the SI unit of power?",
         options: [
-            "Correct answer for Scientific Learning question 36",
-            "Incorrect option 1 for question 36",
-            "Incorrect option 2 for question 36",
-            "Incorrect option 3 for question 36"
+            "Watt",
+            "Newton",
+            "Pascal",
+            "Kilogram"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Watt is the SI unit of power."
     },
+
     {
         id: "U1-037",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 37: Which of the following is correct regarding scientific learning?",
+        question: "Which unit is used for frequency?",
         options: [
-            "Correct answer for Scientific Learning question 37",
-            "Incorrect option 1 for question 37",
-            "Incorrect option 2 for question 37",
-            "Incorrect option 3 for question 37"
+            "Hertz",
+            "Newton",
+            "Pascal",
+            "Watt"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The textbook gives hertz (Hz) as the unit of frequency."
     },
+
     {
         id: "U1-038",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 38: Which of the following is correct regarding scientific learning?",
+        question: "What is a derived unit?",
         options: [
-            "Correct answer for Scientific Learning question 38",
-            "Incorrect option 1 for question 38",
-            "Incorrect option 2 for question 38",
-            "Incorrect option 3 for question 38"
+            "A unit obtained by combining fundamental units",
+            "A unit that cannot be expressed using other units",
+            "A unit used only for length",
+            "A unit without a standard"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Derived units are obtained by combining fundamental units."
     },
+
     {
         id: "U1-039",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 39: Which of the following is correct regarding scientific learning?",
+        question: "What is the main purpose of unit analysis of an equation?",
         options: [
-            "Correct answer for Scientific Learning question 39",
-            "Incorrect option 1 for question 39",
-            "Incorrect option 2 for question 39",
-            "Incorrect option 3 for question 39"
+            "To check the validity of an equation",
+            "To change the value of a variable",
+            "To remove all units",
+            "To measure temperature"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The textbook explains that unit analysis can be used to check the validity of a physical equation."
     },
+
     {
         id: "U1-040",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 40: Which of the following is correct regarding scientific learning?",
+        question: "According to unit analysis, the units on both sides of a valid equation should be:",
         options: [
-            "Correct answer for Scientific Learning question 40",
-            "Incorrect option 1 for question 40",
-            "Incorrect option 2 for question 40",
-            "Incorrect option 3 for question 40"
+            "The same",
+            "Different",
+            "Zero",
+            "Unrelated"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "For a unit-wise valid equation, the units on the left and right sides must match."
     },
     {
         id: "U1-041",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 41: Which of the following is correct regarding scientific learning?",
+        question: "Which variable is plotted on the horizontal axis of a graph?",
         options: [
-            "Correct answer for Scientific Learning question 41",
-            "Incorrect option 1 for question 41",
-            "Incorrect option 2 for question 41",
-            "Incorrect option 3 for question 41"
+            "Independent variable",
+            "Dependent variable",
+            "Controlled variable",
+            "Constant"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The independent variable is plotted on the x-axis or horizontal axis."
     },
+
     {
         id: "U1-042",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 42: Which of the following is correct regarding scientific learning?",
+        question: "Which variable is also called the vertical variable?",
         options: [
-            "Correct answer for Scientific Learning question 42",
-            "Incorrect option 1 for question 42",
-            "Incorrect option 2 for question 42",
-            "Incorrect option 3 for question 42"
+            "Dependent variable",
+            "Independent variable",
+            "Controlled variable",
+            "Constant variable"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The dependent variable is also called the vertical variable or y-variable."
     },
+
     {
         id: "U1-043",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 43: Which of the following is correct regarding scientific learning?",
+        question: "Which variable is also called the horizontal variable?",
         options: [
-            "Correct answer for Scientific Learning question 43",
-            "Incorrect option 1 for question 43",
-            "Incorrect option 2 for question 43",
-            "Incorrect option 3 for question 43"
+            "Independent variable",
+            "Dependent variable",
+            "Controlled variable",
+            "Measured variable"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The independent variable is also called the horizontal variable or x-variable."
     },
+
     {
         id: "U1-044",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 44: Which of the following is correct regarding scientific learning?",
+        question: "In an experiment, what should normally happen to variables other than the selected independent and dependent variables?",
         options: [
-            "Correct answer for Scientific Learning question 44",
-            "Incorrect option 1 for question 44",
-            "Incorrect option 2 for question 44",
-            "Incorrect option 3 for question 44"
+            "They should be controlled",
+            "They should all be changed",
+            "They should be ignored",
+            "They should be removed"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Other variables should be controlled so that the effect of the independent variable can be studied reliably."
     },
+
     {
         id: "U1-045",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 45: Which of the following is correct regarding scientific learning?",
+        question: "How many independent variables should normally be selected in an experiment?",
         options: [
-            "Correct answer for Scientific Learning question 45",
-            "Incorrect option 1 for question 45",
-            "Incorrect option 2 for question 45",
-            "Incorrect option 3 for question 45"
+            "One",
+            "Two",
+            "Three",
+            "Four"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The textbook states that an experiment should have only one independent variable."
     },
+
     {
         id: "U1-046",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 46: Which of the following is correct regarding scientific learning?",
+        question: "How many dependent variables should normally be selected in an experiment?",
         options: [
-            "Correct answer for Scientific Learning question 46",
-            "Incorrect option 1 for question 46",
-            "Incorrect option 2 for question 46",
-            "Incorrect option 3 for question 46"
+            "One",
+            "Two",
+            "Three",
+            "Four"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The textbook states that an experiment should have only one dependent variable."
     },
+
     {
         id: "U1-047",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 47: Which of the following is correct regarding scientific learning?",
+        question: "In an experiment on the effect of water amount on plant growth, what is the independent variable?",
         options: [
-            "Correct answer for Scientific Learning question 47",
-            "Incorrect option 1 for question 47",
-            "Incorrect option 2 for question 47",
-            "Incorrect option 3 for question 47"
+            "Amount of water",
+            "Plant growth",
+            "Size of pot",
+            "Type of soil"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The amount of water is the factor deliberately changed in the experiment."
     },
+
     {
         id: "U1-048",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 48: Which of the following is correct regarding scientific learning?",
+        question: "In an experiment on the effect of water amount on plant growth, what is the dependent variable?",
         options: [
-            "Correct answer for Scientific Learning question 48",
-            "Incorrect option 1 for question 48",
-            "Incorrect option 2 for question 48",
-            "Incorrect option 3 for question 48"
+            "Plant growth",
+            "Amount of water",
+            "Size of pot",
+            "Amount of soil"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Plant growth is the outcome that depends on the amount of water."
     },
+
     {
         id: "U1-049",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 49: Which of the following is correct regarding scientific learning?",
+        question: "In an experiment investigating water flow by rotating a tap knob, which factor can be taken as the independent variable?",
         options: [
-            "Correct answer for Scientific Learning question 49",
-            "Incorrect option 1 for question 49",
-            "Incorrect option 2 for question 49",
-            "Incorrect option 3 for question 49"
+            "Rotation of the tap knob",
+            "Amount of water flowing",
+            "Water flow observed",
+            "Size of the measuring container"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The rotation of the tap knob is the factor that is changed to observe its effect on water flow."
     },
+
     {
         id: "U1-050",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 50: Which of the following is correct regarding scientific learning?",
+        question: "In the tap experiment, what is the dependent variable?",
         options: [
-            "Correct answer for Scientific Learning question 50",
-            "Incorrect option 1 for question 50",
-            "Incorrect option 2 for question 50",
-            "Incorrect option 3 for question 50"
+            "Water flow",
+            "Rotation of tap knob",
+            "Tap size",
+            "Water pressure kept constant"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Water flow changes in response to the change in the tap knob."
     },
+
     {
         id: "U1-051",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 51: Which of the following is correct regarding scientific learning?",
+        question: "What is the main purpose of controlling other variables in an experiment?",
         options: [
-            "Correct answer for Scientific Learning question 51",
-            "Incorrect option 1 for question 51",
-            "Incorrect option 2 for question 51",
-            "Incorrect option 3 for question 51"
+            "To make the result reliable",
+            "To increase the number of variables",
+            "To change the dependent variable directly",
+            "To remove the independent variable"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Controlled variables help maintain reliable and valid experimental results."
     },
+
     {
         id: "U1-052",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 52: Which of the following is correct regarding scientific learning?",
+        question: "Which statement correctly describes the relationship shown by a graph of two variables?",
         options: [
-            "Correct answer for Scientific Learning question 52",
-            "Incorrect option 1 for question 52",
-            "Incorrect option 2 for question 52",
-            "Incorrect option 3 for question 52"
+            "A change in the independent variable can produce a change in the dependent variable",
+            "The dependent variable always controls the independent variable",
+            "Neither variable changes",
+            "Both variables must always remain constant"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "A graph shows how a change in the independent variable affects the dependent variable."
     },
+
     {
         id: "U1-053",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 53: Which of the following is correct regarding scientific learning?",
+        question: "Which two types of units are discussed for physical quantities?",
         options: [
-            "Correct answer for Scientific Learning question 53",
-            "Incorrect option 1 for question 53",
-            "Incorrect option 2 for question 53",
-            "Incorrect option 3 for question 53"
+            "Fundamental and derived units",
+            "Large and small units",
+            "Natural and artificial units",
+            "Metric and non-metric units"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The textbook classifies units into fundamental units and derived units."
     },
+
     {
         id: "U1-054",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 54: Which of the following is correct regarding scientific learning?",
+        question: "Which of the following is a fundamental SI unit?",
         options: [
-            "Correct answer for Scientific Learning question 54",
-            "Incorrect option 1 for question 54",
-            "Incorrect option 2 for question 54",
-            "Incorrect option 3 for question 54"
+            "Kelvin",
+            "Newton",
+            "Pascal",
+            "Watt"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Kelvin is one of the seven SI fundamental units."
     },
+
     {
         id: "U1-055",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 55: Which of the following is correct regarding scientific learning?",
+        question: "Which of the following is a fundamental SI unit?",
         options: [
-            "Correct answer for Scientific Learning question 55",
-            "Incorrect option 1 for question 55",
-            "Incorrect option 2 for question 55",
-            "Incorrect option 3 for question 55"
+            "Ampere",
+            "Newton",
+            "Joule",
+            "Pascal"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Ampere is one of the seven SI fundamental units."
     },
+
     {
         id: "U1-056",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 56: Which of the following is correct regarding scientific learning?",
+        question: "Which of the following is a fundamental SI unit?",
         options: [
-            "Correct answer for Scientific Learning question 56",
-            "Incorrect option 1 for question 56",
-            "Incorrect option 2 for question 56",
-            "Incorrect option 3 for question 56"
+            "Mole",
+            "Newton",
+            "Watt",
+            "Hertz"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Mole is one of the seven SI fundamental units."
     },
+
     {
         id: "U1-057",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 57: Which of the following is correct regarding scientific learning?",
+        question: "Which of the following is a fundamental SI unit?",
         options: [
-            "Correct answer for Scientific Learning question 57",
-            "Incorrect option 1 for question 57",
-            "Incorrect option 2 for question 57",
-            "Incorrect option 3 for question 57"
+            "Candela",
+            "Pascal",
+            "Newton",
+            "Joule"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Candela is one of the seven SI fundamental units."
     },
+
     {
         id: "U1-058",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 58: Which of the following is correct regarding scientific learning?",
+        question: "Which expression represents the SI unit of force in fundamental units?",
         options: [
-            "Correct answer for Scientific Learning question 58",
-            "Incorrect option 1 for question 58",
-            "Incorrect option 2 for question 58",
-            "Incorrect option 3 for question 58"
+            "kg·m/s²",
+            "kg/m³",
+            "kg·m²/s³",
+            "kg·m/s"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The SI unit of force, newton, can be expressed as kg·m/s²."
     },
+
     {
         id: "U1-059",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 59: Which of the following is correct regarding scientific learning?",
+        question: "Which expression represents the SI unit of density?",
         options: [
-            "Correct answer for Scientific Learning question 59",
-            "Incorrect option 1 for question 59",
-            "Incorrect option 2 for question 59",
-            "Incorrect option 3 for question 59"
+            "kg/m³",
+            "kg·m/s²",
+            "kg·m²/s³",
+            "m³/kg"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Density is expressed in SI as kg/m³."
     },
+
     {
         id: "U1-060",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 60: Which of the following is correct regarding scientific learning?",
+        question: "What is the main idea of unit analysis of a physical equation?",
         options: [
-            "Correct answer for Scientific Learning question 60",
-            "Incorrect option 1 for question 60",
-            "Incorrect option 2 for question 60",
-            "Incorrect option 3 for question 60"
+            "The units on both sides must be consistent",
+            "All units must be removed from the equation",
+            "Only numerical values are checked",
+            "The equation must contain no variables"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Unit analysis checks whether the units on the two sides of a physical equation are consistent."
     },
     {
         id: "U1-061",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 61: Which of the following is correct regarding scientific learning?",
+        question: "Which of the following is a derived unit?",
         options: [
-            "Correct answer for Scientific Learning question 61",
-            "Incorrect option 1 for question 61",
-            "Incorrect option 2 for question 61",
-            "Incorrect option 3 for question 61"
+            "Joule",
+            "Kilogram",
+            "Metre",
+            "Second"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Joule is a derived unit because it is obtained from fundamental units."
     },
+
     {
         id: "U1-062",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 62: Which of the following is correct regarding scientific learning?",
+        question: "What is the SI unit of work or energy?",
         options: [
-            "Correct answer for Scientific Learning question 62",
-            "Incorrect option 1 for question 62",
-            "Incorrect option 2 for question 62",
-            "Incorrect option 3 for question 62"
+            "Joule",
+            "Newton",
+            "Pascal",
+            "Watt"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Joule is the SI derived unit of work or energy."
     },
+
     {
         id: "U1-063",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 63: Which of the following is correct regarding scientific learning?",
+        question: "How can joule be expressed in terms of fundamental SI units?",
         options: [
-            "Correct answer for Scientific Learning question 63",
-            "Incorrect option 1 for question 63",
-            "Incorrect option 2 for question 63",
-            "Incorrect option 3 for question 63"
+            "kg·m²/s²",
+            "kg·m/s²",
+            "kg/m³",
+            "kg·m²/s³"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Joule is expressed as kg·m²/s² in fundamental units."
     },
+
     {
         id: "U1-064",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 64: Which of the following is correct regarding scientific learning?",
+        question: "Which physical quantity has the derived unit newton?",
         options: [
-            "Correct answer for Scientific Learning question 64",
-            "Incorrect option 1 for question 64",
-            "Incorrect option 2 for question 64",
-            "Incorrect option 3 for question 64"
+            "Force",
+            "Work",
+            "Power",
+            "Pressure"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Newton is the SI derived unit of force."
     },
+
     {
         id: "U1-065",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 65: Which of the following is correct regarding scientific learning?",
+        question: "Which physical quantity has the derived unit joule?",
         options: [
-            "Correct answer for Scientific Learning question 65",
-            "Incorrect option 1 for question 65",
-            "Incorrect option 2 for question 65",
-            "Incorrect option 3 for question 65"
+            "Work",
+            "Force",
+            "Pressure",
+            "Power"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Joule is the SI derived unit of work or energy."
     },
+
     {
         id: "U1-066",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 66: Which of the following is correct regarding scientific learning?",
+        question: "Which physical quantity has watt as its SI unit?",
         options: [
-            "Correct answer for Scientific Learning question 66",
-            "Incorrect option 1 for question 66",
-            "Incorrect option 2 for question 66",
-            "Incorrect option 3 for question 66"
+            "Power",
+            "Force",
+            "Work",
+            "Pressure"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Watt is the SI derived unit of power."
     },
+
     {
         id: "U1-067",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 67: Which of the following is correct regarding scientific learning?",
+        question: "Which statement correctly describes fundamental units?",
         options: [
-            "Correct answer for Scientific Learning question 67",
-            "Incorrect option 1 for question 67",
-            "Incorrect option 2 for question 67",
-            "Incorrect option 3 for question 67"
+            "They are basic units that cannot be broken into simpler units",
+            "They are formed by combining derived units",
+            "They are used only for measuring length",
+            "They always contain two or more units"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Fundamental units are basic and independent units that cannot be expressed in terms of simpler units."
     },
+
     {
         id: "U1-068",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 68: Which of the following is correct regarding scientific learning?",
+        question: "Which statement correctly describes derived units?",
         options: [
-            "Correct answer for Scientific Learning question 68",
-            "Incorrect option 1 for question 68",
-            "Incorrect option 2 for question 68",
-            "Incorrect option 3 for question 68"
+            "They are formed by combining fundamental units",
+            "They cannot be expressed using other units",
+            "They are always fundamental quantities",
+            "There are only seven derived units"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Derived units are obtained by combining two or more fundamental units."
     },
+
     {
         id: "U1-069",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 69: Which of the following is correct regarding scientific learning?",
+        question: "How many fundamental units are there in the SI system?",
         options: [
-            "Correct answer for Scientific Learning question 69",
-            "Incorrect option 1 for question 69",
-            "Incorrect option 2 for question 69",
-            "Incorrect option 3 for question 69"
+            "7",
+            "6",
+            "8",
+            "10"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The SI system has seven fundamental units."
     },
+
     {
         id: "U1-070",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 70: Which of the following is correct regarding scientific learning?",
+        question: "Which of the following is NOT a fundamental SI unit?",
         options: [
-            "Correct answer for Scientific Learning question 70",
-            "Incorrect option 1 for question 70",
-            "Incorrect option 2 for question 70",
-            "Incorrect option 3 for question 70"
+            "Newton",
+            "Kilogram",
+            "Metre",
+            "Second"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Newton is a derived unit, whereas kilogram, metre and second are fundamental units."
     },
+
     {
         id: "U1-071",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 71: Which of the following is correct regarding scientific learning?",
+        question: "Which of the following is NOT a fundamental SI unit?",
         options: [
-            "Correct answer for Scientific Learning question 71",
-            "Incorrect option 1 for question 71",
-            "Incorrect option 2 for question 71",
-            "Incorrect option 3 for question 71"
+            "Joule",
+            "Kelvin",
+            "Ampere",
+            "Mole"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Joule is a derived unit, while kelvin, ampere and mole are fundamental units."
     },
+
     {
         id: "U1-072",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 72: Which of the following is correct regarding scientific learning?",
+        question: "Which of the following is a fundamental SI unit of temperature?",
         options: [
-            "Correct answer for Scientific Learning question 72",
-            "Incorrect option 1 for question 72",
-            "Incorrect option 2 for question 72",
-            "Incorrect option 3 for question 72"
+            "Kelvin",
+            "Celsius",
+            "Joule",
+            "Watt"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Kelvin is the SI fundamental unit of temperature."
     },
+
     {
         id: "U1-073",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 73: Which of the following is correct regarding scientific learning?",
+        question: "Which of the following is the SI fundamental unit of electric current?",
         options: [
-            "Correct answer for Scientific Learning question 73",
-            "Incorrect option 1 for question 73",
-            "Incorrect option 2 for question 73",
-            "Incorrect option 3 for question 73"
+            "Ampere",
+            "Volt",
+            "Coulomb",
+            "Ohm"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Ampere is the SI fundamental unit of electric current."
     },
+
     {
         id: "U1-074",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 74: Which of the following is correct regarding scientific learning?",
+        question: "Which of the following is the SI fundamental unit of luminous intensity?",
         options: [
-            "Correct answer for Scientific Learning question 74",
-            "Incorrect option 1 for question 74",
-            "Incorrect option 2 for question 74",
-            "Incorrect option 3 for question 74"
+            "Candela",
+            "Kelvin",
+            "Mole",
+            "Ampere"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Candela is the SI fundamental unit of luminous intensity."
     },
+
     {
         id: "U1-075",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 75: Which of the following is correct regarding scientific learning?",
+        question: "Which of the following is the SI fundamental unit of amount of substance?",
         options: [
-            "Correct answer for Scientific Learning question 75",
-            "Incorrect option 1 for question 75",
-            "Incorrect option 2 for question 75",
-            "Incorrect option 3 for question 75"
+            "Mole",
+            "Kilogram",
+            "Candela",
+            "Kelvin"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Mole is the SI fundamental unit of amount of substance."
     },
+
     {
         id: "U1-076",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 76: Which of the following is correct regarding scientific learning?",
+        question: "What does unit-wise analysis of a physical equation mean?",
         options: [
-            "Correct answer for Scientific Learning question 76",
-            "Incorrect option 1 for question 76",
-            "Incorrect option 2 for question 76",
-            "Incorrect option 3 for question 76"
+            "Checking whether the units of the terms are consistent",
+            "Changing all units into centimetres",
+            "Removing units from an equation",
+            "Comparing only numerical values"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Unit-wise analysis checks whether the units or dimensions of the terms in an equation are consistent."
     },
+
     {
         id: "U1-077",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 77: Which of the following is correct regarding scientific learning?",
+        question: "What principle states that the dimensions of both sides of a correct physical equation must be equal?",
         options: [
-            "Correct answer for Scientific Learning question 77",
-            "Incorrect option 1 for question 77",
-            "Incorrect option 2 for question 77",
-            "Incorrect option 3 for question 77"
+            "Principle of Homogeneity",
+            "Principle of Conservation",
+            "Principle of Relativity",
+            "Principle of Reflection"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The Principle of Homogeneity states that the dimensions of both sides of a correct physical equation must be equal."
     },
+
     {
         id: "U1-078",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 78: Which of the following is correct regarding scientific learning?",
+        question: "According to the principle of homogeneity, what must be true for a correct physical equation?",
         options: [
-            "Correct answer for Scientific Learning question 78",
-            "Incorrect option 1 for question 78",
-            "Incorrect option 2 for question 78",
-            "Incorrect option 3 for question 78"
+            "Dimensions of both sides must be equal",
+            "Numerical values on both sides must always be equal to 1",
+            "All quantities must have the same numerical value",
+            "All variables must be independent"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "A correct physical equation must have equal dimensions on its left-hand and right-hand sides."
     },
+
     {
         id: "U1-079",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 79: Which of the following is correct regarding scientific learning?",
+        question: "Which equation is dimensionally homogeneous?",
         options: [
-            "Correct answer for Scientific Learning question 79",
-            "Incorrect option 1 for question 79",
-            "Incorrect option 2 for question 79",
-            "Incorrect option 3 for question 79"
+            "v = u + at",
+            "v = u + a/t",
+            "v = u + at²",
+            "v = u + a"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "In v = u + at, all terms have the dimensions of velocity."
     },
+
     {
         id: "U1-080",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 80: Which of the following is correct regarding scientific learning?",
+        question: "Which equation is dimensionally homogeneous?",
         options: [
-            "Correct answer for Scientific Learning question 80",
-            "Incorrect option 1 for question 80",
-            "Incorrect option 2 for question 80",
-            "Incorrect option 3 for question 80"
+            "s = ut + ½at²",
+            "s = ut + ½at",
+            "s = u + ½at²",
+            "s = u/t + ½at²"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "In s = ut + ½at², both ut and at² have the dimensions of length, matching s."
     },
     {
         id: "U1-081",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 81: Which of the following is correct regarding scientific learning?",
+        question: "Which of the following is the SI unit of velocity?",
         options: [
-            "Correct answer for Scientific Learning question 81",
-            "Incorrect option 1 for question 81",
-            "Incorrect option 2 for question 81",
-            "Incorrect option 3 for question 81"
+            "m/s",
+            "m/s²",
+            "kg/m³",
+            "N"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Velocity is displacement divided by time, so its SI unit is m/s."
     },
+
     {
         id: "U1-082",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 82: Which of the following is correct regarding scientific learning?",
+        question: "Which of the following is the SI unit of acceleration?",
         options: [
-            "Correct answer for Scientific Learning question 82",
-            "Incorrect option 1 for question 82",
-            "Incorrect option 2 for question 82",
-            "Incorrect option 3 for question 82"
+            "m/s²",
+            "m/s",
+            "kg/m³",
+            "N"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Acceleration is change in velocity per unit time, so its SI unit is m/s²."
     },
+
     {
         id: "U1-083",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 83: Which of the following is correct regarding scientific learning?",
+        question: "Which derived quantity has m² as its SI unit?",
         options: [
-            "Correct answer for Scientific Learning question 83",
-            "Incorrect option 1 for question 83",
-            "Incorrect option 2 for question 83",
-            "Incorrect option 3 for question 83"
+            "Area",
+            "Volume",
+            "Density",
+            "Velocity"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Area is obtained by multiplying length and breadth, giving m × m = m²."
     },
+
     {
         id: "U1-084",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 84: Which of the following is correct regarding scientific learning?",
+        question: "Which derived quantity has m³ as its SI unit?",
         options: [
-            "Correct answer for Scientific Learning question 84",
-            "Incorrect option 1 for question 84",
-            "Incorrect option 2 for question 84",
-            "Incorrect option 3 for question 84"
+            "Volume",
+            "Area",
+            "Density",
+            "Force"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Volume is obtained from length × breadth × height, giving m³."
     },
+
     {
         id: "U1-085",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 85: Which of the following is correct regarding scientific learning?",
+        question: "Which formula is used to obtain the unit of density?",
         options: [
-            "Correct answer for Scientific Learning question 85",
-            "Incorrect option 1 for question 85",
-            "Incorrect option 2 for question 85",
-            "Incorrect option 3 for question 85"
+            "Density = mass / volume",
+            "Density = force / area",
+            "Density = mass × acceleration",
+            "Density = work / time"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Density is defined as mass divided by volume."
     },
+
     {
         id: "U1-086",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 86: Which of the following is correct regarding scientific learning?",
+        question: "Which formula gives the SI unit of force?",
         options: [
-            "Correct answer for Scientific Learning question 86",
-            "Incorrect option 1 for question 86",
-            "Incorrect option 2 for question 86",
-            "Incorrect option 3 for question 86"
+            "F = ma",
+            "F = m/a",
+            "F = a/m",
+            "F = m + a"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Force is defined by F = ma, where m is mass and a is acceleration."
     },
+
     {
         id: "U1-087",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 87: Which of the following is correct regarding scientific learning?",
+        question: "Which fundamental units are involved in the SI unit of force?",
         options: [
-            "Correct answer for Scientific Learning question 87",
-            "Incorrect option 1 for question 87",
-            "Incorrect option 2 for question 87",
-            "Incorrect option 3 for question 87"
+            "kg, m and s",
+            "kg and m only",
+            "m and s only",
+            "kg and s only"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Newton is expressed as kg·m/s², involving kilogram, metre and second."
     },
+
     {
         id: "U1-088",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 88: Which of the following is correct regarding scientific learning?",
+        question: "Which fundamental units are involved in the SI unit of pressure?",
         options: [
-            "Correct answer for Scientific Learning question 88",
-            "Incorrect option 1 for question 88",
-            "Incorrect option 2 for question 88",
-            "Incorrect option 3 for question 88"
+            "kg, m and s",
+            "kg and m only",
+            "m and s only",
+            "kg and s only"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Pascal can be expressed as kg·m⁻¹·s⁻², involving kilogram, metre and second."
     },
+
     {
         id: "U1-089",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 89: Which of the following is correct regarding scientific learning?",
+        question: "Which is the SI unit of pressure?",
         options: [
-            "Correct answer for Scientific Learning question 89",
-            "Incorrect option 1 for question 89",
-            "Incorrect option 2 for question 89",
-            "Incorrect option 3 for question 89"
+            "Pascal",
+            "Newton",
+            "Joule",
+            "Watt"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Pascal (Pa) is the SI derived unit of pressure."
     },
+
     {
         id: "U1-090",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 90: Which of the following is correct regarding scientific learning?",
+        question: "Which is the SI unit of power?",
         options: [
-            "Correct answer for Scientific Learning question 90",
-            "Incorrect option 1 for question 90",
-            "Incorrect option 2 for question 90",
-            "Incorrect option 3 for question 90"
+            "Watt",
+            "Joule",
+            "Newton",
+            "Pascal"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Watt (W) is the SI derived unit of power."
     },
+
     {
         id: "U1-091",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 91: Which of the following is correct regarding scientific learning?",
+        question: "What is the fundamental-unit form of a joule?",
         options: [
-            "Correct answer for Scientific Learning question 91",
-            "Incorrect option 1 for question 91",
-            "Incorrect option 2 for question 91",
-            "Incorrect option 3 for question 91"
+            "kg·m²/s²",
+            "kg·m/s²",
+            "kg·m²/s³",
+            "kg/m³"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Joule is expressed in fundamental units as kg·m²/s²."
     },
+
     {
         id: "U1-092",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 92: Which of the following is correct regarding scientific learning?",
+        question: "What is the fundamental-unit form of a watt?",
         options: [
-            "Correct answer for Scientific Learning question 92",
-            "Incorrect option 1 for question 92",
-            "Incorrect option 2 for question 92",
-            "Incorrect option 3 for question 92"
+            "kg·m²/s³",
+            "kg·m²/s²",
+            "kg·m/s²",
+            "kg/m³"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Watt is expressed in fundamental units as kg·m²/s³."
     },
+
     {
         id: "U1-093",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 93: Which of the following is correct regarding scientific learning?",
+        question: "What is the fundamental-unit form of a pascal?",
         options: [
-            "Correct answer for Scientific Learning question 93",
-            "Incorrect option 1 for question 93",
-            "Incorrect option 2 for question 93",
-            "Incorrect option 3 for question 93"
+            "kg·m⁻¹·s⁻²",
+            "kg·m·s⁻²",
+            "kg·m²·s⁻²",
+            "kg·m²·s⁻³"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Pascal is expressed in fundamental units as kg·m⁻¹·s⁻²."
     },
+
     {
         id: "U1-094",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 94: Which of the following is correct regarding scientific learning?",
+        question: "What is the fundamental-unit form of a newton?",
         options: [
-            "Correct answer for Scientific Learning question 94",
-            "Incorrect option 1 for question 94",
-            "Incorrect option 2 for question 94",
-            "Incorrect option 3 for question 94"
+            "kg·m·s⁻²",
+            "kg·m²·s⁻²",
+            "kg·m⁻¹·s⁻²",
+            "kg·m²·s⁻³"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Newton is expressed in fundamental units as kg·m·s⁻²."
     },
+
     {
         id: "U1-095",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 95: Which of the following is correct regarding scientific learning?",
+        question: "Which equation can be checked using unit-wise analysis?",
         options: [
-            "Correct answer for Scientific Learning question 95",
-            "Incorrect option 1 for question 95",
-            "Incorrect option 2 for question 95",
-            "Incorrect option 3 for question 95"
+            "s = vt",
+            "All physical equations",
+            "Only equations containing force",
+            "Only equations containing mass"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The textbook uses physical equations such as s = vt to demonstrate unit-wise analysis."
     },
+
     {
         id: "U1-096",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 96: Which of the following is correct regarding scientific learning?",
+        question: "Is the equation s = vt dimensionally valid?",
         options: [
-            "Correct answer for Scientific Learning question 96",
-            "Incorrect option 1 for question 96",
-            "Incorrect option 2 for question 96",
-            "Incorrect option 3 for question 96"
+            "Yes",
+            "No",
+            "Only when t = 0",
+            "Only when v = 0"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The units of vt are (m/s) × s = m, which are the same as the unit of s."
     },
+
     {
         id: "U1-097",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 97: Which of the following is correct regarding scientific learning?",
+        question: "Is the equation s = v/t dimensionally valid when s is distance, v is velocity and t is time?",
         options: [
-            "Correct answer for Scientific Learning question 97",
-            "Incorrect option 1 for question 97",
-            "Incorrect option 2 for question 97",
-            "Incorrect option 3 for question 97"
+            "No",
+            "Yes",
+            "Only when velocity is zero",
+            "Only when distance is zero"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "The right side has the unit m/s², while distance has the unit m, so the equation is not dimensionally valid."
     },
+
     {
         id: "U1-098",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 98: Which of the following is correct regarding scientific learning?",
+        question: "If the units on the two sides of a physical equation are different, what can be concluded?",
         options: [
-            "Correct answer for Scientific Learning question 98",
-            "Incorrect option 1 for question 98",
-            "Incorrect option 2 for question 98",
-            "Incorrect option 3 for question 98"
+            "The equation is not valid",
+            "The equation is always correct",
+            "The equation needs no checking",
+            "The units should simply be removed"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "A valid physical equation must have consistent units on both sides."
     },
+
     {
         id: "U1-099",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 99: Which of the following is correct regarding scientific learning?",
+        question: "Which statement about derived units is correct?",
         options: [
-            "Correct answer for Scientific Learning question 99",
-            "Incorrect option 1 for question 99",
-            "Incorrect option 2 for question 99",
-            "Incorrect option 3 for question 99"
+            "They are formed by combining fundamental units",
+            "They are independent of all fundamental units",
+            "There are exactly seven derived units",
+            "They cannot be expressed using fundamental units"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Derived units are obtained by combining fundamental units."
     },
+
     {
         id: "U1-100",
         lesson: 1,
-        question: "NEB Class 10 Scientific Learning - MCQ 100: Which of the following is correct regarding scientific learning?",
+        question: "What is the main purpose of unit-wise analysis of a physical equation?",
         options: [
-            "Correct answer for Scientific Learning question 100",
-            "Incorrect option 1 for question 100",
-            "Incorrect option 2 for question 100",
-            "Incorrect option 3 for question 100"
+            "To check the validity or consistency of the equation",
+            "To change the independent variable",
+            "To measure only mass",
+            "To determine the number of variables"
         ],
         answer: 0,
-        reason: "Explanation: This is the correct answer based on NEB Class 10 Scientific Learning curriculum."
+        reason: "Unit-wise analysis is used to verify the consistency and validity of a physical equation."
     }
 ];

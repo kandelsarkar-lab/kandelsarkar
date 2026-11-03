@@ -2285,25 +2285,7 @@ footer{
 
 </footer>
 
-<script src="science-unit-01.js" onerror="console.error('Failed to load science-unit-01.js');"></script>
-<script src="science-unit-02.js" onerror="console.error('Failed to load science-unit-02.js');"></script>
-<script src="science-unit-03.js" onerror="console.error('Failed to load science-unit-03.js');"></script>
-<script src="science-unit-04.js" onerror="console.error('Failed to load science-unit-04.js');"></script>
-<script src="science-unit-05.js" onerror="console.error('Failed to load science-unit-05.js');"></script>
-<script src="science-unit-06.js" onerror="console.error('Failed to load science-unit-06.js');"></script>
-<script src="science-unit-07.js" onerror="console.error('Failed to load science-unit-07.js');"></script>
-<script src="science-unit-08.js" onerror="console.error('Failed to load science-unit-08.js');"></script>
-<script src="science-unit-09.js" onerror="console.error('Failed to load science-unit-09.js');"></script>
-<script src="science-unit-10.js" onerror="console.error('Failed to load science-unit-10.js');"></script>
-<script src="science-unit-11.js" onerror="console.error('Failed to load science-unit-11.js');"></script>
-<script src="science-unit-12.js" onerror="console.error('Failed to load science-unit-12.js');"></script>
-<script src="science-unit-13.js" onerror="console.error('Failed to load science-unit-13.js');"></script>
-<script src="science-unit-14.js" onerror="console.error('Failed to load science-unit-14.js');"></script>
-<script src="science-unit-15.js" onerror="console.error('Failed to load science-unit-15.js');"></script>
-<script src="science-unit-16.js" onerror="console.error('Failed to load science-unit-16.js');"></script>
-<script src="science-unit-17.js" onerror="console.error('Failed to load science-unit-17.js');"></script>
-<script src="science-unit-18.js" onerror="console.error('Failed to load science-unit-18.js');"></script>
-<script src="science-unit-19.js" onerror="console.error('Failed to load science-unit-19.js');"></script>
+<script src="science-unit-01.js?v=2" onerror="console.error('Failed to load science-unit-01.js');"></script>
 
 
 
@@ -3255,24 +3237,10 @@ const legacyQuestionBank = [
 ];
       const questionBank = [
     ...( (typeof window !== 'undefined' && window.unit1Questions) ? window.unit1Questions : [] ),
-    ...( (typeof window !== 'undefined' && window.unit2Questions) ? window.unit2Questions : [] ),
-    ...( (typeof window !== 'undefined' && window.unit3Questions) ? window.unit3Questions : [] ),
-    ...( (typeof window !== 'undefined' && window.unit4Questions) ? window.unit4Questions : [] ),
-    ...( (typeof window !== 'undefined' && window.unit5Questions) ? window.unit5Questions : [] ),
-    ...( (typeof window !== 'undefined' && window.unit6Questions) ? window.unit6Questions : [] ),
-    ...( (typeof window !== 'undefined' && window.unit7Questions) ? window.unit7Questions : [] ),
-    ...( (typeof window !== 'undefined' && window.unit8Questions) ? window.unit8Questions : [] ),
-    ...( (typeof window !== 'undefined' && window.unit9Questions) ? window.unit9Questions : [] ),
-    ...( (typeof window !== 'undefined' && window.unit10Questions) ? window.unit10Questions : [] ),
-    ...( (typeof window !== 'undefined' && window.unit11Questions) ? window.unit11Questions : [] ),
-    ...( (typeof window !== 'undefined' && window.unit12Questions) ? window.unit12Questions : [] ),
-    ...( (typeof window !== 'undefined' && window.unit13Questions) ? window.unit13Questions : [] ),
-    ...( (typeof window !== 'undefined' && window.unit14Questions) ? window.unit14Questions : [] ),
-    ...( (typeof window !== 'undefined' && window.unit15Questions) ? window.unit15Questions : [] ),
-    ...( (typeof window !== 'undefined' && window.unit16Questions) ? window.unit16Questions : [] ),
-    ...( (typeof window !== 'undefined' && window.unit17Questions) ? window.unit17Questions : [] ),
-    ...( (typeof window !== 'undefined' && window.unit18Questions) ? window.unit18Questions : [] ),
-    ...( (typeof window !== 'undefined' && window.unit19Questions) ? window.unit19Questions : [] )
+
+    ...legacyQuestionBank.filter(
+        question => Number(question.lesson ?? question.unit) !== 1
+    )
 ];
 
 
@@ -3368,6 +3336,12 @@ function createLessonCards(){
             "lesson-card";
 
 
+        const count =
+            questionBank.filter(
+                question => question.lesson === lesson.id
+            ).length;
+
+
         card.innerHTML = `
 
             <div class="lesson-number">
@@ -3384,7 +3358,7 @@ function createLessonCards(){
 
             <div class="lesson-meta">
 
-                Chapter practice
+                ${count} ${count === 1 ? "question" : "questions"}
 
             </div>
 
@@ -3434,8 +3408,8 @@ function createLessonCards(){
             </h3>
 
             <p>
-                Randomly practice questions from
-                all available Science chapters.
+                Practice questions from all
+                available Science chapters.
                 Choose up to 100 questions.
             </p>
 
@@ -3571,6 +3545,7 @@ document
 
                 customCount.value="";
 
+                updateStartButton();
 
             }
         );
@@ -3624,6 +3599,9 @@ customCount.addEventListener(
 
                 });
 
+
+            updateStartButton();
+
         }
 
 
@@ -3635,16 +3613,117 @@ customCount.addEventListener(
    START BUTTON
 ========================================================= */
 
-function updateStartButton(){
+function getSelectedPool(){
 
-    if(selectedLesson){
+    if(selectedLesson === "all"){
 
-        startButton.disabled=false;
+        /*
+           Mix one question from each unit in
+           rounds, so a short test still covers
+           every chapter.
+        */
 
-        startButton.textContent =
-            `🚀 Start ${selectedQuestionCount} Questions`;
+        const byLesson =
+            new Map();
+
+
+        questionBank.forEach(
+            question=>{
+
+                if(!byLesson.has(question.lesson)){
+
+                    byLesson.set(
+                        question.lesson,
+                        []
+                    );
+
+                }
+
+                byLesson
+                    .get(question.lesson)
+                    .push(question);
+
+            }
+        );
+
+
+        const buckets =
+            [...byLesson.values()];
+
+
+        const mixed = [];
+
+        let added = true;
+
+
+        while(added){
+
+            added = false;
+
+            buckets.forEach(
+                bucket=>{
+
+                    if(bucket.length){
+
+                        mixed.push(
+                            bucket.shift()
+                        );
+
+                        added = true;
+
+                    }
+
+                }
+            );
+
+        }
+
+
+        return mixed;
 
     }
+
+
+    return questionBank.filter(
+        question =>
+            question.lesson ===
+            selectedLesson
+    );
+
+}
+
+
+function updateStartButton(){
+
+    if(!selectedLesson){
+
+        startButton.disabled = true;
+
+        return;
+
+    }
+
+
+    const available =
+        getSelectedPool().length;
+
+
+    const count =
+        Math.min(
+            selectedQuestionCount,
+            100,
+            available
+        );
+
+
+    startButton.disabled =
+        available === 0;
+
+
+    startButton.textContent =
+        available === 0
+            ? "No questions available for this unit"
+            : `🚀 Start ${count} ${count === 1 ? "Question" : "Questions"}`;
 
 }
 
@@ -3661,39 +3740,13 @@ startButton.addEventListener(
 
 function startQuiz(){
 
-    let pool;
-
-
     /*
-       If user selected ALL,
-       use every question.
+       Keep the bank order so questions are
+       presented in a clear, arranged sequence.
     */
 
-    if(selectedLesson === "all"){
-
-        pool =
-            [...questionBank];
-
-    }
-
-    else{
-
-        pool =
-            questionBank.filter(
-                question =>
-                    question.lesson ===
-                    selectedLesson
-            );
-
-    }
-
-
-    /*
-       Shuffle question pool.
-    */
-
-    pool =
-        shuffle(pool);
+    const pool =
+        getSelectedPool();
 
 
     /*
@@ -4286,46 +4339,6 @@ document
 
         }
     );
-
-
-/* =========================================================
-   SHUFFLE
-========================================================= */
-
-function shuffle(array){
-
-    const copy =
-        [...array];
-
-
-    for(
-        let i=copy.length-1;
-        i>0;
-        i--
-    ){
-
-        const j =
-            Math.floor(
-                Math.random() *
-                (i+1)
-            );
-
-
-        [
-            copy[i],
-            copy[j]
-        ] =
-        [
-            copy[j],
-            copy[i]
-        ];
-
-    }
-
-
-    return copy;
-
-}
 
 
 /* =========================================================
