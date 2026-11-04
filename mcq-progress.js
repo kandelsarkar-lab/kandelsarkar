@@ -161,7 +161,31 @@
         }
     }
 
+    function hasCookieConsent() {
+        try {
+            return document.cookie.split("; ").some(function (part) {
+                return part.indexOf("ks_cookie_consent=accepted") === 0;
+            });
+        } catch (error) {
+            return false;
+        }
+    }
+
+    function removeProgressCookie() {
+        try {
+            document.cookie =
+                COOKIE_KEY + "=; Max-Age=0; Path=/; SameSite=Lax";
+        } catch (error) {
+            /* Cookies can be blocked. */
+        }
+    }
+
     function syncCookie(data) {
+        if (!hasCookieConsent()) {
+            removeProgressCookie();
+            return;
+        }
+
         try {
             var summary = buildSummary(data);
             var payload = {
@@ -177,6 +201,10 @@
         } catch (error) {
             /* Cookies can be blocked. Local storage still works. */
         }
+    }
+
+    function refreshCookie() {
+        syncCookie(read());
     }
 
     function write(data) {
@@ -543,6 +571,7 @@
         recent: recent,
         getAttempt: getAttempt,
         clear: clear,
+        refreshCookie: refreshCookie,
         formatTime: formatTime,
         formatDate: formatDate,
         subjectMeta: subjectMeta,
@@ -550,9 +579,9 @@
         escapeHtml: escapeHtml
     };
 
-    /* Set the small first-party progress cookie as soon as the tracker loads. */
+    /* Set the small first-party progress cookie only after cookie consent. */
     try {
-        syncCookie(read());
+        refreshCookie();
     } catch (error) {
         /* Cookies or storage may be blocked. The site still works. */
     }
