@@ -9,7 +9,7 @@
       content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-      content="Practice 244+ NEB Class 10 Science MCQs with timed tests, instant scoring and detailed explanations.">
+      content="Practice 1,900+ NEB Class 10 Science MCQs with an elapsed-time clock, instant scoring and detailed explanations.">
 
 <title>
     Science MCQ Lab | Kandel Sarkar
@@ -2100,7 +2100,7 @@ body{
 }
 
 
-.quiz-timer{
+.quiz-clock{
 
     display:inline-flex;
 
@@ -2134,56 +2134,6 @@ body{
         tabular-nums;
 
     letter-spacing:.5px;
-
-    transition:.2s ease;
-}
-
-
-.quiz-timer.warning{
-
-    color:var(--yellow);
-
-    border-color:
-        rgba(255,209,102,.5);
-
-    background:
-        rgba(255,209,102,.08);
-}
-
-
-.quiz-timer.danger{
-
-    color:var(--red);
-
-    border-color:
-        rgba(255,104,121,.6);
-
-    background:
-        rgba(255,104,121,.1);
-
-    animation:
-        timerPulse 1s infinite;
-}
-
-
-@keyframes timerPulse{
-
-    0%,100%{
-
-        box-shadow:
-            0 0 0 0
-            rgba(255,104,121,0);
-
-    }
-
-    50%{
-
-        box-shadow:
-            0 0 0 5px
-            rgba(255,104,121,.08);
-
-    }
-
 }
 
 
@@ -2288,26 +2238,6 @@ body{
 }
 
 
-.result-timeout{
-
-    padding:
-        5px 10px;
-
-    border:
-        1px solid
-        rgba(255,209,102,.3);
-
-    border-radius:100px;
-
-    background:
-        rgba(255,209,102,.08);
-
-    color:var(--yellow);
-
-    font-weight:800;
-}
-
-
 .review-item.skipped{
 
     border-color:
@@ -2337,7 +2267,7 @@ body{
 
     }
 
-    .quiz-timer{
+    .quiz-clock{
 
         font-size:13px;
 
@@ -2472,7 +2402,8 @@ body{
 
         Choose your lesson, decide how many questions
         you want to solve, and test your scientific
-        understanding with a focused, timed practice session.
+        understanding with a focused practice session
+        and an elapsed-time clock.
 
     </p>
 
@@ -2481,7 +2412,7 @@ body{
 
         <div class="hero-stat">
 
-            <strong id="hero-total-questions">240+</strong>
+            <strong id="hero-total-questions">1900+</strong>
 
             <span>Real MCQs</span>
 
@@ -2497,9 +2428,9 @@ body{
 
         <div class="hero-stat">
 
-            <strong>60s</strong>
+            <strong>100</strong>
 
-            <span>Per question</span>
+            <span>Per unit</span>
 
         </div>
 
@@ -2602,14 +2533,14 @@ body{
 
             <div class="selection-label">
 
-                TIMED PRACTICE
+                YOUR CLOCK
 
             </div>
 
 
             <div class="selection-value">
 
-                60 sec / question
+                Tracks your time
 
             </div>
 
@@ -2728,8 +2659,8 @@ body{
 
         <p class="timer-hint">
 
-            ⏱ Timed practice: 60 seconds per question.
-            The quiz submits automatically when time runs out.
+            ⏱ No time limit. A clock tracks how long you take,
+            so you can see your pace and improve.
 
         </p>
 
@@ -2784,8 +2715,8 @@ body{
 
 
             <span
-                id="quiz-timer"
-                class="quiz-timer"
+                id="quiz-clock"
+                class="quiz-clock"
                 role="timer"
                 aria-live="polite">
 
@@ -2922,16 +2853,7 @@ body{
 
         <span id="result-time">
 
-            Time used: 00:00
-
-        </span>
-
-
-        <span
-            id="result-timed-out"
-            class="result-timeout hidden">
-
-            ⏱ Time limit reached
+            Time taken: 00:00
 
         </span>
 
@@ -3008,6 +2930,7 @@ body{
 
 <script src="science-unit-01.js?v=2" onerror="console.error('Failed to load science-unit-01.js');"></script>
 <script src="science-extra-questions.js?v=1" onerror="console.error('Failed to load science-extra-questions.js');"></script>
+<script src="science-fact-bank.js?v=1" onerror="console.error('Failed to load science-fact-bank.js');"></script>
 
 
 
@@ -3957,15 +3880,241 @@ const legacyQuestionBank = [
     }
 
 ];
-      const questionBank = [
+
+
+/* =========================================================
+   BUILD QUESTIONS FROM THE FACT BANK
+========================================================= */
+
+function pickFactDistractors(index, total, count){
+
+    const picked = [];
+
+    for(
+        let step = 1;
+        picked.length < count && step <= total * 2;
+        step++
+    ){
+        const candidate =
+            (index + step * 7 + 1) % total;
+
+        if(
+            candidate !== index &&
+            !picked.includes(candidate)
+        ){
+            picked.push(candidate);
+        }
+    }
+
+    for(
+        let i = 0;
+        picked.length < count && i < total;
+        i++
+    ){
+        if(
+            i !== index &&
+            !picked.includes(i)
+        ){
+            picked.push(i);
+        }
+    }
+
+    return picked;
+}
+
+
+function makeFactQuestion(lesson, facts, index, mode){
+
+    const term =
+        String(facts[index][0]).trim();
+
+    const description =
+        String(facts[index][1]).trim();
+
+    const distractors =
+        pickFactDistractors(
+            index,
+            facts.length,
+            3
+        );
+
+    const correctPosition =
+        index % 4;
+
+    const options = [];
+
+    let distractorIndex = 0;
+
+    for(let position = 0; position < 4; position++){
+
+        if(position === correctPosition){
+
+            options.push(
+                mode === "forward"
+                    ? term
+                    : description
+            );
+        }
+        else{
+
+            const other =
+                facts[distractors[distractorIndex++]];
+
+            options.push(
+                mode === "forward"
+                    ? String(other[0]).trim()
+                    : String(other[1]).trim()
+            );
+        }
+    }
+
+    const forwardTemplates = [
+        value => `Which term is described by: ${value}?`,
+        value => `Identify the term that matches this description: ${value}.`,
+        value => `Which of the following is described as: ${value}?`,
+        value => `Choose the term that fits this description: ${value}.`
+    ];
+
+    const reverseTemplates = [
+        value => `Which of the following best describes ${value}?`,
+        value => `What is the correct description of ${value}?`,
+        value => `Choose the statement that correctly describes ${value}.`,
+        value => `Which description matches ${value}?`
+    ];
+
+    const question =
+        mode === "forward"
+            ? forwardTemplates[index % forwardTemplates.length](description)
+            : reverseTemplates[index % reverseTemplates.length](term);
+
+    return {
+        lesson,
+        question,
+        options,
+        answer: correctPosition,
+        reason:
+            `The correct match is ${term}: ${description}.`
+    };
+}
+
+
+function buildFactQuestions(){
+
+    const bank =
+        (typeof window !== "undefined" && window.scienceFactBank)
+            ? window.scienceFactBank
+            : {};
+
+    const built = [];
+
+    Object.keys(bank).forEach(key => {
+
+        const lesson = Number(key);
+
+        const facts = bank[key];
+
+        if(
+            !Array.isArray(facts) ||
+            facts.length < 4
+        ){
+            return;
+        }
+
+        facts.forEach((pair, index) => {
+
+            const term =
+                String(pair[0] || "").trim();
+
+            const description =
+                String(pair[1] || "").trim();
+
+            if(!term || !description){
+                return;
+            }
+
+            const forward =
+                makeFactQuestion(
+                    lesson,
+                    facts,
+                    index,
+                    "forward"
+                );
+
+            const reverse =
+                makeFactQuestion(
+                    lesson,
+                    facts,
+                    index,
+                    "reverse"
+                );
+
+            if(index % 2 === 0){
+                built.push(forward, reverse);
+            }
+            else{
+                built.push(reverse, forward);
+            }
+        });
+    });
+
+    return built;
+}
+
+
+function limitQuestionBank(questions, limit){
+
+    const seen = new Set();
+
+    const counts = {};
+
+    const limited = [];
+
+    questions.forEach(question => {
+
+        const lesson =
+            Number(question.lesson ?? question.unit);
+
+        if(!Number.isFinite(lesson)){
+            return;
+        }
+
+        if((counts[lesson] || 0) >= limit){
+            return;
+        }
+
+        const key =
+            `${lesson}::${String(question.question).trim().toLowerCase()}`;
+
+        if(seen.has(key)){
+            return;
+        }
+
+        seen.add(key);
+
+        counts[lesson] = (counts[lesson] || 0) + 1;
+
+        limited.push(question);
+    });
+
+    return limited;
+}
+
+
+const generatedFactQuestions =
+    buildFactQuestions();
+
+
+const questionBank = limitQuestionBank([
     ...( (typeof window !== 'undefined' && window.unit1Questions) ? window.unit1Questions : [] ),
+
+    ...generatedFactQuestions,
 
     ...( (typeof window !== 'undefined' && window.scienceExtraQuestions) ? window.scienceExtraQuestions : [] ),
 
     ...legacyQuestionBank.filter(
         question => Number(question.lesson ?? question.unit) !== 1
     )
-];
+], 100);
 
 
 /* =========================================================
@@ -3984,17 +4133,11 @@ let userAnswers = [];
 
 let activeQuestions = [];
 
-let timerInterval = null;
-
-let remainingSeconds = 0;
-
-let quizTotalSeconds = 0;
+let clockInterval = null;
 
 let quizStartedAt = 0;
 
-let timerEndAt = 0;
-
-const SECONDS_PER_QUESTION = 60;
+let elapsedSeconds = 0;
 
 
 /* =========================================================
@@ -4040,8 +4183,8 @@ const quizAnswered =
 const quizUnitLabel =
     document.getElementById("quiz-unit-label");
 
-const quizTimer =
-    document.getElementById("quiz-timer");
+const quizClock =
+    document.getElementById("quiz-clock");
 
 const quizStatus =
     document.getElementById("quiz-status");
@@ -4057,9 +4200,6 @@ const scorePercent =
 
 const resultTime =
     document.getElementById("result-time");
-
-const resultTimedOut =
-    document.getElementById("result-timed-out");
 
 const resultMessage =
     document.getElementById("result-message");
@@ -4499,7 +4639,7 @@ startButton.addEventListener(
 
 
 /* =========================================================
-   QUIZ TIMER
+   ELAPSED-TIME CLOCK
 ========================================================= */
 
 function formatTime(totalSeconds){
@@ -4511,9 +4651,15 @@ function formatTime(totalSeconds){
         );
 
 
+    const hours =
+        Math.floor(safeSeconds / 3600);
+
+
     const minutes =
         String(
-            Math.floor(safeSeconds / 60)
+            Math.floor(
+                (safeSeconds % 3600) / 60
+            )
         ).padStart(2, "0");
 
 
@@ -4523,100 +4669,68 @@ function formatTime(totalSeconds){
         ).padStart(2, "0");
 
 
-    return `${minutes}:${seconds}`;
+    return hours > 0
+        ? `${hours}:${minutes}:${seconds}`
+        : `${minutes}:${seconds}`;
 
 }
 
 
-function updateTimerDisplay(){
+function updateClockDisplay(){
 
-    quizTimer.textContent =
-        `⏱ ${formatTime(remainingSeconds)}`;
-
-
-    quizTimer.classList.toggle(
-        "warning",
-        remainingSeconds <= 30 &&
-        remainingSeconds > 10
-    );
-
-
-    quizTimer.classList.toggle(
-        "danger",
-        remainingSeconds <= 10
-    );
+    quizClock.textContent =
+        `⏱ ${formatTime(elapsedSeconds)}`;
 
 }
 
 
-function stopTimer(){
+function stopClock(){
 
-    if(timerInterval !== null){
+    if(clockInterval !== null){
 
         clearInterval(
-            timerInterval
+            clockInterval
         );
 
-        timerInterval = null;
+        clockInterval = null;
 
     }
 
 }
 
 
-function startTimer(){
+function startClock(){
 
-    stopTimer();
-
-
-    quizTotalSeconds =
-        activeQuestions.length *
-        SECONDS_PER_QUESTION;
-
-
-    remainingSeconds =
-        quizTotalSeconds;
+    stopClock();
 
 
     quizStartedAt =
         Date.now();
 
-
-    timerEndAt =
-        quizStartedAt +
-        quizTotalSeconds * 1000;
+    elapsedSeconds = 0;
 
 
-    updateTimerDisplay();
+    updateClockDisplay();
 
 
-    timerInterval =
+    clockInterval =
         setInterval(
             ()=>{
 
-                remainingSeconds =
+                elapsedSeconds =
                     Math.max(
                         0,
-                        Math.ceil(
+                        Math.floor(
                             (
-                                timerEndAt -
-                                Date.now()
+                                Date.now() -
+                                quizStartedAt
                             ) /
                             1000
                         )
                     );
 
 
-                updateTimerDisplay();
-
-
-                if(remainingSeconds <= 0){
-
-                    stopTimer();
-
-                    submitQuiz(true);
-
-                }
+                updateClockDisplay();
 
             },
             250
@@ -4634,17 +4748,14 @@ function getElapsedSeconds(){
     }
 
 
-    return Math.min(
-        quizTotalSeconds,
-        Math.max(
-            0,
-            Math.round(
-                (
-                    Date.now() -
-                    quizStartedAt
-                ) /
-                1000
-            )
+    return Math.max(
+        0,
+        Math.floor(
+            (
+                Date.now() -
+                quizStartedAt
+            ) /
+            1000
         )
     );
 
@@ -4719,12 +4830,7 @@ function startQuiz(){
             : `Unit ${selectedLesson} • ${selectedLessonName}`;
 
 
-    resultTimedOut.classList.add(
-        "hidden"
-    );
-
-
-    startTimer();
+    startClock();
 
 
     loadQuizQuestion();
@@ -4949,15 +5055,10 @@ exitButton.addEventListener(
     "click",
     ()=>{
 
-        stopTimer();
+        stopClock();
 
 
-        quizTimer.textContent = "⏱ 00:00";
-
-        quizTimer.classList.remove(
-            "warning",
-            "danger"
-        );
+        quizClock.textContent = "⏱ 00:00";
 
 
         quizSection.classList.add(
@@ -5022,14 +5123,11 @@ function updateQuizProgress(){
    SUBMIT QUIZ
 ========================================================= */
 
-function submitQuiz(timedOut = false){
+function submitQuiz(){
 
     /*
-       Safety check.
-
-       In normal mode, the user must answer
-       every question. On timeout, unanswered
-       questions are marked as not answered.
+       Safety check: the user must answer
+       every question before submitting.
     */
 
     const unanswered =
@@ -5040,7 +5138,7 @@ function submitQuiz(timedOut = false){
         );
 
 
-    if(unanswered && !timedOut){
+    if(unanswered){
 
         alert(
             "Please answer all questions before submitting."
@@ -5051,13 +5149,11 @@ function submitQuiz(timedOut = false){
     }
 
 
-    stopTimer();
+    stopClock();
 
 
     const timeUsed =
-        timedOut
-            ? quizTotalSeconds
-            : getElapsedSeconds();
+        getElapsedSeconds();
 
 
     let score=0;
@@ -5081,7 +5177,6 @@ function submitQuiz(timedOut = false){
 
     showResult(
         score,
-        timedOut,
         timeUsed
     );
 
@@ -5094,7 +5189,6 @@ function submitQuiz(timedOut = false){
 
 function showResult(
     score,
-    timedOut = false,
     timeUsed = 0
 ){
 
@@ -5128,27 +5222,14 @@ function showResult(
 
 
     resultTime.textContent =
-        `Time used: ${formatTime(timeUsed)} / ${formatTime(quizTotalSeconds)}`;
-
-
-    resultTimedOut.classList.toggle(
-        "hidden",
-        !timedOut
-    );
+        `Time taken: ${formatTime(timeUsed)}`;
 
 
     /*
        Result message.
     */
 
-    if(timedOut){
-
-        resultMessage.textContent =
-            "Time is up! Your answered questions have been scored. Review the explanations below and try again to improve your speed.";
-
-    }
-
-    else if(percentage >= 90){
+    if(percentage >= 90){
 
         resultMessage.textContent =
             "Outstanding! 🧬 Your scientific understanding is very strong. Keep practicing to maintain this performance.";
@@ -5339,14 +5420,9 @@ document
         "click",
         ()=>{
 
-            stopTimer();
+            stopClock();
 
-            quizTimer.textContent = "⏱ 00:00";
-
-            quizTimer.classList.remove(
-                "warning",
-                "danger"
-            );
+            quizClock.textContent = "⏱ 00:00";
 
 
             resultSection.classList.add(

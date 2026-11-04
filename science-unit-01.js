@@ -753,47 +753,8 @@ window.unit1Questions = [
         reason: "Kelvin is one of the seven SI fundamental units."
     },
 
-    {
-        id: "U1-055",
-        lesson: 1,
-        question: "Which of the following is a fundamental SI unit?",
-        options: [
-            "Ampere",
-            "Newton",
-            "Joule",
-            "Pascal"
-        ],
-        answer: 0,
-        reason: "Ampere is one of the seven SI fundamental units."
-    },
 
-    {
-        id: "U1-056",
-        lesson: 1,
-        question: "Which of the following is a fundamental SI unit?",
-        options: [
-            "Mole",
-            "Newton",
-            "Watt",
-            "Hertz"
-        ],
-        answer: 0,
-        reason: "Mole is one of the seven SI fundamental units."
-    },
 
-    {
-        id: "U1-057",
-        lesson: 1,
-        question: "Which of the following is a fundamental SI unit?",
-        options: [
-            "Candela",
-            "Pascal",
-            "Newton",
-            "Joule"
-        ],
-        answer: 0,
-        reason: "Candela is one of the seven SI fundamental units."
-    },
 
     {
         id: "U1-058",
@@ -835,19 +796,6 @@ window.unit1Questions = [
         ],
         answer: 0,
         reason: "Unit analysis checks whether the units on the two sides of a physical equation are consistent."
-    },
-    {
-        id: "U1-061",
-        lesson: 1,
-        question: "Which of the following is a derived unit?",
-        options: [
-            "Joule",
-            "Kilogram",
-            "Metre",
-            "Second"
-        ],
-        answer: 0,
-        reason: "Joule is a derived unit because it is obtained from fundamental units."
     },
 
     {
@@ -948,19 +896,6 @@ window.unit1Questions = [
         reason: "Derived units are obtained by combining two or more fundamental units."
     },
 
-    {
-        id: "U1-069",
-        lesson: 1,
-        question: "How many fundamental units are there in the SI system?",
-        options: [
-            "7",
-            "6",
-            "8",
-            "10"
-        ],
-        answer: 0,
-        reason: "The SI system has seven fundamental units."
-    },
 
     {
         id: "U1-070",
@@ -976,19 +911,6 @@ window.unit1Questions = [
         reason: "Newton is a derived unit, whereas kilogram, metre and second are fundamental units."
     },
 
-    {
-        id: "U1-071",
-        lesson: 1,
-        question: "Which of the following is NOT a fundamental SI unit?",
-        options: [
-            "Joule",
-            "Kelvin",
-            "Ampere",
-            "Mole"
-        ],
-        answer: 0,
-        reason: "Joule is a derived unit, while kelvin, ampere and mole are fundamental units."
-    },
 
     {
         id: "U1-072",
@@ -1102,19 +1024,6 @@ window.unit1Questions = [
         reason: "In v = u + at, all terms have the dimensions of velocity."
     },
 
-    {
-        id: "U1-080",
-        lesson: 1,
-        question: "Which equation is dimensionally homogeneous?",
-        options: [
-            "s = ut + ½at²",
-            "s = ut + ½at",
-            "s = u + ½at²",
-            "s = u/t + ½at²"
-        ],
-        answer: 0,
-        reason: "In s = ut + ½at², both ut and at² have the dimensions of length, matching s."
-    },
     {
         id: "U1-081",
         lesson: 1,
@@ -1393,5 +1302,103 @@ window.unit1Questions = [
         ],
         answer: 0,
         reason: "Unit-wise analysis is used to verify the consistency and validity of a physical equation."
+    },
+
+    {
+        id: "U1-101",
+        lesson: 1,
+        question: "Which of the following is the best example of a scientific hypothesis?",
+        options: [
+            "Adding more water will increase plant height",
+            "Plants are green",
+            "Water boils at 100 C",
+            "The sky is blue"
+        ],
+        answer: 0,
+        reason: "A hypothesis is a testable prediction about the relationship between variables."
+    },
+
+    {
+        id: "U1-102",
+        lesson: 1,
+        question: "What is the main purpose of a control group in an experiment?",
+        options: [
+            "To provide a standard for comparison",
+            "To increase the number of variables",
+            "To replace the dependent variable",
+            "To remove all measurements"
+        ],
+        answer: 0,
+        reason: "A control group provides a baseline against which the effect of the tested variable can be compared."
+    },
+
+    {
+        id: "U1-103",
+        lesson: 1,
+        question: "Which instrument is most suitable for measuring the time taken for a falling object in a school laboratory?",
+        options: [
+            "Stopwatch",
+            "Metre rule",
+            "Thermometer",
+            "Measuring cylinder"
+        ],
+        answer: 0,
+        reason: "A stopwatch measures time intervals, which is the quantity needed in this investigation."
+    },
+
+    {
+        id: "U1-104",
+        lesson: 1,
+        question: "Which of the following is a derived quantity?",
+        options: [
+            "Area",
+            "Length",
+            "Mass",
+            "Time"
+        ],
+        answer: 0,
+        reason: "Area is obtained from length multiplied by length, so it is a derived quantity."
+    },
+
+    {
+        id: "U1-105",
+        lesson: 1,
+        question: "What is the SI unit of volume?",
+        options: [
+            "Cubic metre",
+            "Square metre",
+            "Metre",
+            "Kilogram"
+        ],
+        answer: 0,
+        reason: "Volume is measured in cubic metres because it is the product of three lengths."
+    },
+
+    {
+        id: "U1-106",
+        lesson: 1,
+        question: "Why should a scientific conclusion be based on repeated observations?",
+        options: [
+            "To increase the reliability of the results",
+            "To make the experiment longer",
+            "To avoid recording data",
+            "To change the hypothesis automatically"
+        ],
+        answer: 0,
+        reason: "Repeated observations help reduce the effect of random errors and make the conclusion more reliable."
+    },
+
+    {
+        id: "U1-107",
+        lesson: 1,
+        question: "Which of the following best describes precision in measurement?",
+        options: [
+            "How close repeated measurements are to each other",
+            "How close a measurement is to the true value",
+            "The size of the measuring instrument",
+            "The number of variables in an experiment"
+        ],
+        answer: 0,
+        reason: "Precision describes the closeness of repeated measurements to one another."
     }
 ];
