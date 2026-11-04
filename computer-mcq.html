@@ -1,34 +1,6188 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, follow">
-    <title>Computer Science MCQ | Kandel Sarkar</title>
-    <link rel="icon" type="image/jpeg" href="kandel-sarkar-profile.jpg">
-    <style>
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:Arial,sans-serif;background:#05070b;color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px}
-        .container{max-width:600px}
-        h1{font-size:clamp(32px,6vw,48px);margin-bottom:16px;background:linear-gradient(110deg,#fff,#77e7ff);-webkit-background-clip:text;background-clip:text;color:transparent}
-        p{color:#9ca5b2;margin-bottom:32px;line-height:1.7}
-        .btn{display:inline-block;padding:12px 28px;background:linear-gradient(135deg,#35d8ff,#4d8dff);color:#03101a;text-decoration:none;border-radius:12px;font-weight:700;transition:transform .2s}
-        .btn:hover{transform:translateY(-2px)}
-        .nav{position:absolute;top:20px;left:20px}
-        .nav a{color:#9ca5b2;text-decoration:none;margin-right:16px;font-size:14px}
-        .nav a:hover{color:#fff}
-    </style>
+
+<meta charset="UTF-8">
+
+<link rel="icon" type="image/jpeg" href="kandel-sarkar-profile.jpg">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+      content="Practice 1,100+ free NEB Class 10 Computer Science MCQs across 11 units. Unit-wise questions with instant scoring, explanations and an elapsed-time clock.">
+<meta name="keywords"
+      content="mcq class 10 neb, class 10 computer mcq, neb class 10 computer science mcq, see computer mcq, computer science mcq practice">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://kandelbishal.com.np/computer-mcq.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kandel Sarkar">
+<meta property="og:title" content="Class 10 Computer Science MCQ NEB | 1,100+ Questions">
+<meta property="og:description" content="Practice 1,100+ free NEB Class 10 Computer Science MCQs across 11 units with instant scoring and explanations.">
+<meta property="og:url" content="https://kandelbishal.com.np/computer-mcq.html">
+<meta property="og:image" content="https://kandelbishal.com.np/kandel-sarkar-profile.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Class 10 Computer Science MCQ NEB | 1,100+ Questions">
+<meta name="twitter:description" content="Free NEB Class 10 Computer Science MCQ practice with unit-wise questions, scoring and explanations.">
+<meta name="twitter:image" content="https://kandelbishal.com.np/kandel-sarkar-profile.jpg">
+
+<title>
+    Class 10 Computer Science MCQ NEB | 1,100+ Questions
+</title>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Class 10 Computer Science MCQ NEB Practice",
+  "description": "Free NEB Class 10 Computer Science MCQ practice with 1,100+ questions across 11 units, instant scoring and explanations.",
+  "url": "https://kandelbishal.com.np/computer-mcq.html",
+  "learningResourceType": "Quiz",
+  "educationalLevel": "Grade 10",
+  "about": "NEB Class 10 Computer Science",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "dateModified": "2026-11-04",
+  "provider": {
+    "@type": "Organization",
+    "name": "Kandel Sarkar",
+    "url": "https://kandelbishal.com.np/"
+  }
+}
+</script>
+
+
+<style>
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --background:#06111f;
+
+    --background2:#091b2d;
+
+    --card:rgba(13,35,55,.78);
+
+    --card2:rgba(10,28,46,.92);
+
+    --border:rgba(86,196,255,.18);
+
+    --border-hover:rgba(86,220,255,.55);
+
+    --cyan:#35d8ff;
+
+    --blue:#4d8dff;
+
+    --green:#47e0a3;
+
+    --yellow:#ffd166;
+
+    --red:#ff6879;
+
+    --white:#f2faff;
+
+    --text:#d6e5ef;
+
+    --muted:#8199aa;
+
+    --shadow:
+        0 25px 80px rgba(0,0,0,.4);
+
+    --mouse-x:50vw;
+
+    --mouse-y:50vh;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    min-height:100vh;
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    color:var(--white);
+
+    background:
+
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(44,198,255,.10),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 90% 30%,
+            rgba(68,224,163,.07),
+            transparent 28%
+        ),
+
+        linear-gradient(
+            135deg,
+            #030a13,
+            #061321,
+            #08182a
+        );
+
+    overflow-x:hidden;
+
+    position:relative;
+}
+
+
+/* =========================================================
+   MOUSE TRACKING LIGHT
+========================================================= */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:650px;
+
+    height:650px;
+
+    left:var(--mouse-x);
+
+    top:var(--mouse-y);
+
+    transform:
+        translate(-50%,-50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(53,216,255,.09),
+            transparent 68%
+        );
+
+    pointer-events:none;
+
+    z-index:-2;
+
+}
+
+
+/* =========================================================
+   MATH GRID
+========================================================= */
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(53,216,255,.035) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(53,216,255,.035) 1px,
+            transparent 1px
+        );
+
+    background-size:45px 45px;
+
+    pointer-events:none;
+
+    z-index:-3;
+
+}
+
+
+/* =========================================================
+   FLOATING PARTICLES
+========================================================= */
+
+.particles{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:-1;
+}
+
+
+.particle{
+
+    position:absolute;
+
+    width:4px;
+
+    height:4px;
+
+    border-radius:50%;
+
+    background:var(--cyan);
+
+    box-shadow:
+        0 0 15px var(--cyan);
+
+    opacity:.25;
+
+    animation:
+        floating 20s linear infinite;
+}
+
+
+.particle:nth-child(1){
+    left:5%;
+    animation-duration:18s;
+}
+
+.particle:nth-child(2){
+    left:18%;
+    animation-duration:24s;
+}
+
+.particle:nth-child(3){
+    left:32%;
+    animation-duration:20s;
+}
+
+.particle:nth-child(4){
+    left:48%;
+    animation-duration:26s;
+}
+
+.particle:nth-child(5){
+    left:63%;
+    animation-duration:22s;
+}
+
+.particle:nth-child(6){
+    left:77%;
+    animation-duration:19s;
+}
+
+.particle:nth-child(7){
+    left:91%;
+    animation-duration:25s;
+}
+
+
+@keyframes floating{
+
+    from{
+        transform:
+            translateY(110vh)
+            scale(.5);
+    }
+
+    to{
+        transform:
+            translateY(-20vh)
+            scale(1.3);
+    }
+
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:100;
+
+    height:70px;
+
+    padding:
+        0 6%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    background:
+        rgba(3,11,19,.72);
+
+    backdrop-filter:
+        blur(18px);
+
+    border-bottom:
+        1px solid
+        rgba(100,200,255,.10);
+}
+
+
+.logo{
+
+    text-decoration:none;
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:11px;
+
+    font-weight:800;
+
+    font-size:16px;
+}
+
+
+.logo-icon{
+
+    width:38px;
+
+    height:38px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:12px;
+
+    border:
+        1px solid
+        var(--border-hover);
+
+    background:
+        rgba(53,216,255,.08);
+
+    box-shadow:
+        0 0 25px
+        rgba(53,216,255,.10);
+}
+
+
+.nav-links{
+
+    display:flex;
+
+    gap:25px;
+}
+
+
+.nav-links a{
+
+    text-decoration:none;
+
+    color:var(--muted);
+
+    font-size:13px;
+
+    transition:.25s;
+}
+
+
+.nav-links a:hover{
+
+    color:var(--cyan);
+
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.container{
+
+    width:min(94%,1050px);
+
+    margin:auto;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+    text-align:center;
+
+    padding:
+        65px 15px 40px;
+}
+
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:
+        8px 15px;
+
+    border-radius:100px;
+
+    border:
+        1px solid
+        rgba(53,216,255,.3);
+
+    background:
+        rgba(53,216,255,.06);
+
+    color:var(--cyan);
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:1.3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+}
+
+
+.badge-dot{
+
+    width:7px;
+
+    height:7px;
+
+    border-radius:50%;
+
+    background:var(--green);
+
+    box-shadow:
+        0 0 12px var(--green);
+}
+
+
+.hero h1{
+
+    font-size:
+        clamp(42px,7vw,72px);
+
+    letter-spacing:-3px;
+
+    line-height:1;
+
+    margin-bottom:20px;
+
+    background:
+        linear-gradient(
+            110deg,
+            white,
+            #77e7ff,
+            #769eff
+        );
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    color:transparent;
+}
+
+
+.hero p{
+
+    max-width:650px;
+
+    margin:auto;
+
+    color:var(--muted);
+
+    line-height:1.7;
+
+    font-size:14px;
+}
+
+
+/* =========================================================
+   MAIN PANEL
+========================================================= */
+
+.panel{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(13,37,57,.88),
+            rgba(7,20,34,.91)
+        );
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:25px;
+
+    padding:32px;
+
+    box-shadow:var(--shadow);
+
+    backdrop-filter:blur(20px);
+
+}
+
+
+.panel::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:400px;
+
+    height:400px;
+
+    left:
+        var(--panel-x,50%);
+
+    top:
+        var(--panel-y,0%);
+
+    transform:
+        translate(-50%,-50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(53,216,255,.07),
+            transparent 68%
+        );
+
+    pointer-events:none;
+}
+
+
+/* =========================================================
+   PANEL HEADER
+========================================================= */
+
+.panel-header{
+
+    position:relative;
+
+    margin-bottom:30px;
+}
+
+
+.panel-header h2{
+
+    font-size:25px;
+
+    margin-bottom:7px;
+}
+
+
+.panel-header p{
+
+    color:var(--muted);
+
+    font-size:13px;
+
+    line-height:1.6;
+}
+
+
+/* =========================================================
+   LESSON GRID
+========================================================= */
+
+.lesson-grid{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:12px;
+}
+
+
+/* =========================================================
+   LESSON CARD
+========================================================= */
+
+.lesson-card{
+
+    position:relative;
+
+    min-height:90px;
+
+    padding:16px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:15px;
+
+    background:
+        rgba(6,22,37,.67);
+
+    cursor:pointer;
+
+    transition:
+
+        transform .22s ease,
+
+        border-color .22s ease,
+
+        background .22s ease,
+
+        box-shadow .22s ease;
+}
+
+
+.lesson-card:hover{
+
+    transform:
+        translateY(-3px);
+
+    border-color:
+        var(--border-hover);
+
+    background:
+        rgba(14,42,65,.82);
+
+    box-shadow:
+        0 12px 35px
+        rgba(0,0,0,.2);
+}
+
+
+.lesson-card.selected{
+
+    border-color:
+        var(--cyan);
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(30,116,157,.28),
+            rgba(48,78,150,.24)
+        );
+
+    box-shadow:
+        0 0 0 1px
+        rgba(53,216,255,.08),
+        0 15px 40px
+        rgba(0,0,0,.2);
+}
+
+
+.lesson-number{
+
+    color:var(--cyan);
+
+    font-size:10px;
+
+    font-weight:900;
+
+    letter-spacing:1.3px;
+
+    margin-bottom:7px;
+}
+
+
+.lesson-name{
+
+    color:#dceaf2;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    line-height:1.4;
+}
+
+
+.lesson-meta{
+
+    color:var(--muted);
+
+    font-size:10px;
+
+    margin-top:7px;
+}
+
+
+/* =========================================================
+   ALL CHAPTERS
+========================================================= */
+
+.all-chapters{
+
+    grid-column:
+        1 / -1;
+
+    min-height:105px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:17px;
+
+    padding:19px;
+
+    border:
+        1px solid
+        rgba(69,224,163,.25);
+
+    border-radius:16px;
+
+    background:
+        linear-gradient(
+            100deg,
+            rgba(69,224,163,.07),
+            rgba(53,216,255,.05)
+        );
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+
+.all-chapters:hover{
+
+    border-color:
+        rgba(69,224,163,.55);
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+.all-icon{
+
+    width:52px;
+
+    height:52px;
+
+    flex-shrink:0;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:15px;
+
+    background:
+        rgba(69,224,163,.10);
+
+    border:
+        1px solid
+        rgba(69,224,163,.25);
+
+    font-size:24px;
+}
+
+
+.all-chapters h3{
+
+    font-size:16px;
+
+    margin-bottom:4px;
+}
+
+
+.all-chapters p{
+
+    color:var(--muted);
+
+    font-size:12px;
+
+    line-height:1.5;
+}
+
+
+/* =========================================================
+   SELECTED CHAPTER
+========================================================= */
+
+.selection-info{
+
+    margin-top:28px;
+
+    padding:17px;
+
+    border-radius:14px;
+
+    border:
+        1px solid
+        rgba(53,216,255,.12);
+
+    background:
+        rgba(53,216,255,.035);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:15px;
+}
+
+
+.selection-label{
+
+    color:var(--muted);
+
+    font-size:11px;
+
+    margin-bottom:5px;
+}
+
+
+.selection-value{
+
+    color:var(--cyan);
+
+    font-weight:800;
+
+    font-size:14px;
+}
+
+
+/* =========================================================
+   QUESTION COUNT
+========================================================= */
+
+.question-settings{
+
+    margin-top:24px;
+
+    padding-top:25px;
+
+    border-top:
+        1px solid
+        rgba(110,190,230,.09);
+}
+
+
+.question-settings h3{
+
+    font-size:17px;
+
+    margin-bottom:6px;
+}
+
+
+.question-settings p{
+
+    color:var(--muted);
+
+    font-size:12px;
+
+    margin-bottom:17px;
+}
+
+
+.number-buttons{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:9px;
+}
+
+
+.number-btn{
+
+    min-width:65px;
+
+    height:42px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:10px;
+
+    background:
+        rgba(255,255,255,.025);
+
+    color:#bcd0dc;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+
+.number-btn:hover{
+
+    border-color:
+        var(--border-hover);
+
+    color:white;
+}
+
+
+.number-btn.selected{
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(53,216,255,.20),
+            rgba(77,141,255,.18)
+        );
+
+    border-color:
+        var(--cyan);
+
+    color:var(--cyan);
+}
+
+
+/* =========================================================
+   CUSTOM NUMBER
+========================================================= */
+
+.custom-count{
+
+    margin-top:15px;
+
+    display:flex;
+
+    gap:10px;
+}
+
+
+.custom-count input{
+
+    width:150px;
+
+    height:43px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:10px;
+
+    background:
+        rgba(2,12,22,.65);
+
+    color:white;
+
+    padding:
+        0 13px;
+
+    outline:none;
+
+    font-size:13px;
+}
+
+
+.custom-count input:focus{
+
+    border-color:
+        var(--cyan);
+
+}
+
+
+/* =========================================================
+   START BUTTON
+========================================================= */
+
+.start-area{
+
+    margin-top:28px;
+
+    display:flex;
+
+    justify-content:flex-end;
+}
+
+
+.start-btn{
+
+    min-height:51px;
+
+    padding:
+        0 27px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--cyan),
+            var(--blue)
+        );
+
+    color:#03101a;
+
+    font-size:13px;
+
+    font-weight:900;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 12px 35px
+        rgba(53,216,255,.16);
+
+    transition:.2s;
+}
+
+
+.start-btn:hover{
+
+    transform:
+        translateY(-2px);
+
+    filter:
+        brightness(1.08);
+}
+
+
+.start-btn:disabled{
+
+    opacity:.35;
+
+    cursor:not-allowed;
+
+    transform:none;
+}
+
+
+/* =========================================================
+   QUIZ
+========================================================= */
+
+#quiz-section{
+
+    margin-top:25px;
+}
+
+
+.quiz-top{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    margin-bottom:15px;
+}
+
+
+.quiz-count{
+
+    font-size:13px;
+
+    font-weight:800;
+}
+
+
+.quiz-answered{
+
+    color:var(--muted);
+
+    font-size:11px;
+}
+
+
+.progress{
+
+    height:7px;
+
+    background:
+        rgba(255,255,255,.05);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    margin-bottom:35px;
+}
+
+
+.progress-bar{
+
+    width:0%;
+
+    height:100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--cyan),
+            var(--blue),
+            var(--green)
+        );
+
+    transition:
+        width .4s ease;
+}
+
+
+.question-tag{
+
+    color:var(--cyan);
+
+    font-size:10px;
+
+    font-weight:900;
+
+    text-transform:uppercase;
+
+    letter-spacing:1.5px;
+
+    margin-bottom:10px;
+}
+
+
+#quiz-question{
+
+    font-size:
+        clamp(20px,3vw,29px);
+
+    line-height:1.5;
+
+    margin-bottom:25px;
+}
+
+
+.options{
+
+    display:grid;
+
+    gap:11px;
+}
+
+
+.option{
+
+    width:100%;
+
+    min-height:62px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:13px;
+
+    text-align:left;
+
+    border:
+        1px solid
+        rgba(100,190,230,.13);
+
+    border-radius:14px;
+
+    padding:
+        12px 15px;
+
+    background:
+        rgba(5,20,34,.72);
+
+    color:#d9e8f1;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+
+.option:hover{
+
+    border-color:
+        rgba(53,216,255,.4);
+
+    transform:
+        translateX(4px);
+}
+
+
+.option.selected{
+
+    border-color:
+        rgba(53,216,255,.65);
+
+    background:
+        rgba(26,105,145,.25);
+
+}
+
+
+.option-letter{
+
+    width:34px;
+
+    height:34px;
+
+    flex-shrink:0;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:9px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    border:
+        1px solid
+        rgba(120,190,220,.13);
+
+    color:#a9c2d0;
+
+    font-size:12px;
+
+    font-weight:900;
+}
+
+
+.option.selected
+.option-letter{
+
+    color:var(--cyan);
+
+    border-color:
+        rgba(53,216,255,.5);
+
+    background:
+        rgba(53,216,255,.10);
+}
+
+
+.quiz-footer{
+
+    margin-top:27px;
+
+    padding-top:21px;
+
+    border-top:
+        1px solid
+        rgba(110,190,230,.08);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+}
+
+
+.status{
+
+    color:var(--muted);
+
+    font-size:11px;
+
+}
+
+
+.next-btn{
+
+    min-height:46px;
+
+    padding:
+        0 22px;
+
+    border:none;
+
+    border-radius:11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--cyan),
+            var(--blue)
+        );
+
+    color:#03101a;
+
+    font-weight:900;
+
+    cursor:pointer;
+}
+
+
+.next-btn:disabled{
+
+    opacity:.3;
+
+    cursor:not-allowed;
+}
+
+
+/* =========================================================
+   RESULT
+========================================================= */
+
+.result{
+
+    margin-top:25px;
+
+    padding:40px 25px;
+
+    text-align:center;
+
+    border-radius:24px;
+
+    border:
+        1px solid
+        rgba(53,216,255,.25);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(13,39,58,.95),
+            rgba(5,18,31,.97)
+        );
+
+    box-shadow:var(--shadow);
+}
+
+
+.result-icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:
+        0 auto 20px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        rgba(53,216,255,.35);
+
+    background:
+        rgba(53,216,255,.07);
+
+    font-size:40px;
+
+    box-shadow:
+        0 0 45px
+        rgba(53,216,255,.12);
+}
+
+
+.result h2{
+
+    font-size:32px;
+
+    margin-bottom:7px;
+}
+
+
+.result-subtitle{
+
+    color:var(--muted);
+
+    font-size:13px;
+}
+
+
+.score{
+
+    font-size:
+        clamp(55px,9vw,80px);
+
+    font-weight:900;
+
+    margin-top:25px;
+
+    background:
+        linear-gradient(
+            120deg,
+            white,
+            var(--cyan),
+            #789fff
+        );
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    color:transparent;
+}
+
+
+.score-percent{
+
+    display:inline-block;
+
+    margin-top:10px;
+
+    padding:
+        8px 16px;
+
+    border-radius:100px;
+
+    color:var(--green);
+
+    border:
+        1px solid
+        rgba(69,224,163,.25);
+
+    background:
+        rgba(69,224,163,.06);
+
+    font-size:13px;
+
+    font-weight:800;
+}
+
+
+.result-message{
+
+    max-width:650px;
+
+    margin:
+        20px auto;
+
+    color:#a9bdca;
+
+    line-height:1.7;
+
+    font-size:13px;
+}
+
+
+/* =========================================================
+   REVIEW
+========================================================= */
+
+.review{
+
+    margin-top:35px;
+
+    padding-top:28px;
+
+    border-top:
+        1px solid
+        rgba(110,190,230,.09);
+
+    text-align:left;
+}
+
+
+.review h3{
+
+    font-size:22px;
+
+    margin-bottom:6px;
+}
+
+
+.review-intro{
+
+    color:var(--muted);
+
+    font-size:12px;
+
+    margin-bottom:20px;
+}
+
+
+.review-item{
+
+    margin-bottom:12px;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    background:
+        rgba(3,15,26,.68);
+
+    border:
+        1px solid
+        rgba(110,190,230,.11);
+
+}
+
+
+.review-item.correct{
+
+    border-left:
+        4px solid
+        var(--green);
+}
+
+
+.review-item.wrong{
+
+    border-left:
+        4px solid
+        var(--red);
+}
+
+
+.review-number{
+
+    color:var(--cyan);
+
+    font-size:10px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
+
+    margin-bottom:9px;
+}
+
+
+.review-question{
+
+    font-size:15px;
+
+    font-weight:750;
+
+    line-height:1.6;
+
+    margin-bottom:13px;
+}
+
+
+.answer{
+
+    padding:
+        10px 12px;
+
+    border-radius:9px;
+
+    font-size:12px;
+
+    line-height:1.5;
+
+    margin-top:6px;
+}
+
+
+.student-answer{
+
+    background:
+        rgba(255,255,255,.035);
+
+    color:#afc1cc;
+}
+
+
+.correct-answer{
+
+    background:
+        rgba(69,224,163,.055);
+
+    border:
+        1px solid
+        rgba(69,224,163,.16);
+
+    color:#c3e8d6;
+}
+
+
+.reason{
+
+    margin-top:12px;
+
+    padding:14px;
+
+    border-radius:10px;
+
+    background:
+        rgba(53,216,255,.045);
+
+    border:
+        1px solid
+        rgba(53,216,255,.10);
+
+    color:#9db5c4;
+
+    font-size:12px;
+
+    line-height:1.7;
+}
+
+
+.reason strong{
+
+    color:var(--cyan);
+}
+
+
+/* =========================================================
+   RESULT BUTTON
+========================================================= */
+
+.restart-btn{
+
+    margin-top:15px;
+
+    min-height:46px;
+
+    padding:
+        0 22px;
+
+    border:none;
+
+    border-radius:11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--cyan),
+            var(--blue)
+        );
+
+    color:#03101a;
+
+    font-weight:900;
+
+    cursor:pointer;
+}
+
+
+/* =========================================================
+   UTILITIES
+========================================================= */
+
+.hidden{
+
+    display:none !important;
+}
+
+
+footer{
+
+    text-align:center;
+
+    padding:
+        35px 20px;
+
+    color:#607888;
+
+    font-size:11px;
+
+    line-height:2;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:700px){
+
+    .navbar{
+
+        padding:
+            0 4%;
+
+    }
+
+    .nav-links{
+
+        gap:12px;
+
+    }
+
+    .nav-links a{
+
+        font-size:10px;
+
+    }
+
+    .hero{
+
+        padding:
+            50px 8px 30px;
+
+    }
+
+    .hero h1{
+
+        letter-spacing:-1.5px;
+
+    }
+
+    .panel{
+
+        padding:20px;
+
+        border-radius:19px;
+
+    }
+
+    .lesson-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .all-chapters{
+
+        grid-column:auto;
+
+    }
+
+    .selection-info{
+
+        align-items:flex-start;
+
+        flex-direction:column;
+
+    }
+
+    .start-area{
+
+        display:block;
+
+    }
+
+    .start-btn{
+
+        width:100%;
+
+    }
+
+    .quiz-footer{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    .next-btn{
+
+        width:100%;
+
+    }
+
+}
+
+
+/* =========================================================
+   PROFESSIONAL POLISH
+========================================================= */
+
+:root{
+
+    --gold:#f7c66b;
+
+    --danger:#ff6879;
+
+}
+
+
+body{
+
+    background-attachment:fixed;
+
+}
+
+
+.hero{
+
+    position:relative;
+
+}
+
+
+.hero h1{
+
+    text-shadow:
+        0 0 45px
+        rgba(53,216,255,.16);
+}
+
+
+.hero-stats{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:10px;
+
+    margin-top:27px;
+}
+
+
+.hero-stat{
+
+    min-width:118px;
+
+    padding:
+        12px 18px;
+
+    border:
+        1px solid
+        rgba(86,196,255,.16);
+
+    border-radius:14px;
+
+    background:
+        rgba(5,20,34,.5);
+
+    backdrop-filter:
+        blur(8px);
+
+}
+
+
+.hero-stat strong{
+
+    display:block;
+
+    color:var(--cyan);
+
+    font-size:22px;
+
+    letter-spacing:-.5px;
+}
+
+
+.hero-stat span{
+
+    display:block;
+
+    margin-top:3px;
+
+    color:var(--muted);
+
+    font-size:10px;
+
+    letter-spacing:1.1px;
+
+    text-transform:uppercase;
+}
+
+
+.panel{
+
+    animation:
+        riseIn .45s ease both;
+}
+
+
+@keyframes riseIn{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+
+.panel::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    pointer-events:none;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255,255,255,.04);
+}
+
+
+.lesson-card{
+
+    overflow:hidden;
+}
+
+
+.lesson-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    bottom:0;
+
+    width:3px;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--cyan),
+            transparent
+        );
+
+    opacity:0;
+
+    transition:
+        opacity .2s ease;
+}
+
+
+.lesson-card:hover::before,
+.lesson-card.selected::before{
+
+    opacity:1;
+}
+
+
+.lesson-card::after{
+
+    content:"→";
+
+    position:absolute;
+
+    right:14px;
+
+    top:13px;
+
+    color:var(--cyan);
+
+    font-size:15px;
+
+    opacity:0;
+
+    transform:
+        translateX(-4px);
+
+    transition:.2s ease;
+}
+
+
+.lesson-card:hover::after,
+.lesson-card.selected::after{
+
+    opacity:1;
+
+    transform:none;
+}
+
+
+.lesson-card.selected{
+
+    transform:
+        translateY(-2px);
+}
+
+
+.lesson-meta{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+}
+
+
+.lesson-meta::before{
+
+    content:"";
+
+    width:5px;
+
+    height:5px;
+
+    border-radius:50%;
+
+    background:var(--green);
+
+    box-shadow:
+        0 0 8px
+        var(--green);
+}
+
+
+.selection-info{
+
+    flex-wrap:wrap;
+}
+
+
+.selection-info > div{
+
+    flex:
+        1 1 160px;
+}
+
+
+.timer-hint{
+
+    margin-top:14px;
+
+    color:var(--muted);
+
+    font-size:11px;
+
+    line-height:1.6;
+
+    text-align:center;
+}
+
+
+.quiz-top{
+
+    gap:14px;
+
+    flex-wrap:wrap;
+}
+
+
+.quiz-meta-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:4px;
+}
+
+
+.quiz-meta-right{
+
+    align-items:flex-end;
+}
+
+
+.quiz-unit{
+
+    color:var(--muted);
+
+    font-size:10px;
+
+    letter-spacing:.4px;
+}
+
+
+.quiz-clock{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:6px;
+
+    min-width:96px;
+
+    padding:
+        8px 12px;
+
+    border:
+        1px solid
+        rgba(53,216,255,.3);
+
+    border-radius:10px;
+
+    background:
+        rgba(5,20,34,.8);
+
+    color:var(--cyan);
+
+    font-size:14px;
+
+    font-weight:900;
+
+    font-variant-numeric:
+        tabular-nums;
+
+    letter-spacing:.5px;
+}
+
+
+.option{
+
+    position:relative;
+}
+
+
+.option:focus-visible,
+.number-btn:focus-visible,
+.start-btn:focus-visible,
+.next-btn:focus-visible,
+.restart-btn:focus-visible,
+.lesson-card:focus-visible{
+
+    outline:
+        2px solid
+        var(--cyan);
+
+    outline-offset:2px;
+}
+
+
+.option.selected::after{
+
+    content:"✓";
+
+    position:absolute;
+
+    right:14px;
+
+    color:var(--cyan);
+
+    font-weight:900;
+}
+
+
+.quiz-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:9px;
+}
+
+
+.exit-btn{
+
+    min-height:46px;
+
+    padding:
+        0 16px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    border-radius:11px;
+
+    background:
+        transparent;
+
+    color:var(--muted);
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    transition:.2s ease;
+}
+
+
+.exit-btn:hover{
+
+    color:var(--white);
+
+    border-color:
+        rgba(255,255,255,.3);
+
+    background:
+        rgba(255,255,255,.04);
+}
+
+
+.result-meta{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:10px;
+
+    margin-top:14px;
+
+    color:var(--muted);
+
+    font-size:11px;
+}
+
+
+.review-item.skipped{
+
+    border-color:
+        rgba(255,209,102,.3);
+}
+
+
+.review-item.skipped
+.review-number{
+
+    color:var(--yellow);
+}
+
+
+@media (max-width:700px){
+
+    .hero-stat{
+
+        flex:
+            1 1 40%;
+
+    }
+
+    .quiz-meta-right{
+
+        align-items:flex-start;
+
+    }
+
+    .quiz-clock{
+
+        font-size:13px;
+
+    }
+
+    .quiz-actions{
+
+        width:100%;
+
+    }
+
+    .quiz-actions .next-btn{
+
+        width:auto;
+
+        flex:1;
+
+    }
+
+}
+
+
+@media (prefers-reduced-motion: reduce){
+
+    *,
+    *::before,
+    *::after{
+
+        animation-duration:
+            .01ms !important;
+
+        transition-duration:
+            .01ms !important;
+
+    }
+
+}
+
+
+/* =========================================================
+   COMPUTER LAB THEME
+========================================================= */
+
+body.computer-theme{
+
+    --background:#020906;
+    --background2:#04140d;
+    --card:rgba(4,26,16,.82);
+    --card2:rgba(2,16,12,.94);
+    --border:rgba(87,255,176,.16);
+    --border-hover:rgba(87,255,176,.55);
+    --cyan:#57ffb0;
+    --blue:#28d7ff;
+    --green:#b8ff6a;
+    --yellow:#e6ff6a;
+    --red:#ff5f7a;
+    --white:#eafff2;
+    --text:#c9f6dd;
+    --muted:#78ab8f;
+
+    font-family:
+        "JetBrains Mono",
+        "IBM Plex Mono",
+        "Fira Code",
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Consolas,
+        "Courier New",
+        monospace;
+
+    background:
+        radial-gradient(
+            circle at 12% 8%,
+            rgba(87,255,176,.11),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 88% 18%,
+            rgba(40,215,255,.08),
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #010604,
+            #03110a 48%,
+            #020b10
+        );
+}
+
+
+body.computer-theme::before{
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(87,255,176,.07),
+            transparent 68%
+        );
+}
+
+
+body.computer-theme::after{
+
+    background-image:
+        linear-gradient(
+            rgba(87,255,176,.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(87,255,176,.035) 1px,
+            transparent 1px
+        );
+
+    background-size:32px 32px;
+}
+
+
+.scanlines{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:40;
+
+    pointer-events:none;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(0,0,0,.18) 0,
+            rgba(0,0,0,.18) 1px,
+            transparent 1px,
+            transparent 4px
+        );
+
+    opacity:.16;
+
+    mix-blend-mode:multiply;
+}
+
+
+.binary-rain{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+    opacity:.22;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            transparent,
+            #000 15%,
+            #000 85%,
+            transparent
+        );
+}
+
+
+.binary-rain span{
+
+    position:absolute;
+
+    top:-45vh;
+
+    color:
+        rgba(87,255,176,.55);
+
+    font-size:10px;
+
+    line-height:1.4;
+
+    letter-spacing:3px;
+
+    writing-mode:vertical-rl;
+
+    text-shadow:
+        0 0 8px
+        rgba(87,255,176,.25);
+
+    animation:
+        binaryFall
+        linear
+        infinite;
+}
+
+
+@keyframes binaryFall{
+
+    from{
+        transform:
+            translateY(-50vh);
+    }
+
+    to{
+        transform:
+            translateY(150vh);
+    }
+
+}
+
+
+body.computer-theme .particle{
+
+    background:var(--green);
+
+    box-shadow:
+        0 0 15px var(--green);
+
+    opacity:.12;
+}
+
+
+/* =========================================================
+   NAV / HERO
+========================================================= */
+
+body.computer-theme .navbar{
+
+    background:
+        rgba(2,10,7,.90);
+
+    border-bottom-color:
+        rgba(87,255,176,.12);
+
+    backdrop-filter:blur(14px);
+}
+
+
+body.computer-theme .logo{
+
+    color:#eafff2;
+}
+
+
+body.computer-theme .logo-icon{
+
+    color:var(--cyan);
+
+    font-family:inherit;
+
+    text-shadow:
+        0 0 14px
+        rgba(87,255,176,.35);
+}
+
+
+body.computer-theme .nav-links a{
+
+    color:#86b09b;
+}
+
+
+body.computer-theme .nav-links a:hover,
+body.computer-theme .nav-links a.active{
+
+    color:var(--cyan);
+
+    text-shadow:
+        0 0 12px
+        rgba(87,255,176,.25);
+}
+
+
+body.computer-theme .hero{
+
+    position:relative;
+
+    margin-top:24px;
+
+    padding:
+        72px 26px 34px;
+
+    border:
+        1px solid
+        rgba(87,255,176,.22);
+
+    border-radius:16px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(4,26,16,.86),
+            rgba(2,12,14,.72)
+        );
+
+    box-shadow:
+        0 0 0 1px
+        rgba(87,255,176,.04),
+        0 30px 90px
+        rgba(0,0,0,.50),
+        inset 0 0 90px
+        rgba(87,255,176,.035);
+
+    overflow:hidden;
+}
+
+
+body.computer-theme .hero::before{
+
+    content:
+        "●  ●  ●     /class-10/computer-science";
+
+    position:absolute;
+
+    left:0;
+
+    right:0;
+
+    top:0;
+
+    height:34px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding-left:16px;
+
+    border-bottom:
+        1px solid
+        rgba(87,255,176,.15);
+
+    background:
+        rgba(2,14,8,.92);
+
+    color:#609a7d;
+
+    font-size:10px;
+
+    letter-spacing:.12em;
+
+    text-align:left;
+}
+
+
+body.computer-theme .badge{
+
+    position:relative;
+
+    z-index:1;
+
+    border-color:
+        rgba(87,255,176,.28);
+
+    background:
+        rgba(87,255,176,.05);
+
+    color:var(--cyan);
+
+    font-family:inherit;
+}
+
+
+body.computer-theme .hero h1{
+
+    position:relative;
+
+    z-index:1;
+
+    font-family:inherit;
+
+    font-size:
+        clamp(34px,6.2vw,64px);
+
+    font-weight:800;
+
+    letter-spacing:-2px;
+
+    line-height:1.04;
+
+    background:none;
+
+    -webkit-background-clip:initial;
+
+    background-clip:initial;
+
+    -webkit-text-fill-color:#eafff2;
+
+    color:#eafff2;
+
+    text-shadow:
+        0 0 22px
+        rgba(87,255,176,.22),
+        0 0 70px
+        rgba(40,215,255,.08);
+}
+
+
+body.computer-theme .hero h1::after{
+
+    content:"_";
+
+    color:var(--cyan);
+
+    animation:
+        cursorBlink 1.05s
+        steps(2,start)
+        infinite;
+}
+
+
+@keyframes cursorBlink{
+
+    0%,
+    45%{
+        opacity:1;
+    }
+
+    46%,
+    100%{
+        opacity:0;
+    }
+
+}
+
+
+body.computer-theme .hero p{
+
+    position:relative;
+
+    z-index:1;
+
+    max-width:700px;
+
+    color:#93c8ac;
+
+    font-size:13px;
+}
+
+
+.system-line{
+
+    position:relative;
+
+    z-index:1;
+
+    display:inline-flex;
+
+    flex-wrap:wrap;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    margin-top:18px;
+
+    padding:
+        8px 14px;
+
+    border:
+        1px dashed
+        rgba(87,255,176,.22);
+
+    border-radius:7px;
+
+    background:
+        rgba(0,0,0,.24);
+
+    color:#83c8a4;
+
+    font-size:10px;
+
+    letter-spacing:.04em;
+}
+
+
+.system-line .prompt{
+
+    color:var(--cyan);
+
+    font-weight:900;
+}
+
+
+.system-line .dot{
+
+    color:#3e6c57;
+}
+
+
+body.computer-theme .hero-stats{
+
+    position:relative;
+
+    z-index:1;
+
+    margin-top:24px;
+}
+
+
+body.computer-theme .hero-stat{
+
+    padding:
+        12px 14px;
+
+    border:
+        1px solid
+        rgba(87,255,176,.16);
+
+    border-radius:8px;
+
+    background:
+        rgba(0,0,0,.22);
+
+    box-shadow:
+        inset 0 0 20px
+        rgba(87,255,176,.03);
+}
+
+
+body.computer-theme .hero-stat strong{
+
+    color:var(--cyan);
+
+    text-shadow:
+        0 0 18px
+        rgba(87,255,176,.30);
+}
+
+
+body.computer-theme .hero-stat span{
+
+    color:#6d9f84;
+}
+
+
+/* =========================================================
+   PANEL / UNIT CARDS
+========================================================= */
+
+body.computer-theme .panel{
+
+    border-radius:14px;
+
+    border-color:
+        rgba(87,255,176,.20);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(4,26,16,.90),
+            rgba(2,12,18,.94)
+        );
+
+    box-shadow:
+        0 30px 90px
+        rgba(0,0,0,.45);
+}
+
+
+body.computer-theme .panel::before{
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(87,255,176,.06),
+            transparent 68%
+        );
+}
+
+
+body.computer-theme .panel-header h2{
+
+    font-family:inherit;
+
+    font-size:22px;
+
+    color:#eafff2;
+}
+
+
+body.computer-theme .panel-header p{
+
+    color:#7daf93;
+}
+
+
+body.computer-theme .lesson-grid{
+
+    gap:10px;
+}
+
+
+body.computer-theme .lesson-card{
+
+    min-height:96px;
+
+    padding:
+        15px 15px 15px 18px;
+
+    border-radius:8px;
+
+    border-color:
+        rgba(87,255,176,.14);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(3,20,12,.82),
+            rgba(2,12,10,.92)
+        );
+
+    overflow:hidden;
+}
+
+
+body.computer-theme .lesson-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    bottom:0;
+
+    width:3px;
+
+    background:
+        linear-gradient(
+            var(--cyan),
+            var(--green)
+        );
+
+    opacity:.55;
+}
+
+
+body.computer-theme .lesson-card:hover{
+
+    transform:
+        translateY(-2px);
+
+    border-color:
+        rgba(87,255,176,.45);
+
+    background:
+        rgba(7,36,21,.90);
+
+    box-shadow:
+        0 10px 35px
+        rgba(0,0,0,.25),
+        0 0 24px
+        rgba(87,255,176,.05);
+}
+
+
+body.computer-theme .lesson-card.selected{
+
+    border-color:var(--cyan);
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(11,69,41,.55),
+            rgba(4,34,32,.60)
+        );
+
+    box-shadow:
+        0 0 0 1px
+        rgba(87,255,176,.14),
+        0 0 34px
+        rgba(87,255,176,.08);
+}
+
+
+body.computer-theme .lesson-number{
+
+    color:#74e4ad;
+
+    font-size:9px;
+
+    letter-spacing:1.4px;
+}
+
+
+body.computer-theme .lesson-file{
+
+    color:#4f8b6e;
+
+    font-size:9px;
+
+    letter-spacing:.02em;
+}
+
+
+body.computer-theme .lesson-name{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#eafff2;
+
+    font-size:13px;
+
+    line-height:1.45;
+}
+
+
+body.computer-theme .lesson-icon{
+
+    font-size:15px;
+
+    filter:
+        drop-shadow(
+            0 0 8px
+            rgba(87,255,176,.25)
+        );
+}
+
+
+body.computer-theme .lesson-meta{
+
+    color:#63977d;
+
+    font-size:9px;
+}
+
+
+body.computer-theme .all-chapters{
+
+    border-radius:8px;
+
+    border-color:
+        rgba(40,215,255,.24);
+
+    background:
+        linear-gradient(
+            100deg,
+            rgba(40,215,255,.06),
+            rgba(87,255,176,.04)
+        );
+}
+
+
+body.computer-theme .all-chapters:hover{
+
+    border-color:
+        rgba(87,255,176,.55);
+}
+
+
+body.computer-theme .all-icon{
+
+    border-radius:8px;
+
+    background:
+        rgba(40,215,255,.07);
+
+    border-color:
+        rgba(40,215,255,.25);
+
+    color:var(--blue);
+
+    font-family:inherit;
+
+    font-size:18px;
+}
+
+
+body.computer-theme .all-chapters h3{
+
+    color:#eafff2;
+}
+
+
+body.computer-theme .all-chapters p{
+
+    color:#78ab8f;
+}
+
+
+body.computer-theme .selection-info{
+
+    border-radius:8px;
+
+    border-color:
+        rgba(87,255,176,.13);
+
+    background:
+        rgba(87,255,176,.025);
+}
+
+
+body.computer-theme .selection-label{
+
+    color:#5f9a7e;
+
+    font-size:10px;
+
+    letter-spacing:.08em;
+}
+
+
+body.computer-theme .selection-value{
+
+    color:var(--cyan);
+
+    font-size:13px;
+}
+
+
+body.computer-theme .question-settings{
+
+    border-top-color:
+        rgba(87,255,176,.10);
+}
+
+
+body.computer-theme .question-settings h3{
+
+    color:#eafff2;
+
+    font-size:16px;
+}
+
+
+body.computer-theme .question-settings p{
+
+    color:#78ab8f;
+}
+
+
+body.computer-theme .number-btn{
+
+    border-radius:6px;
+
+    background:
+        rgba(0,0,0,.25);
+
+    color:#9ad2b6;
+
+    font-family:inherit;
+}
+
+
+body.computer-theme .number-btn:hover{
+
+    border-color:
+        rgba(87,255,176,.55);
+
+    color:#eafff2;
+}
+
+
+body.computer-theme .number-btn.selected{
+
+    border-color:var(--cyan);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(87,255,176,.18),
+            rgba(40,215,255,.12)
+        );
+
+    color:var(--cyan);
+
+    box-shadow:
+        0 0 18px
+        rgba(87,255,176,.08);
+}
+
+
+body.computer-theme .custom-count input{
+
+    border-radius:6px;
+
+    background:
+        rgba(1,12,8,.80);
+
+    border-color:
+        rgba(87,255,176,.16);
+
+    font-family:inherit;
+}
+
+
+body.computer-theme .custom-count input:focus{
+
+    border-color:var(--cyan);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(87,255,176,.06);
+}
+
+
+body.computer-theme .start-btn,
+body.computer-theme .next-btn,
+body.computer-theme .restart-btn{
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--cyan),
+            #29e6ff
+        );
+
+    color:#02120b;
+
+    border-radius:7px;
+
+    box-shadow:
+        0 0 26px
+        rgba(87,255,176,.16);
+
+    font-family:inherit;
+}
+
+
+body.computer-theme .start-btn:hover,
+body.computer-theme .next-btn:hover,
+body.computer-theme .restart-btn:hover{
+
+    filter:brightness(1.06);
+
+    box-shadow:
+        0 0 34px
+        rgba(87,255,176,.24);
+}
+
+
+body.computer-theme .timer-hint{
+
+    color:#6d9f84;
+}
+
+
+/* =========================================================
+   QUIZ
+========================================================= */
+
+body.computer-theme .quiz-count{
+
+    color:#eafff2;
+}
+
+
+body.computer-theme .quiz-answered{
+
+    color:#6d9f84;
+}
+
+
+body.computer-theme .progress{
+
+    height:5px;
+
+    border-radius:2px;
+
+    background:
+        rgba(87,255,176,.07);
+}
+
+
+body.computer-theme .progress-bar{
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--green),
+            var(--cyan)
+        );
+
+    box-shadow:
+        0 0 12px
+        rgba(87,255,176,.35);
+}
+
+
+body.computer-theme .question-tag{
+
+    color:#8fe0b8;
+
+    font-size:9px;
+
+    letter-spacing:2px;
+}
+
+
+body.computer-theme #quiz-question{
+
+    font-size:
+        clamp(17px,2.5vw,23px);
+
+    line-height:1.65;
+
+    color:#eafff2;
+}
+
+
+body.computer-theme .option{
+
+    border-radius:7px;
+
+    border-color:
+        rgba(87,255,176,.13);
+
+    background:
+        rgba(1,14,8,.74);
+
+    color:#d5f7e4;
+
+    padding:
+        12px 14px;
+}
+
+
+body.computer-theme .option:hover{
+
+    border-color:
+        rgba(87,255,176,.50);
+
+    background:
+        rgba(7,35,20,.80);
+
+    transform:
+        translateX(2px);
+}
+
+
+body.computer-theme .option.selected{
+
+    border-color:var(--cyan);
+
+    background:
+        rgba(10,60,35,.55);
+
+    box-shadow:
+        inset 0 0 18px
+        rgba(87,255,176,.06);
+}
+
+
+body.computer-theme .option-letter{
+
+    border-radius:5px;
+
+    background:
+        rgba(87,255,176,.06);
+
+    border-color:
+        rgba(87,255,176,.20);
+
+    color:#8fe0b8;
+
+    font-family:inherit;
+}
+
+
+body.computer-theme .option-letter::before{
+
+    content:"[";
+}
+
+
+body.computer-theme .option-letter::after{
+
+    content:"]";
+}
+
+
+body.computer-theme .option.selected .option-letter{
+
+    color:var(--cyan);
+
+    border-color:
+        rgba(87,255,176,.50);
+
+    background:
+        rgba(87,255,176,.10);
+}
+
+
+body.computer-theme .quiz-footer{
+
+    border-top-color:
+        rgba(87,255,176,.08);
+}
+
+
+body.computer-theme .status{
+
+    color:#78ab8f;
+}
+
+
+body.computer-theme .exit-btn{
+
+    border-color:
+        rgba(87,255,176,.18);
+
+    color:#9ad2b6;
+
+    border-radius:7px;
+
+    background:transparent;
+}
+
+
+/* =========================================================
+   RESULT / REVIEW
+========================================================= */
+
+body.computer-theme .result{
+
+    border-radius:12px;
+
+    border-color:
+        rgba(87,255,176,.22);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(4,26,16,.96),
+            rgba(1,10,14,.98)
+        );
+}
+
+
+body.computer-theme .result-icon{
+
+    border-radius:8px;
+
+    border-color:
+        rgba(87,255,176,.35);
+
+    background:
+        rgba(87,255,176,.06);
+
+    color:var(--cyan);
+
+    font-family:inherit;
+
+    font-size:30px;
+
+    box-shadow:
+        0 0 45px
+        rgba(87,255,176,.12);
+}
+
+
+body.computer-theme .result h2{
+
+    color:#eafff2;
+}
+
+
+body.computer-theme .result-subtitle{
+
+    color:#78ab8f;
+}
+
+
+body.computer-theme .score{
+
+    background:
+        linear-gradient(
+            120deg,
+            white,
+            var(--cyan),
+            var(--green)
+        );
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    color:transparent;
+}
+
+
+body.computer-theme .score-percent{
+
+    color:var(--green);
+
+    border-color:
+        rgba(87,255,176,.25);
+
+    background:
+        rgba(87,255,176,.06);
+}
+
+
+body.computer-theme .result-message{
+
+    color:#a9d8bf;
+}
+
+
+body.computer-theme .review{
+
+    border-top-color:
+        rgba(87,255,176,.08);
+}
+
+
+body.computer-theme .review h3{
+
+    color:#eafff2;
+}
+
+
+body.computer-theme .review-intro{
+
+    color:#78ab8f;
+}
+
+
+body.computer-theme .review-item{
+
+    border-radius:8px;
+
+    background:
+        rgba(1,12,8,.70);
+}
+
+
+body.computer-theme .review-item.correct{
+
+    border-color:
+        rgba(87,255,176,.20);
+}
+
+
+body.computer-theme .review-item.wrong{
+
+    border-color:
+        rgba(255,95,122,.22);
+}
+
+
+body.computer-theme .review-number{
+
+    color:#8fe0b8;
+}
+
+
+body.computer-theme .review-question{
+
+    color:#eafff2;
+}
+
+
+body.computer-theme .answer{
+
+    color:#b9e5ce;
+}
+
+
+body.computer-theme .reason{
+
+    color:#9ed3b7;
+}
+
+
+body.computer-theme footer{
+
+    border-top-color:
+        rgba(87,255,176,.10);
+
+    color:#5d8d75;
+
+    font-family:inherit;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width:900px){
+
+    body.computer-theme .hero{
+
+        padding:
+            64px 16px 30px;
+    }
+
+    body.computer-theme .hero h1{
+
+        letter-spacing:-1.5px;
+    }
+
+}
+
+
+@media (max-width:650px){
+
+    body.computer-theme .navbar{
+
+        flex-wrap:wrap;
+
+        gap:10px;
+
+        padding:
+            14px 4%;
+    }
+
+    body.computer-theme .nav-links{
+
+        width:100%;
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+        gap:
+            8px 13px;
+    }
+
+    body.computer-theme .nav-links a{
+
+        font-size:10px;
+    }
+
+    body.computer-theme .hero{
+
+        margin-top:16px;
+
+        padding:
+            58px 12px 26px;
+    }
+
+    body.computer-theme .hero::before{
+
+        font-size:8px;
+
+        padding-left:10px;
+
+        letter-spacing:.06em;
+    }
+
+    body.computer-theme .hero h1{
+
+        font-size:
+            clamp(30px,9vw,42px);
+
+        letter-spacing:-1px;
+    }
+
+    body.computer-theme .hero-stats{
+
+        gap:8px;
+    }
+
+    body.computer-theme .hero-stat{
+
+        padding:
+            10px 8px;
+    }
+
+    body.computer-theme .hero-stat strong{
+
+        font-size:19px;
+    }
+
+    body.computer-theme .system-line{
+
+        font-size:9px;
+
+        padding:
+            7px 10px;
+    }
+
+    body.computer-theme .panel{
+
+        padding:
+            22px 16px;
+    }
+
+    body.computer-theme .lesson-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    body.computer-theme .binary-rain{
+
+        display:none;
+    }
+
+}
+
+</style>
+
 </head>
-<body>
-    <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="mcq.html">MCQ Lab</a>
-    </nav>
-    <div class="container">
-        <h1>Computer Science MCQ</h1>
-        <p>Computer Science MCQ practice for Class 10 SEE is coming soon. Stay tuned for questions covering Programming, Database, Networking, and more.</p>
-        <a href="mcq.html" class="btn">← Back to MCQ Lab</a>
+
+
+<body class="computer-theme">
+
+<div class="scanlines" aria-hidden="true"></div>
+
+<div class="binary-rain" aria-hidden="true">
+    <span style="left:4%;animation-duration:17s;animation-delay:-2s;">01001010 11010101 00110110</span>
+    <span style="left:12%;animation-duration:23s;animation-delay:-8s;">10110100 01010111 11001001</span>
+    <span style="left:21%;animation-duration:19s;animation-delay:-14s;">00101101 10110010 01110100</span>
+    <span style="left:31%;animation-duration:26s;animation-delay:-4s;">11010010 00101111 10010110</span>
+    <span style="left:41%;animation-duration:21s;animation-delay:-11s;">01101001 11000101 00111010</span>
+    <span style="left:52%;animation-duration:24s;animation-delay:-1s;">10010110 01110010 11001010</span>
+    <span style="left:62%;animation-duration:18s;animation-delay:-16s;">01001101 10110110 00101011</span>
+    <span style="left:71%;animation-duration:27s;animation-delay:-6s;">11100010 01011001 10100110</span>
+    <span style="left:81%;animation-duration:20s;animation-delay:-13s;">00110101 11001010 01110101</span>
+    <span style="left:91%;animation-duration:25s;animation-delay:-9s;">10101100 00110111 11010010</span>
+</div>
+
+
+<!-- =======================================================
+     PARTICLES
+======================================================== -->
+
+<div class="particles">
+
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+
+</div>
+
+
+<!-- =======================================================
+     NAVIGATION
+======================================================== -->
+
+<nav class="navbar">
+
+    <a
+        href="index.html"
+        class="logo">
+
+        <span class="logo-icon">
+            &gt;_
+        </span>
+
+        Kandel Sarkar
+
+    </a>
+
+
+    <div class="nav-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="projects.html">
+            Projects
+        </a>
+
+        <a href="class-10-mcq.html">
+            Class 10 MCQ
+        </a>
+
+        <a href="science-mcq.html">
+            Science
+        </a>
+
+        <a href="math-mcq.html">
+            Math
+        </a>
+
+        <a href="computer-mcq.html" class="active">
+            Computer
+        </a>
+
     </div>
+
+</nav>
+
+
+<!-- =======================================================
+     MAIN
+======================================================== -->
+
+<main class="container">
+
+
+<!-- =======================================================
+     HERO
+======================================================== -->
+
+<section class="hero">
+
+    <div class="badge">
+
+        <span class="badge-dot"></span>
+
+        CLASS 10 • COMPUTER SCIENCE • NEB
+
+    </div>
+
+
+    <h1>
+
+        Class 10 Computer Science MCQ
+
+    </h1>
+
+
+    <p>
+
+        Boot up your NEB Class 10 Computer Science revision.
+        Choose a unit, decide how many questions you want, and
+        practice with instant scoring, detailed explanations and
+        an elapsed-time clock. No countdown. No pressure.
+
+    </p>
+
+
+    <div class="system-line">
+
+        <span class="prompt">&gt;_</span>
+        <span>11 units loaded</span>
+        <span class="dot">•</span>
+        <span>1,100 MCQs</span>
+        <span class="dot">•</span>
+        <span>ready for SEE</span>
+
+    </div>
+
+
+    <div class="hero-stats">
+
+        <div class="hero-stat">
+
+            <strong id="hero-total-questions">1100+</strong>
+
+            <span>Computer MCQs</span>
+
+        </div>
+
+        <div class="hero-stat">
+
+            <strong>11</strong>
+
+            <span>Units</span>
+
+        </div>
+
+        <div class="hero-stat">
+
+            <strong>100</strong>
+
+            <span>Per unit</span>
+
+        </div>
+
+        <div class="hero-stat">
+
+            <strong>NEB</strong>
+
+            <span>Grade 10</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     SELECTION PANEL
+======================================================== -->
+
+<section
+    id="selection-section"
+    class="panel">
+
+
+    <div class="panel-header">
+
+        <h2>
+
+            &gt;_ Choose Your Unit
+
+        </h2>
+
+
+        <p>
+
+            Select a unit or practice questions from
+            the complete Computer Science course.
+
+        </p>
+
+    </div>
+
+
+
+    <!-- LESSONS -->
+
+    <div
+        id="lesson-grid"
+        class="lesson-grid">
+
+    </div>
+
+
+
+    <!-- SELECTED CHAPTER -->
+
+    <div class="selection-info">
+
+        <div>
+
+            <div class="selection-label">
+
+                SELECTED UNIT
+
+            </div>
+
+
+            <div
+                id="selected-lesson"
+                class="selection-value">
+
+                Select a unit to continue
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <div class="selection-label">
+
+                QUESTION LIMIT
+
+            </div>
+
+
+            <div class="selection-value">
+
+                Maximum 100
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <div class="selection-label">
+
+                YOUR CLOCK
+
+            </div>
+
+
+            <div class="selection-value">
+
+                Tracks your time
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- QUESTION COUNT -->
+
+    <div class="question-settings">
+
+        <h3>
+
+            &gt;_ How many questions?
+
+        </h3>
+
+
+        <p>
+
+            You can choose any number from 1 to 100.
+
+        </p>
+
+
+        <div
+            id="number-buttons"
+            class="number-buttons">
+
+            <button
+                class="number-btn"
+                data-number="10">
+
+                10
+
+            </button>
+
+
+            <button
+                class="number-btn"
+                data-number="20">
+
+                20
+
+            </button>
+
+
+            <button
+                class="number-btn selected"
+                data-number="25">
+
+                25
+
+            </button>
+
+
+            <button
+                class="number-btn"
+                data-number="50">
+
+                50
+
+            </button>
+
+
+            <button
+                class="number-btn"
+                data-number="75">
+
+                75
+
+            </button>
+
+
+            <button
+                class="number-btn"
+                data-number="100">
+
+                100
+
+            </button>
+
+        </div>
+
+
+        <div class="custom-count">
+
+            <input
+                id="custom-count"
+                type="number"
+                min="1"
+                max="100"
+                placeholder="Custom: 1–100">
+
+        </div>
+
+    </div>
+
+
+
+    <!-- START -->
+
+    <div class="start-area">
+
+        <button
+            id="start-btn"
+            class="start-btn"
+            disabled>
+
+            &gt;_ Select a Unit First
+
+        </button>
+
+
+        <p class="timer-hint">
+
+            ⏱ No time limit. A clock tracks how long you take,
+            so you can see your pace and improve.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     QUIZ SECTION
+======================================================== -->
+
+<section
+    id="quiz-section"
+    class="panel hidden">
+
+
+    <div class="quiz-top">
+
+        <div class="quiz-meta-group">
+
+            <span
+                id="quiz-count"
+                class="quiz-count">
+
+                Question 1
+
+            </span>
+
+
+            <span
+                id="quiz-unit-label"
+                class="quiz-unit">
+
+                Practice session
+
+            </span>
+
+        </div>
+
+
+        <div class="quiz-meta-group quiz-meta-right">
+
+            <span
+                id="quiz-answered"
+                class="quiz-answered">
+
+                Answered: 0
+
+            </span>
+
+
+            <span
+                id="quiz-clock"
+                class="quiz-clock"
+                role="timer"
+                aria-live="polite">
+
+                ⏱ 00:00
+
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="progress">
+
+        <div
+            id="progress-bar"
+            class="progress-bar">
+
+        </div>
+
+    </div>
+
+
+    <div class="question-tag">
+
+        SYSTEM CHECK // COMPUTER SCIENCE
+
+    </div>
+
+
+    <h2 id="quiz-question">
+
+        Question loading...
+
+    </h2>
+
+
+    <div
+        id="quiz-options"
+        class="options">
+
+    </div>
+
+
+    <div class="quiz-footer">
+
+        <span
+            id="quiz-status"
+            class="status">
+
+            Select an answer.
+
+        </span>
+
+
+        <div class="quiz-actions">
+
+            <button
+                id="exit-btn"
+                class="exit-btn"
+                type="button">
+
+                Exit
+
+            </button>
+
+
+            <button
+                id="next-btn"
+                class="next-btn"
+                disabled>
+
+                Next Question →
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     RESULT SECTION
+======================================================== -->
+
+<section
+    id="result-section"
+    class="result hidden">
+
+
+    <div class="result-icon">
+
+        &gt;_
+
+    </div>
+
+
+    <h2>
+
+        Practice Complete
+
+    </h2>
+
+
+    <p class="result-subtitle">
+
+        Your Computer Science MCQ session is finished.
+
+    </p>
+
+
+    <div
+        id="score"
+        class="score">
+
+        0 / 0
+
+    </div>
+
+
+    <div
+        id="score-percent"
+        class="score-percent">
+
+        0%
+
+    </div>
+
+
+    <div class="result-meta">
+
+        <span id="result-time">
+
+            Time taken: 00:00
+
+        </span>
+
+    </div>
+
+
+    <p
+        id="result-message"
+        class="result-message">
+
+    </p>
+
+
+    <button
+        id="restart-btn"
+        class="restart-btn">
+
+        🔄 Practice Again
+
+    </button>
+
+
+
+    <!-- REVIEW -->
+
+    <div class="review">
+
+        <h3>
+
+            📊 Detailed Answer Analysis
+
+        </h3>
+
+
+        <p class="review-intro">
+
+            Correct answers and computer science explanations
+            are revealed only after completing the test.
+
+        </p>
+
+
+        <div
+            id="review-container">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =======================================================
+     FOOTER
+======================================================== -->
+
+<footer>
+
+    Kandel Sarkar • Computer MCQ Lab
+
+    <br>
+
+    Class 10 Computer Science Practice Platform
+
+    <br>
+
+    Aligned with the NEB Grade 10 Computer Science textbook
+
+</footer>
+
+<script src="computer-fact-bank.js?v=1" onerror="console.error('Failed to load computer-fact-bank.js');"></script>
+
+
+
+<script>
+try {
+
+/* =========================================================
+   LESSON DATABASE
+
+   Based on the 11 units shown in the
+   Computer Science Grade 10 contents page.
+========================================================= */
+
+const lessons = [
+
+    {
+        id:1,
+        code:"1.1",
+        name:"Networking and Telecommunication",
+        icon:"🌐",
+        file:"networking.sys"
+    },
+
+    {
+        id:2,
+        code:"1.2",
+        name:"Ethical and Social Issues in ICT",
+        icon:"⚖️",
+        file:"ethics.sys"
+    },
+
+    {
+        id:3,
+        code:"1.3",
+        name:"Computer Security",
+        icon:"🔐",
+        file:"security.sys"
+    },
+
+    {
+        id:4,
+        code:"1.4",
+        name:"E-commerce",
+        icon:"🛒",
+        file:"ecommerce.sys"
+    },
+
+    {
+        id:5,
+        code:"1.5",
+        name:"Contemporary Technology",
+        icon:"🚀",
+        file:"future.sys"
+    },
+
+    {
+        id:6,
+        code:"1.6",
+        name:"Number System",
+        icon:"🔢",
+        file:"binary.sys"
+    },
+
+    {
+        id:7,
+        code:"2.1",
+        name:"Database Management System",
+        icon:"🗄️",
+        file:"database.sys"
+    },
+
+    {
+        id:8,
+        code:"3.1",
+        name:"Programming in QBASIC",
+        icon:"💻",
+        file:"qbasic.bas"
+    },
+
+    {
+        id:9,
+        code:"3.2",
+        name:"Modular Programming",
+        icon:"🧩",
+        file:"modules.bas"
+    },
+
+    {
+        id:10,
+        code:"3.3",
+        name:"File Handling in QBASIC",
+        icon:"📁",
+        file:"files.bas"
+    },
+
+    {
+        id:11,
+        code:"4.1",
+        name:"Structured Programming in C",
+        icon:"⚙️",
+        file:"structured.c"
+    }
+
+];
+
+
+/* =========================================================
+   QUESTION DATABASE
+
+   IMPORTANT:
+
+   This is where we will put the complete MCQ bank.
+
+   Each question has:
+
+   question
+   options
+   answer
+   reason
+   lesson
+
+========================================================= */
+
+const legacyQuestionBank = [];
+
+
+/* =========================================================
+   BUILD QUESTIONS FROM THE FACT BANK
+========================================================= */
+
+function pickFactDistractors(index, total, count){
+
+    const picked = [];
+
+    for(
+        let step = 1;
+        picked.length < count && step <= total * 2;
+        step++
+    ){
+        const candidate =
+            (index + step * 7 + 1) % total;
+
+        if(
+            candidate !== index &&
+            !picked.includes(candidate)
+        ){
+            picked.push(candidate);
+        }
+    }
+
+    for(
+        let i = 0;
+        picked.length < count && i < total;
+        i++
+    ){
+        if(
+            i !== index &&
+            !picked.includes(i)
+        ){
+            picked.push(i);
+        }
+    }
+
+    return picked;
+}
+
+
+function makeFactQuestion(lesson, facts, index, mode){
+
+    const term =
+        String(facts[index][0]).trim();
+
+    const description =
+        String(facts[index][1]).trim();
+
+    const distractors =
+        pickFactDistractors(
+            index,
+            facts.length,
+            3
+        );
+
+    const correctPosition =
+        index % 4;
+
+    const options = [];
+
+    let distractorIndex = 0;
+
+    for(let position = 0; position < 4; position++){
+
+        if(position === correctPosition){
+
+            options.push(
+                mode === "forward"
+                    ? term
+                    : description
+            );
+        }
+        else{
+
+            const other =
+                facts[distractors[distractorIndex++]];
+
+            options.push(
+                mode === "forward"
+                    ? String(other[0]).trim()
+                    : String(other[1]).trim()
+            );
+        }
+    }
+
+    const forwardTemplates = [
+        value => `In computer science, which term is described by: ${value}?`,
+        value => `Which computer term matches this definition: ${value}?`,
+        value => `Identify the computer term described as: ${value}.`,
+        value => `Which term from this unit means: ${value}?`
+    ];
+
+    const reverseTemplates = [
+        value => `Which of the following best describes ${value}?`,
+        value => `What is the correct definition of ${value}?`,
+        value => `Choose the statement that correctly explains ${value}.`,
+        value => `Which description matches the computer term ${value}?`
+    ];
+
+    const question =
+        mode === "forward"
+            ? forwardTemplates[index % forwardTemplates.length](description)
+            : reverseTemplates[index % reverseTemplates.length](term);
+
+    return {
+        lesson,
+        question,
+        options,
+        answer: correctPosition,
+        reason:
+            `The correct match is ${term}: ${description}.`
+    };
+}
+
+
+function buildFactQuestions(){
+
+    const bank =
+        (typeof window !== "undefined" && window.computerFactBank)
+            ? window.computerFactBank
+            : {};
+
+    const built = [];
+
+    Object.keys(bank).forEach(key => {
+
+        const lesson = Number(key);
+
+        const facts = bank[key];
+
+        if(
+            !Array.isArray(facts) ||
+            facts.length < 4
+        ){
+            return;
+        }
+
+        facts.forEach((pair, index) => {
+
+            const term =
+                String(pair[0] || "").trim();
+
+            const description =
+                String(pair[1] || "").trim();
+
+            if(!term || !description){
+                return;
+            }
+
+            const forward =
+                makeFactQuestion(
+                    lesson,
+                    facts,
+                    index,
+                    "forward"
+                );
+
+            const reverse =
+                makeFactQuestion(
+                    lesson,
+                    facts,
+                    index,
+                    "reverse"
+                );
+
+            if(index % 2 === 0){
+                built.push(forward, reverse);
+            }
+            else{
+                built.push(reverse, forward);
+            }
+        });
+    });
+
+    return built;
+}
+
+
+function limitQuestionBank(questions, limit){
+
+    const seen = new Set();
+
+    const counts = {};
+
+    const limited = [];
+
+    questions.forEach(question => {
+
+        const lesson =
+            Number(question.lesson ?? question.unit);
+
+        if(!Number.isFinite(lesson)){
+            return;
+        }
+
+        if((counts[lesson] || 0) >= limit){
+            return;
+        }
+
+        const key =
+            `${lesson}::${String(question.question).trim().toLowerCase()}`;
+
+        if(seen.has(key)){
+            return;
+        }
+
+        seen.add(key);
+
+        counts[lesson] = (counts[lesson] || 0) + 1;
+
+        limited.push(question);
+    });
+
+    return limited;
+}
+
+
+const generatedFactQuestions =
+    buildFactQuestions();
+
+
+const questionBank = limitQuestionBank([
+    ...generatedFactQuestions
+], 100);
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+let selectedLesson = null;
+
+let selectedLessonName = "";
+
+let selectedLessonCode = "";
+
+let selectedQuestionCount = 25;
+
+let currentQuestion = 0;
+
+let userAnswers = [];
+
+let activeQuestions = [];
+
+let clockInterval = null;
+
+let quizStartedAt = 0;
+
+let elapsedSeconds = 0;
+
+
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
+const lessonGrid =
+    document.getElementById("lesson-grid");
+
+const selectedLessonText =
+    document.getElementById("selected-lesson");
+
+const startButton =
+    document.getElementById("start-btn");
+
+const selectionSection =
+    document.getElementById("selection-section");
+
+const quizSection =
+    document.getElementById("quiz-section");
+
+const resultSection =
+    document.getElementById("result-section");
+
+const quizQuestion =
+    document.getElementById("quiz-question");
+
+const quizOptions =
+    document.getElementById("quiz-options");
+
+const nextButton =
+    document.getElementById("next-btn");
+
+const exitButton =
+    document.getElementById("exit-btn");
+
+const quizCount =
+    document.getElementById("quiz-count");
+
+const quizAnswered =
+    document.getElementById("quiz-answered");
+
+const quizUnitLabel =
+    document.getElementById("quiz-unit-label");
+
+const quizClock =
+    document.getElementById("quiz-clock");
+
+const quizStatus =
+    document.getElementById("quiz-status");
+
+const progressBar =
+    document.getElementById("progress-bar");
+
+const scoreElement =
+    document.getElementById("score");
+
+const scorePercent =
+    document.getElementById("score-percent");
+
+const resultTime =
+    document.getElementById("result-time");
+
+const resultMessage =
+    document.getElementById("result-message");
+
+const reviewContainer =
+    document.getElementById("review-container");
+
+const customCount =
+    document.getElementById("custom-count");
+
+const heroTotalQuestions =
+    document.getElementById("hero-total-questions");
+
+
+/* =========================================================
+   CREATE LESSON CARDS
+========================================================= */
+
+function createLessonCards(){
+
+    lessonGrid.innerHTML="";
+
+
+    lessons.forEach(lesson=>{
+
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "lesson-card";
+
+
+        const count =
+            questionBank.filter(
+                question => question.lesson === lesson.id
+            ).length;
+
+
+        card.innerHTML = `
+
+            <div class="lesson-number">
+
+                UNIT ${escapeHTML(lesson.code)} // <span class="lesson-file">${escapeHTML(lesson.file)}</span>
+
+            </div>
+
+            <div class="lesson-name">
+
+                <span class="lesson-icon">${escapeHTML(lesson.icon)}</span>
+
+                ${escapeHTML(lesson.name)}
+
+            </div>
+
+            <div class="lesson-meta">
+
+                ${count} MCQs • 50 concepts
+
+            </div>
+
+        `;
+
+
+        card.addEventListener(
+            "click",
+            ()=>{
+
+                selectLesson(
+                    lesson.id,
+                    lesson.name,
+                    lesson.code,
+                    card
+                );
+
+            }
+        );
+
+
+        lessonGrid.appendChild(card);
+
+    });
+
+
+    /* =====================================================
+       ALL CHAPTER OPTION
+    ====================================================== */
+
+    const all =
+        document.createElement("div");
+
+    all.className =
+        "all-chapters";
+
+
+    all.innerHTML = `
+
+        <div class="all-icon">
+            &gt;_
+        </div>
+
+        <div>
+
+            <h3>
+                Full Computer Course
+            </h3>
+
+            <p>
+                Practice questions from all
+                11 Computer Science units.
+                Choose up to 100 questions.
+            </p>
+
+        </div>
+
+    `;
+
+
+    all.addEventListener(
+        "click",
+        ()=>{
+
+            selectAllChapters(all);
+
+        }
+    );
+
+
+    lessonGrid.appendChild(all);
+
+}
+
+
+/* =========================================================
+   SELECT LESSON
+========================================================= */
+
+function selectLesson(
+    id,
+    name,
+    code,
+    selectedCard
+){
+
+    selectedLesson = id;
+
+    selectedLessonName = name;
+
+    selectedLessonCode = code;
+
+
+    document
+        .querySelectorAll(".lesson-card")
+        .forEach(card=>{
+
+            card.classList.remove(
+                "selected"
+            );
+
+        });
+
+
+    selectedCard.classList.add(
+        "selected"
+    );
+
+
+    selectedLessonText.textContent =
+        `Unit ${code}: ${name}`;
+
+
+    updateStartButton();
+
+}
+
+
+/* =========================================================
+   SELECT ALL
+========================================================= */
+
+function selectAllChapters(card){
+
+    selectedLesson = "all";
+
+    selectedLessonName = "All Computer Units";
+
+    selectedLessonCode = "all";
+
+
+    document
+        .querySelectorAll(".lesson-card")
+        .forEach(element=>{
+
+            element.classList.remove(
+                "selected"
+            );
+
+        });
+
+
+    card.classList.add(
+        "selected"
+    );
+
+
+    selectedLessonText.textContent =
+        ">_ All Computer Units";
+
+
+    updateStartButton();
+
+}
+
+
+/* =========================================================
+   QUESTION NUMBER BUTTONS
+========================================================= */
+
+document
+    .querySelectorAll(".number-btn")
+    .forEach(button=>{
+
+        button.addEventListener(
+            "click",
+            ()=>{
+
+                const number =
+                    Number(
+                        button.dataset.number
+                    );
+
+
+                selectedQuestionCount =
+                    number;
+
+
+                document
+                    .querySelectorAll(".number-btn")
+                    .forEach(btn=>{
+
+                        btn.classList.remove(
+                            "selected"
+                        );
+
+                    });
+
+
+                button.classList.add(
+                    "selected"
+                );
+
+
+                customCount.value="";
+
+                updateStartButton();
+
+            }
+        );
+
+    });
+
+
+/* =========================================================
+   CUSTOM QUESTION COUNT
+========================================================= */
+
+customCount.addEventListener(
+    "input",
+    ()=>{
+
+        let value =
+            Number(
+                customCount.value
+            );
+
+
+        if(value > 100){
+
+            value=100;
+
+            customCount.value=100;
+
+        }
+
+
+        if(value < 1){
+
+            value=1;
+
+        }
+
+
+        if(value){
+
+            selectedQuestionCount =
+                value;
+
+
+            document
+                .querySelectorAll(".number-btn")
+                .forEach(btn=>{
+
+                    btn.classList.remove(
+                        "selected"
+                    );
+
+                });
+
+
+            updateStartButton();
+
+        }
+
+
+    }
+);
+
+
+/* =========================================================
+   START BUTTON
+========================================================= */
+
+function getSelectedPool(){
+
+    if(selectedLesson === "all"){
+
+        /*
+           Mix one question from each chapter in
+           rounds, so a short test still covers
+           every chapter.
+        */
+
+        const byLesson =
+            new Map();
+
+
+        questionBank.forEach(
+            question=>{
+
+                if(!byLesson.has(question.lesson)){
+
+                    byLesson.set(
+                        question.lesson,
+                        []
+                    );
+
+                }
+
+                byLesson
+                    .get(question.lesson)
+                    .push(question);
+
+            }
+        );
+
+
+        const buckets =
+            [...byLesson.values()];
+
+
+        const mixed = [];
+
+        let added = true;
+
+
+        while(added){
+
+            added = false;
+
+            buckets.forEach(
+                bucket=>{
+
+                    if(bucket.length){
+
+                        mixed.push(
+                            bucket.shift()
+                        );
+
+                        added = true;
+
+                    }
+
+                }
+            );
+
+        }
+
+
+        return mixed;
+
+    }
+
+
+    return questionBank.filter(
+        question =>
+            question.lesson ===
+            selectedLesson
+    );
+
+}
+
+
+function updateStartButton(){
+
+    if(!selectedLesson){
+
+        startButton.disabled = true;
+
+        return;
+
+    }
+
+
+    const available =
+        getSelectedPool().length;
+
+
+    const count =
+        Math.min(
+            selectedQuestionCount,
+            100,
+            available
+        );
+
+
+    startButton.disabled =
+        available === 0;
+
+
+    startButton.textContent =
+        available === 0
+            ? "No questions available for this unit"
+            : `>_ Start ${count} ${count === 1 ? "Question" : "Questions"}`;
+
+}
+
+
+/* =========================================================
+   START PRACTICE
+========================================================= */
+
+startButton.addEventListener(
+    "click",
+    startQuiz
+);
+
+
+/* =========================================================
+   ELAPSED-TIME CLOCK
+========================================================= */
+
+function formatTime(totalSeconds){
+
+    const safeSeconds =
+        Math.max(
+            0,
+            Math.floor(totalSeconds)
+        );
+
+
+    const hours =
+        Math.floor(safeSeconds / 3600);
+
+
+    const minutes =
+        String(
+            Math.floor(
+                (safeSeconds % 3600) / 60
+            )
+        ).padStart(2, "0");
+
+
+    const seconds =
+        String(
+            safeSeconds % 60
+        ).padStart(2, "0");
+
+
+    return hours > 0
+        ? `${hours}:${minutes}:${seconds}`
+        : `${minutes}:${seconds}`;
+
+}
+
+
+function updateClockDisplay(){
+
+    quizClock.textContent =
+        `⏱ ${formatTime(elapsedSeconds)}`;
+
+}
+
+
+function stopClock(){
+
+    if(clockInterval !== null){
+
+        clearInterval(
+            clockInterval
+        );
+
+        clockInterval = null;
+
+    }
+
+}
+
+
+function startClock(){
+
+    stopClock();
+
+
+    quizStartedAt =
+        Date.now();
+
+    elapsedSeconds = 0;
+
+
+    updateClockDisplay();
+
+
+    clockInterval =
+        setInterval(
+            ()=>{
+
+                elapsedSeconds =
+                    Math.max(
+                        0,
+                        Math.floor(
+                            (
+                                Date.now() -
+                                quizStartedAt
+                            ) /
+                            1000
+                        )
+                    );
+
+
+                updateClockDisplay();
+
+            },
+            250
+        );
+
+}
+
+
+function getElapsedSeconds(){
+
+    if(!quizStartedAt){
+
+        return 0;
+
+    }
+
+
+    return Math.max(
+        0,
+        Math.floor(
+            (
+                Date.now() -
+                quizStartedAt
+            ) /
+            1000
+        )
+    );
+
+}
+
+
+function startQuiz(){
+
+    /*
+       Keep the bank order so questions are
+       presented in a clear, arranged sequence.
+    */
+
+    const pool =
+        getSelectedPool();
+
+
+    /*
+       IMPORTANT:
+
+       Never allow more questions than
+       available questions.
+
+       Maximum is also hard limited
+       to 100.
+    */
+
+    const number =
+        Math.min(
+            selectedQuestionCount,
+            100,
+            pool.length
+        );
+
+
+    activeQuestions =
+        pool.slice(
+            0,
+            number
+        );
+
+
+    /*
+       Reset state.
+    */
+
+    currentQuestion=0;
+
+    userAnswers=[];
+
+
+    /*
+       Show quiz.
+    */
+
+    selectionSection.classList.add(
+        "hidden"
+    );
+
+    quizSection.classList.remove(
+        "hidden"
+    );
+
+    resultSection.classList.add(
+        "hidden"
+    );
+
+
+    quizUnitLabel.textContent =
+        selectedLesson === "all"
+            ? "All units • mixed practice"
+            : `Unit ${selectedLessonCode} • ${selectedLessonName}`;
+
+
+    startClock();
+
+
+    loadQuizQuestion();
+
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+}
+
+
+/* =========================================================
+   LOAD QUIZ QUESTION
+========================================================= */
+
+function loadQuizQuestion(){
+
+    const question =
+        activeQuestions[
+            currentQuestion
+        ];
+
+
+    quizCount.textContent =
+        `Question ${currentQuestion+1} of ${activeQuestions.length}`;
+
+
+    quizQuestion.textContent =
+        question.question;
+
+
+    quizOptions.innerHTML="";
+
+
+    question.options.forEach(
+        (option,index)=>{
+
+            const button =
+                document.createElement("button");
+
+
+            button.className =
+                "option";
+
+
+            button.type="button";
+
+
+            button.innerHTML = `
+
+                <span class="option-letter">
+
+                    ${String.fromCharCode(
+                        65 + index
+                    )}
+
+                </span>
+
+                <span>
+
+                    ${escapeHTML(option)}
+
+                </span>
+
+            `;
+
+
+            button.addEventListener(
+                "click",
+                ()=>{
+
+                    chooseQuizAnswer(
+                        index,
+                        button
+                    );
+
+                }
+            );
+
+
+            quizOptions.appendChild(
+                button
+            );
+
+        }
+    );
+
+
+    nextButton.disabled=true;
+
+
+    nextButton.textContent =
+        currentQuestion ===
+        activeQuestions.length - 1
+
+        ? "Submit Test →"
+
+        : "Next Question →";
+
+
+    quizStatus.textContent =
+        "Select an answer. Correctness will be revealed after submission.";
+
+
+    updateQuizProgress();
+
+}
+
+
+/* =========================================================
+   SELECT ANSWER
+========================================================= */
+
+function chooseQuizAnswer(
+    index,
+    button
+){
+
+    /*
+       Remove previous selection.
+    */
+
+    document
+        .querySelectorAll(".option")
+        .forEach(option=>{
+
+            option.classList.remove(
+                "selected"
+            );
+
+        });
+
+
+    /*
+       Highlight student's selection.
+
+       NOTICE:
+
+       We DO NOT check whether it is
+       correct here.
+    */
+
+    button.classList.add(
+        "selected"
+    );
+
+
+    userAnswers[
+        currentQuestion
+    ] = index;
+
+
+    nextButton.disabled=false;
+
+
+    quizStatus.textContent =
+        "Answer saved. Your result will be revealed after the test.";
+
+
+    updateQuizProgress();
+
+}
+
+
+/* =========================================================
+   NEXT QUESTION
+========================================================= */
+
+nextButton.addEventListener(
+    "click",
+    ()=>{
+
+        if(
+            userAnswers[currentQuestion] ===
+            undefined
+        ){
+
+            return;
+
+        }
+
+
+        if(
+            currentQuestion <
+            activeQuestions.length - 1
+        ){
+
+            currentQuestion++;
+
+            loadQuizQuestion();
+
+            window.scrollTo({
+
+                top:0,
+
+                behavior:"smooth"
+
+            });
+
+        }
+
+        else{
+
+            submitQuiz();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   EXIT PRACTICE
+========================================================= */
+
+exitButton.addEventListener(
+    "click",
+    ()=>{
+
+        stopClock();
+
+
+        quizClock.textContent = "⏱ 00:00";
+
+
+        quizSection.classList.add(
+            "hidden"
+        );
+
+        resultSection.classList.add(
+            "hidden"
+        );
+
+        selectionSection.classList.remove(
+            "hidden"
+        );
+
+
+        window.scrollTo({
+
+            top:0,
+
+            behavior:"smooth"
+
+        });
+
+    }
+);
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+function updateQuizProgress(){
+
+    const answered =
+        userAnswers.filter(
+            answer =>
+                answer !== undefined
+        ).length;
+
+
+    quizAnswered.textContent =
+        `Answered: ${answered} / ${activeQuestions.length}`;
+
+
+    const progress =
+        (
+            (currentQuestion + 1)
+            /
+            activeQuestions.length
+        )
+        *
+        100;
+
+
+    progressBar.style.width =
+        `${progress}%`;
+
+}
+
+
+/* =========================================================
+   SUBMIT QUIZ
+========================================================= */
+
+function submitQuiz(){
+
+    /*
+       Safety check: the user must answer
+       every question before submitting.
+    */
+
+    const unanswered =
+        activeQuestions.some(
+            (_,index)=>
+                userAnswers[index] ===
+                undefined
+        );
+
+
+    if(unanswered){
+
+        alert(
+            "Please answer all questions before submitting."
+        );
+
+        return;
+
+    }
+
+
+    stopClock();
+
+
+    const timeUsed =
+        getElapsedSeconds();
+
+
+    let score=0;
+
+
+    activeQuestions.forEach(
+        (question,index)=>{
+
+            if(
+                userAnswers[index] ===
+                question.answer
+            ){
+
+                score++;
+
+            }
+
+        }
+    );
+
+
+    showResult(
+        score,
+        timeUsed
+    );
+
+}
+
+
+/* =========================================================
+   SHOW RESULT
+========================================================= */
+
+function showResult(
+    score,
+    timeUsed = 0
+){
+
+    quizSection.classList.add(
+        "hidden"
+    );
+
+
+    resultSection.classList.remove(
+        "hidden"
+    );
+
+
+    scoreElement.textContent =
+        `${score} / ${activeQuestions.length}`;
+
+
+    const percentage =
+        Math.round(
+            (
+                score /
+                activeQuestions.length
+            )
+            *
+            100
+        );
+
+
+    scorePercent.textContent =
+        `${percentage}%`;
+
+
+    resultTime.textContent =
+        `Time taken: ${formatTime(timeUsed)}`;
+
+
+    /*
+       Result message.
+    */
+
+    if(percentage >= 90){
+
+        resultMessage.textContent =
+            "System check passed! 💻 Your computer science fundamentals are strong. Keep practicing to maintain this performance.";
+
+    }
+
+    else if(percentage >= 75){
+
+        resultMessage.textContent =
+            "Excellent work! ⚡ You have a strong foundation. Review the explanations for the questions you missed.";
+
+    }
+
+    else if(percentage >= 60){
+
+        resultMessage.textContent =
+            "Good progress! 🖥️ Strengthen the concepts behind your incorrect answers and try another practice session.";
+
+    }
+
+    else if(percentage >= 40){
+
+        resultMessage.textContent =
+            "You are making progress. 📚 Study the explanations carefully and practice the unit again.";
+
+    }
+
+    else{
+
+        resultMessage.textContent =
+            "Every practice session teaches something. 💾 Review the explanations, understand the concepts, and try again.";
+
+    }
+
+
+    createReview();
+
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+}
+
+
+/* =========================================================
+   CREATE ANSWER REVIEW
+========================================================= */
+
+function createReview(){
+
+    reviewContainer.innerHTML="";
+
+
+    activeQuestions.forEach(
+        (question,index)=>{
+
+            const studentAnswer =
+                userAnswers[index];
+
+
+            const hasAnswer =
+                Number.isInteger(
+                    studentAnswer
+                );
+
+
+            const isCorrect =
+                hasAnswer &&
+                studentAnswer ===
+                question.answer;
+
+
+            const item =
+                document.createElement("div");
+
+
+            item.className =
+                !hasAnswer
+                    ? "review-item skipped"
+                    : isCorrect
+                        ? "review-item correct"
+                        : "review-item wrong";
+
+
+            const studentText =
+                hasAnswer
+                    ? question.options[
+                        studentAnswer
+                    ]
+                    : "Not answered";
+
+
+            const correctText =
+                question.options[
+                    question.answer
+                ];
+
+
+            item.innerHTML = `
+
+                <div class="review-number">
+
+                    QUESTION ${index+1}
+                    •
+                    ${!hasAnswer
+                        ? "— NOT ANSWERED"
+                        : isCorrect
+                            ? "✓ CORRECT"
+                            : "✕ INCORRECT"}
+
+                </div>
+
+
+                <div class="review-question">
+
+                    ${escapeHTML(
+                        question.question
+                    )}
+
+                </div>
+
+
+                <div class="answer student-answer">
+
+                    <strong>
+                        Your answer:
+                    </strong>
+
+                    ${escapeHTML(
+                        studentText
+                    )}
+
+                </div>
+
+
+                <div class="answer correct-answer">
+
+                    <strong>
+                        Correct answer:
+                    </strong>
+
+                    ${escapeHTML(
+                        correctText
+                    )}
+
+                </div>
+
+
+                <div class="reason">
+
+                    <strong>
+                        💡 Why is this correct?
+                    </strong>
+
+                    <br>
+
+                    ${escapeHTML(
+                        question.reason
+                    )}
+
+                </div>
+
+            `;
+
+
+            reviewContainer.appendChild(
+                item
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   RESTART
+========================================================= */
+
+document
+    .getElementById("restart-btn")
+    .addEventListener(
+        "click",
+        ()=>{
+
+            stopClock();
+
+            quizClock.textContent = "⏱ 00:00";
+
+
+            resultSection.classList.add(
+                "hidden"
+            );
+
+
+            selectionSection.classList.remove(
+                "hidden"
+            );
+
+
+            window.scrollTo({
+
+                top:0,
+
+                behavior:"smooth"
+
+            });
+
+        }
+    );
+
+
+/* =========================================================
+   SECURITY / HTML ESCAPING
+========================================================= */
+
+function escapeHTML(text){
+
+    return String(text)
+
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+
+        .replace(
+            /</g,
+            "&lt;"
+        )
+
+        .replace(
+            />/g,
+            "&gt;"
+        )
+
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
+}
+
+
+/* =========================================================
+   MOUSE TRACKING
+========================================================= */
+
+document.addEventListener(
+    "mousemove",
+    event=>{
+
+        document.body.style.setProperty(
+            "--mouse-x",
+            `${event.clientX}px`
+        );
+
+
+        document.body.style.setProperty(
+            "--mouse-y",
+            `${event.clientY}px`
+        );
+
+    }
+);
+
+
+/* =========================================================
+   PANEL MOUSE TRACKING
+========================================================= */
+
+document
+    .querySelectorAll(".panel")
+    .forEach(panel=>{
+
+        panel.addEventListener(
+            "mousemove",
+            event=>{
+
+                const rect =
+                    panel.getBoundingClientRect();
+
+
+                const x =
+                    event.clientX -
+                    rect.left;
+
+
+                const y =
+                    event.clientY -
+                    rect.top;
+
+
+                panel.style.setProperty(
+                    "--panel-x",
+                    `${x}px`
+                );
+
+
+                panel.style.setProperty(
+                    "--panel-y",
+                    `${y}px`
+                );
+
+            }
+        );
+
+    });
+
+
+/* =========================================================
+   INITIALIZE
+========================================================= */
+
+heroTotalQuestions.textContent =
+    questionBank.length.toLocaleString("en-US");
+
+
+createLessonCards();
+
+} catch(e) {
+    console.error('Quiz initialization error:', e);
+    document.body.innerHTML = '<div style="padding:40px;text-align:center;color:#ff6879;">Something went wrong loading the quiz. Please refresh the page.</div>';
+}
+
+</script>
+
+
 </body>
+
 </html>
