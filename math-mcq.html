@@ -16,6 +16,7 @@
       content="mcq class 10 neb, class 10 math mcq, neb class 10 mathematics mcq, see math mcq, math mcq practice">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://kandelbishal.com.np/math-mcq.html">
+<link rel="stylesheet" href="mcq-progress.css?v=1">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Kandel Sarkar">
@@ -2418,6 +2419,10 @@ body{
             Class 10 MCQ
         </a>
 
+        <a href="see-mock-exam.html">
+            Mock Exam
+        </a>
+
         <a href="science-mcq.html">
             Science
         </a>
@@ -2929,6 +2934,14 @@ body{
     </p>
 
 
+    <div
+        id="attempt-insights"
+        class="attempt-insights"
+        hidden>
+
+    </div>
+
+
     <button
         id="restart-btn"
         class="restart-btn">
@@ -2936,6 +2949,15 @@ body{
         🔄 Practice Again
 
     </button>
+
+
+    <a
+        class="mcq-dashboard-cta"
+        href="class-10-mcq.html#progress">
+
+        📈 View progress dashboard
+
+    </a>
 
 
 
@@ -2991,6 +3013,7 @@ body{
 </footer>
 
 <script src="math-fact-bank.js?v=1" onerror="console.error('Failed to load math-fact-bank.js');"></script>
+<script src="mcq-progress.js?v=1"></script>
 
 
 
@@ -4329,6 +4352,145 @@ function updateQuizProgress(){
 
 
 /* =========================================================
+   SAVE ATTEMPT TO PROGRESS TRACKER
+========================================================= */
+
+function recordAttempt(
+    score,
+    timeUsed
+){
+
+    if(
+        !window.MCQTracker ||
+        !Array.isArray(activeQuestions)
+    ){
+        return;
+    }
+
+
+    const answerRecords =
+        activeQuestions.map((question,index)=>{
+
+            const topicId =
+                Number(
+                    question.lesson ??
+                    question.unit ??
+                    0
+                );
+
+            const lesson =
+                lessons.find(
+                    item =>
+                        Number(item.id) ===
+                        topicId
+                );
+
+            return {
+
+                subject:"math",
+
+                topicId,
+
+                topicName:
+                    lesson
+                        ? lesson.name
+                        : `Chapter ${topicId}`,
+
+                correct:
+                    userAnswers[index] ===
+                    question.answer
+            };
+
+        });
+
+
+    const missed =
+        activeQuestions.map((question,index)=>{
+
+            if(
+                userAnswers[index] ===
+                question.answer
+            ){
+                return null;
+            }
+
+            const topicId =
+                Number(
+                    question.lesson ??
+                    question.unit ??
+                    0
+                );
+
+            const lesson =
+                lessons.find(
+                    item =>
+                        Number(item.id) ===
+                        topicId
+                );
+
+            return {
+
+                question:question.question,
+
+                yourAnswer:
+                    userAnswers[index] !== undefined
+                        ? question.options[userAnswers[index]]
+                        : "Not answered",
+
+                correctAnswer:
+                    question.options[question.answer],
+
+                reason:question.reason,
+
+                topicName:
+                    lesson
+                        ? lesson.name
+                        : `Chapter ${topicId}`
+            };
+
+        }).filter(Boolean);
+
+
+    const record =
+        window.MCQTracker.recordAttempt({
+
+            subject:"math",
+
+            type:"practice",
+
+            title:
+                selectedLesson === "all"
+                    ? "All Math chapters • mixed practice"
+                    : `Chapter ${selectedLesson}: ${selectedLessonName}`,
+
+            unitId:
+                selectedLesson === "all"
+                    ? null
+                    : selectedLesson,
+
+            unitName:selectedLessonName,
+
+            total:activeQuestions.length,
+
+            correct:score,
+
+            timeSeconds:timeUsed,
+
+            answers:answerRecords,
+
+            missed
+        });
+
+
+    window.MCQTracker.renderAttemptInsights(
+        document.getElementById("attempt-insights"),
+        record
+    );
+
+}
+
+
+/* =========================================================
    SUBMIT QUIZ
 ========================================================= */
 
@@ -4381,6 +4543,12 @@ function submitQuiz(){
             }
 
         }
+    );
+
+
+    recordAttempt(
+        score,
+        timeUsed
     );
 
 
@@ -4767,6 +4935,33 @@ heroTotalQuestions.textContent =
 
 
 createLessonCards();
+
+
+/* Deep link from the progress dashboard: #unit-7 */
+
+const unitHash =
+    /^#unit-(\d+)$/.exec(
+        window.location.hash
+    );
+
+
+if(unitHash){
+
+    const unitCard =
+        document.querySelectorAll(
+            "#lesson-grid .lesson-card"
+        )[
+            Number(unitHash[1]) - 1
+        ];
+
+
+    if(unitCard){
+
+        unitCard.click();
+
+    }
+
+}
 
 } catch(e) {
     console.error('Quiz initialization error:', e);

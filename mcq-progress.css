@@ -1,0 +1,96 @@
+/* =========================================================
+   SHARED MCQ PROGRESS / INSIGHT STYLES
+   Used inside the Science, Math and Computer result screens.
+========================================================= */
+
+.attempt-insights {
+    width: min(100%, 820px);
+    margin: 22px auto 6px;
+    padding: 20px 22px;
+    border: 1px solid rgba(88, 166, 255, 0.22);
+    border-radius: 18px;
+    background:
+        linear-gradient(135deg, rgba(88, 166, 255, 0.08), rgba(87, 255, 176, 0.04)),
+        rgba(8, 13, 20, 0.9);
+    text-align: left;
+}
+
+.attempt-insights[hidden] {
+    display: none;
+}
+
+.attempt-insights .insight-heading {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    color: #f3f7ff;
+    margin-bottom: 12px;
+}
+
+.attempt-insights .insight-heading.good {
+    color: #57ffb0;
+}
+
+.attempt-insights .insight-sub {
+    margin-top: 12px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #9aa7b7;
+}
+
+.attempt-insights .insight-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.attempt-insights .insight-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 13px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffd9a0;
+    border: 1px solid rgba(255, 179, 71, 0.35);
+    background: rgba(255, 179, 71, 0.08);
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.attempt-insights .insight-chip:hover {
+    transform: translateY(-2px);
+    border-color: #ffb347;
+    background: rgba(255, 179, 71, 0.16);
+}
+
+.attempt-insights .insight-chip strong {
+    color: #ffb347;
+    font-size: 12px;
+    padding: 3px 7px;
+    border-radius: 999px;
+    background: rgba(255, 179, 71, 0.14);
+}
+
+.mcq-dashboard-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 16px auto 4px;
+    padding: 12px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 800;
+    color: #041016;
+    background: linear-gradient(135deg, #57ffb0, #58a6ff);
+    box-shadow: 0 14px 36px rgba(88, 166, 255, 0.22);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mcq-dashboard-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 44px rgba(88, 166, 255, 0.32);
+}
