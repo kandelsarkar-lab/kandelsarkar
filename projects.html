@@ -198,6 +198,16 @@
       border: 1px solid #30363d;
       color: #c9d1d9;
     }
+
+    /* reveal on scroll (same as the Billing Nepal draft site) */
+    [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    [data-reveal].in { opacity: 1; transform: none; }
+    .project-card[data-reveal].in {
+      transition: opacity 0.7s ease, transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      [data-reveal] { opacity: 1; transform: none; transition: none; }
+    }
   </style>
     <link rel="stylesheet" href="cookie-consent.css?v=1">
     <script src="cookie-consent.js?v=1" defer></script>
@@ -221,7 +231,7 @@
     <div class="projects-grid">
       
       <!-- Project 1 -->
-<div class="project-card mcq-project">
+<div class="project-card mcq-project" data-reveal>
     <div class="project-icon">🎓</div>
 
     <div>
@@ -251,7 +261,7 @@
     </div>
 </div>
       <!-- Project 2: Billing Nepal -->
-      <div class="project-card featured">
+      <div class="project-card featured" data-reveal>
         <div>
           <span class="project-badge">Free offline app</span>
           <img src="billing-nepal-icon.png" alt="Billing Nepal app icon" class="project-icon-img" width="64" height="64">
@@ -276,6 +286,23 @@
 
     </div>
   </div>
+
+  <script>
+    /* reveal on scroll — same as the Billing Nepal draft site */
+    (function () {
+      var cards = Array.prototype.slice.call(document.querySelectorAll("[data-reveal]"));
+      if ("IntersectionObserver" in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+          });
+        }, { threshold: 0.12 });
+        cards.forEach(function (el) { io.observe(el); });
+      } else {
+        cards.forEach(function (el) { el.classList.add("in"); });
+      }
+    })();
+  </script>
 </body>
   </html>
   
