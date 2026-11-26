@@ -63,6 +63,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
   max-width: 940px;
   text-wrap: balance;
 }
+.scramble-char { color: rgba(91, 132, 255, 0.6); }
 .em {
   font-family: var(--serif);
   font-style: italic;

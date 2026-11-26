@@ -17,10 +17,19 @@
 
   /* ---------- toast ---------- */
   var toastTimer = null;
-  function toast(html) {
+  function toast(message, link) {
     var el = $("#toast");
     if (!el) return;
-    el.innerHTML = html;
+    el.textContent = "";
+    el.appendChild(document.createTextNode(message));
+    if (link) {
+      var a = document.createElement("a");
+      a.href = link.url;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      a.textContent = link.text;
+      el.appendChild(a);
+    }
     el.classList.add("show");
     clearTimeout(toastTimer);
     toastTimer = setTimeout(function () { el.classList.remove("show"); }, 3600);
@@ -91,16 +100,21 @@
     }
     var frameN = 0;
     function step() {
-      var out = "", done = 0;
+      var frag = document.createDocumentFragment();
+      var done = 0;
       for (var j = 0; j < queue.length; j++) {
         var q = queue[j];
-        if (frameN >= q.end) { out += q.ch; done++; }
+        if (frameN >= q.end) { frag.appendChild(document.createTextNode(q.ch)); done++; }
         else if (frameN >= q.start) {
           if (!q.c || Math.random() < 0.28) { q.c = SCRAMBLE_CHARS.charAt(Math.floor(Math.random() * SCRAMBLE_CHARS.length)); }
-          out += '<span style="color:rgba(91,132,255,0.6)">' + q.c + "</span>";
-        } else { out += q.ch; }
+          var span = document.createElement("span");
+          span.className = "scramble-char";
+          span.textContent = q.c;
+          frag.appendChild(span);
+        } else { frag.appendChild(document.createTextNode(q.ch)); }
       }
-      el.innerHTML = out;
+      el.textContent = "";
+      el.appendChild(frag);
       if (done === queue.length) {
         el.textContent = finalText;
         el.dataset.done = "1";
@@ -130,7 +144,8 @@
   if (airAccept) {
     airAccept.addEventListener("click", function () {
       toast("Opening the newest upload… see you on YouTube ▶");
-      window.open("https://youtu.be/wjW6yKTuyHw", "_blank", "noopener");
+      var win = window.open("https://youtu.be/wjW6yKTuyHw", "_blank", "noopener,noreferrer");
+      if (win) { try { win.opener = null; } catch (err) { /* ignore */ } }
     });
   }
   if (airDecline) {
@@ -685,7 +700,7 @@
         ? "You win. Flawless reflexes. Your prize: subscribing counts as scientific research."
         : "You lost. Bet you couldn't. Redemption arc: watch a video and try again.";
     }
-    if (win) toast("You won the game 🏆 <a href='https://youtube.com/@kandelsarkar' target='_blank' rel='noopener'>Claim your prize on YouTube →</a>");
+    if (win) toast("You won the game 🏆 ", { url: "https://youtube.com/@kandelsarkar", text: "Claim your prize on YouTube →" });
   }
 
   function moveAtom() {
