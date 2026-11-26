@@ -69,6 +69,27 @@
     });
   }
 
+  /* ---------- golden projects button: 3D tilt (restored) ---------- */
+  var projectBtn = $("#projectBtn");
+  if (projectBtn && !reducedMotion && finePointer) {
+    projectBtn.addEventListener("mousemove", function (e) {
+      var rect = projectBtn.getBoundingClientRect();
+      var x = e.clientX - rect.left;
+      var y = e.clientY - rect.top;
+      projectBtn.style.setProperty("--mouse-x", x + "px");
+      projectBtn.style.setProperty("--mouse-y", y + "px");
+      var centerX = rect.width / 2;
+      var centerY = rect.height / 2;
+      var rotateX = ((y - centerY) / centerY) * -14;
+      var rotateY = ((x - centerX) / centerX) * 14;
+      projectBtn.style.transform =
+        "perspective(1000px) rotateX(" + rotateX + "deg) rotateY(" + rotateY + "deg) scale3d(1.03, 1.03, 1.03)";
+    });
+    projectBtn.addEventListener("mouseleave", function () {
+      projectBtn.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
+    });
+  }
+
   /* ---------- reveal on scroll ---------- */
   if ("IntersectionObserver" in window && !reducedMotion) {
     var io = new IntersectionObserver(function (entries) {

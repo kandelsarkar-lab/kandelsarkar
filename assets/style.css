@@ -123,6 +123,69 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .btn-ghost:hover { border-color: rgba(255, 255, 255, 0.7); transform: translateY(-1px); }
 .btn-sm { min-height: 40px; padding: 0 20px; font-size: 14px; }
 
+/* ---------- centered 3D golden projects button (restored) ---------- */
+.project-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+.gold-project-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 480px;
+  padding: 22px 40px;
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #0b0d17;
+  background: linear-gradient(135deg, #ffe066 0%, #ffb700 50%, #ffa200 100%);
+  border: 2px solid #ffd700;
+  border-radius: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(255, 183, 0, 0.35), 0 0 20px rgba(255, 215, 0, 0.2);
+  transition: transform 0.15s ease-out, box-shadow 0.25s ease-out, border-color 0.25s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+.btn-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.7) 0%, transparent 60%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.gold-project-btn:hover .btn-glow { opacity: 1; }
+.gold-project-btn:hover {
+  box-shadow: 0 20px 45px rgba(255, 183, 0, 0.55), 0 0 30px rgba(255, 224, 102, 0.8);
+  border-color: #ffffff;
+}
+.btn-text {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  pointer-events: none;
+}
+.btn-arrow { transition: transform 0.2s ease; }
+.gold-project-btn:hover .btn-arrow { transform: translateX(6px); }
+.gold-project-btn:active { transform: scale(0.95) !important; }
+@media (max-width: 480px) {
+  .gold-project-btn { font-size: 1.1rem; padding: 18px 24px; }
+}
+
 /* ---------- film grain (0.7s steps(1) infinite — same recipe as theirs) ---------- */
 .grain {
   position: fixed;
